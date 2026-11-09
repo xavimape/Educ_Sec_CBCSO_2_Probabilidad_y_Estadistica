@@ -11,7 +11,7 @@ Astro (SSG) + React (islands) + TypeScript. Motor matemático en `src/lib/math/`
 ## Comandos
 
 ```bash
-npm install            # requiere Node >= 20
+npm install            # requiere Node >= 22.23
 npm run dev            # desarrollo local
 npm test               # pruebas unitarias del motor
 npm run validate:content   # integridad del banco de ejercicios
