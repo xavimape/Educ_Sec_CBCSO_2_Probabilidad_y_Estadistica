@@ -1,0 +1,82 @@
+{
+  "id": "N4-02",
+  "titulo": "Media, mediana y moda desde la tabla de 20 estudiantes de la guía",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "media-tabla",
+    "mediana-par",
+    "moda"
+  ],
+  "enunciado": "En el ejemplo integrador de la guía (n = 20 estudiantes), los libros leídos fueron: 0 libros (f=3), 1 libro (f=8), 2 libros (f=6), 3 libros (f=2), 4 libros (f=1). Calculá la suma total de libros usando los productos (x · f), la media, la mediana y la moda.",
+  "partes": [
+    {
+      "id": "suma_productos",
+      "tipo": "numero",
+      "esperado": 30,
+      "label": "1. Suma total de libros Σ(x · f) = 0×3 + 1×8 + 2×6 + 3×2 + 4×1",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 10,
+            "message": "10 es la suma de los valores distintos (0+1+2+3+4) sin multiplicar por sus frecuencias. Multiplicá cada valor por su f."
+          }
+        ]
+      }
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 1.5,
+      "label": "2. Media aritmética (x̄ = 30 ÷ 20) en libros",
+      "unidad": "libros",
+      "redondeo": 2,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 6,
+            "message": "Dividiste 30 entre 5 (la cantidad de filas), pero hay n = 20 estudiantes en total: 30 ÷ 20 = 1,5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 1,
+      "label": "3. Mediana (Me) buscando las posiciones 10 y 11 en la acumulada (F₁=3, F₂=11)",
+      "unidad": "libros"
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        1
+      ],
+      "label": "4. Moda (Mo) de libros leídos",
+      "detalle": {
+        "maxFrequency": 8
+      }
+    }
+  ],
+  "pistas": [
+    "Sumá los productos: 0 + 8 + 12 + 6 + 4 = 30 libros en total.",
+    "Dividí 30 libros entre los n = 20 estudiantes (da 1,5).",
+    "Como F₁ = 3 y F₂ = 11, tanto el 10.º como el 11.º estudiante leyeron 1 libro (Me = 1). Y la mayor frecuencia es f = 8 en 1 libro (Mo = 1).",
+    "En una tabla de frecuencias, dividí siempre la suma de productos entre el total n (20), nunca entre la cantidad de filas (5)."
+  ],
+  "solucion": [
+    "Suma de productos: 0×3 + 1×8 + 2×6 + 3×2 + 4×1 = 0 + 8 + 12 + 6 + 4 = 30 libros.",
+    "Media: x̄ = 30 ÷ 20 = 1,5 libros.",
+    "Mediana: con n = 20, las posiciones 10 y 11 caen en la fila de 1 libro (que abarca de la posición 4 a la 11) → Me = 1 libro.",
+    "Moda: la mayor frecuencia es f = 8, que corresponde a Mo = 1 libro."
+  ],
+  "etiquetas": [
+    "Práctica N4-02",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "variante": true
+}

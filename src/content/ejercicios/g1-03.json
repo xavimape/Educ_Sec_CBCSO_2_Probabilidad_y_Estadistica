@@ -1,0 +1,89 @@
+{
+  "id": "G1-03",
+  "titulo": "Tiempo registrado en los 100 metros llanos",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "cuantitativa-continua",
+    "magnitud-vs-registro"
+  ],
+  "enunciado": "En la clase de Educación Física, la profesora registra el tiempo en segundos que tarda cada estudiante en recorrer 100 metros llanos. ¿Qué tipo de variable representa esta medición y por qué?",
+  "partes": [
+    {
+      "id": "tipo",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "Tipo y subclasificación de la variable",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cuantitativa-continua": "¡Correcto! El tiempo es una magnitud física continua.",
+          "cuantitativa-discreta": "El tiempo no salta de a unidades aisladas: entre 13 s y 14 s existen infinitos instantes intermedios.",
+          "cualitativa-ordinal": "Se mide el tiempo en segundos (cantidad numérica), no solo el puesto de llegada.",
+          "cualitativa-nominal": "Los segundos medidos con cronómetro son una cantidad numérica continua."
+        }
+      }
+    },
+    {
+      "id": "justificacion",
+      "tipo": "select",
+      "esperado": "magnitud",
+      "label": "¿Por qué sigue siendo continua incluso si un reloj sencillo mostrara segundos sin décimas?",
+      "opciones": [
+        {
+          "valor": "magnitud",
+          "etiqueta": "Porque el tiempo admite valores intermedios por su naturaleza física; la precisión del reloj solo redondea el registro"
+        },
+        {
+          "valor": "enteros",
+          "etiqueta": "Porque si el reloj no muestra coma pasa a ser discreta y si tiene coma pasa a ser continua"
+        },
+        {
+          "valor": "etiqueta",
+          "etiqueta": "Porque los segundos son etiquetas nominales de cada corredor"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "magnitud": "¡Muy bien! La naturaleza de la magnitud (tiempo) no cambia por el instrumento con que la anotemos.",
+          "enteros": "Ojo: redondear al anotar no cambia la naturaleza continua del tiempo.",
+          "etiqueta": "Los segundos miden duración real; no son etiquetas."
+        }
+      }
+    }
+  ],
+  "pistas": [
+    "El tiempo se mide en segundos y fracciones de segundo (como 13,84 s).",
+    "Entre dos tiempos cualesquiera siempre puede existir un tiempo intermedio.",
+    "Recordá distinguir qué es la magnitud física (tiempo) de cómo la redondea el cronómetro.",
+    "No justifiques que es continua diciendo únicamente «porque tiene coma»; explicá que mide una magnitud continua que admite valores intermedios."
+  ],
+  "solucion": [
+    "El tiempo empleado en recorrer 100 metros es una cantidad numérica obtenida por medición.",
+    "Es una variable Cuantitativa Continua porque el tiempo transcurre sin saltos y admite cualquier valor real dentro de un intervalo (por ejemplo, 13,84 s), según la precisión del instrumento."
+  ],
+  "etiquetas": [
+    "Guía 1.3",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

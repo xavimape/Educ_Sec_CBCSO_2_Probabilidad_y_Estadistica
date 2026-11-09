@@ -1,0 +1,77 @@
+{
+  "id": "G3-06",
+  "titulo": "¿Por qué no unir con líneas las categorías de un gráfico de barras?",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "concepto-barras",
+    "justificar-barras"
+  ],
+  "enunciado": "Explicá conceptualmente por qué en una distribución de frecuencias de una variable cualitativa nominal (como deporte o transporte preferido) dibujamos barras separadas y no unimos las categorías con una línea continua.",
+  "partes": [
+    {
+      "id": "motivo_principal",
+      "tipo": "select",
+      "esperado": "orden_transicion",
+      "label": "1. ¿Qué idea falsa transmitiría unir con una línea categorías nominales como «Colectivo, Moto, Bicicleta, Caminando»?",
+      "opciones": [
+        {
+          "valor": "orden_transicion",
+          "etiqueta": "Sugeriría un orden natural o una variación continua entre una palabra y otra, cuando son categorías independientes cuyo orden en el eje X es arbitrario"
+        },
+        {
+          "valor": "suma_distinta",
+          "etiqueta": "Haría que la suma de las frecuencias absolutas deje de dar n"
+        }
+      ]
+    },
+    {
+      "id": "aclaracion_lineas",
+      "tipo": "select",
+      "esperado": "serie_temporal",
+      "label": "2. ¿En qué caso sí tiene sentido usar segmentos o líneas para conectar datos?",
+      "opciones": [
+        {
+          "valor": "serie_temporal",
+          "etiqueta": "Cuando el eje horizontal tiene una secuencia temporal u orden real donde interesa seguir la tendencia o evolución de un período al siguiente"
+        },
+        {
+          "valor": "nunca_jamas",
+          "etiqueta": "En ningún caso de la estadística se usan gráficos de líneas"
+        }
+      ]
+    },
+    {
+      "id": "explicacion",
+      "tipo": "rubrica",
+      "label": "3. Redactá tu explicación y autoevaluala con la rúbrica",
+      "detalle": {
+        "placeholder": "Explicá por qué las barras van separadas y qué representa esa separación...",
+        "criteria": [
+          "Expliqué que las barras separadas muestran categorías o valores discretos independientes.",
+          "Mencioné que unir categorías nominales con una línea sugeriría una transición o tendencia continua inexistente entre ellas."
+        ],
+        "modelAnswer": "Las barras se dibujan separadas porque representan categorías o valores discretos independientes. Unir categorías nominales con una línea continua sugeriría una transición intermedia o un orden natural que no existe entre opciones como colores o medios de transporte."
+      }
+    }
+  ],
+  "pistas": [
+    "Pensá qué hay en el espacio entre la barra de «Colectivo» y la barra de «Moto»: ¿existe un valor numérico intermedio «medio colectivo y media moto»?",
+    "No existe transición intermedia ni orden obligatorio entre categorías nominales.",
+    "Por eso las barras separadas indican visualmente que cada categoría se cuenta por separado.",
+    "La separación entre barras cumple una función matemática: indicar que se trata de categorías o valores discretos separados."
+  ],
+  "solucion": [
+    "En una distribución de categorías nominales o valores discretos, cada barra representa el conteo de un grupo bien diferenciado.",
+    "Unir las barras con líneas continuas sugeriría la existencia de valores intermedios o una evolución de una categoría a la siguiente.",
+    "Nota: los gráficos de líneas se reservan para mostrar tendencias a lo largo de un eje ordenado (típicamente el tiempo)."
+  ],
+  "etiquetas": [
+    "Guía 3.6 (precisado)",
+    "barras"
+  ],
+  "leccion": "L06",
+  "adaptacion": "Explica por qué unir categorías nominales sugiere un orden o transición inexistente, sin afirmar que un gráfico de líneas jamás pueda representar conteos discretos a lo largo del tiempo.",
+  "variante": false
+}

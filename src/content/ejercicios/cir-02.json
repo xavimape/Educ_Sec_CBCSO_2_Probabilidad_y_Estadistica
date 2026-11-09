@@ -1,0 +1,21 @@
+{
+  "id": "CIR-02",
+  "titulo": "Porcentaje de un sector de 180°",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": ["grafico-circular", "angulo-a-porcentaje"],
+  "enunciado": "En un gráfico circular, un sector mide 180°. ¿Qué porcentaje del total representa ese sector?",
+  "partes": [
+    { "id": "porcentaje", "tipo": "numero", "esperado": 50, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "El porcentaje se calcula como (ángulo ÷ 360°) × 100.",
+    "180° es la mitad de 360°."
+  ],
+  "solucion": [
+    "180° ÷ 360° = 0,5.",
+    "0,5 × 100 = 50 %."
+  ],
+  "etiquetas": ["circular", "nuevo"]
+}

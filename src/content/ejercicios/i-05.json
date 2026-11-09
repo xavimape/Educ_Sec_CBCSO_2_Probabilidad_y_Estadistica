@@ -1,0 +1,146 @@
+{
+  "id": "I-05",
+  "titulo": "Integrador 5 (categórico nominal): Club o taller extracurricular elegido (n = 25)",
+  "origen": "integrador",
+  "modulo": "M8",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cualitativa-nominal",
+    "frecuencia-relativa",
+    "porcentaje",
+    "construir-barras",
+    "moda-categorica",
+    "pertinencia-medidas"
+  ],
+  "enunciado": "En un relevamiento a n = 25 estudiantes sobre qué taller extracurricular prefieren (datos ficticios), las respuestas fueron:\nRobótica: 10 | Teatro: 7 | Huerta: 5 | Ajedrez: 3.\nClasificá la variable, completá la tabla sin columna acumulada, configurá el gráfico de barras e indicá la única medida de tendencia central pertinente.",
+  "partes": [
+    {
+      "id": "clasif",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "1. Clasificación de la variable «taller extracurricular elegido»",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "tipo": "tabla",
+      "label": "2. Completá fr y % para los 4 talleres (total n = 25)",
+      "detalle": {
+        "totalN": 25,
+        "columns": [
+          "fr",
+          "pct"
+        ],
+        "rows": [
+          {
+            "x": "Robótica",
+            "label": "Robótica (f = 10)",
+            "f": 10
+          },
+          {
+            "x": "Teatro",
+            "label": "Teatro (f = 7)",
+            "f": 7
+          },
+          {
+            "x": "Huerta",
+            "label": "Huerta (f = 5)",
+            "f": 5
+          },
+          {
+            "x": "Ajedrez",
+            "label": "Ajedrez (f = 3)",
+            "f": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "barras",
+      "tipo": "barras",
+      "label": "3. Construí el gráfico de barras de frecuencias absolutas",
+      "unidad": "estudiantes",
+      "detalle": {
+        "inputMode": "value",
+        "maxGridCells": 12,
+        "validScaleSteps": [
+          1,
+          2
+        ],
+        "bars": [
+          {
+            "key": "rob",
+            "label": "Robótica",
+            "value": 10
+          },
+          {
+            "key": "tea",
+            "label": "Teatro",
+            "value": 7
+          },
+          {
+            "key": "hue",
+            "label": "Huerta",
+            "value": 5
+          },
+          {
+            "key": "aje",
+            "label": "Ajedrez",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "medida_unica",
+      "tipo": "select",
+      "esperado": "moda_robotica",
+      "label": "4. ¿Cuál es la única medida de tendencia central aplicable y cuál es su valor?",
+      "opciones": [
+        {
+          "valor": "moda_robotica",
+          "etiqueta": "La moda: Mo = Robótica (elegida por 10 estudiantes, el 40 %). No corresponden media ni mediana por ser categorías nominales"
+        },
+        {
+          "valor": "media_625",
+          "etiqueta": "La media: (10 + 7 + 5 + 3) ÷ 4 = 6,25 talleres"
+        },
+        {
+          "valor": "mediana_teatro",
+          "etiqueta": "La mediana: Teatro y Huerta"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Los nombres de talleres son categorías sin orden jerárquico (cualitativa nominal).",
+    "Dividí cada frecuencia entre 25: 10/25 = 0,40 (40 %); 7/25 = 0,28 (28 %); 5/25 = 0,20 (20 %); 3/25 = 0,12 (12 %).",
+    "Para categorías nominales nunca se calcula media ni mediana: solo la moda (Robótica).",
+    "Promediar las frecuencias (25 ÷ 4 = 6,25) es el promedio de alumnos por grupo, no la media de la variable."
+  ],
+  "solucion": [
+    "1) Variable cualitativa nominal.",
+    "2) fr y %: Robótica (0,40 / 40 %), Teatro (0,28 / 28 %), Huerta (0,20 / 20 %), Ajedrez (0,12 / 12 %).",
+    "3) Barras de alturas 10, 7, 5 y 3.",
+    "4) Única medida aplicable: Moda Mo = Robótica (no existen media de talleres ni mediana sin orden)."
+  ],
+  "etiquetas": [
+    "Integrador I-05",
+    "integrador"
+  ],
+  "leccion": "L09",
+  "variante": false
+}

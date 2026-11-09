@@ -1,0 +1,36 @@
+{
+  "name": "educ-sec-cbcso-2-probabilidad-y-estadistica",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Estadística y Probabilidad para 2.º año de secundaria. Sitio estático, sin servidor, desplegable en GitHub Pages, Netlify, Cloudflare Pages o Vercel.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate:content": "node scripts/validate-content.mjs",
+    "migrate:bank": "node scripts/migrate-bank.mjs",
+    "resumen": "node scripts/resumen-banco.mjs",
+    "auditar:banco": "node scripts/auditar-banco.mjs",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.5",
+    "astro": "^7.4.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3",
+    "vitest": "^5.1.0"
+  }
+}

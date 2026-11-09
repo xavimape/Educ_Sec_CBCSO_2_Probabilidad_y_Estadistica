@@ -1,0 +1,73 @@
+{
+  "id": "G1-04",
+  "titulo": "Número de asignaturas reprobadas en el cuatrimestre",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "cuantitativa-discreta",
+    "conteo"
+  ],
+  "enunciado": "Se registró el número de asignaturas reprobadas por un grupo de estudiantes al finalizar el primer cuatrimestre (con valores posibles 0, 1, 2, 3, 4). Clasificá esta variable indicando su grupo general y su subclasificación.",
+  "partes": [
+    {
+      "id": "grupo",
+      "tipo": "select",
+      "esperado": "cuantitativa",
+      "label": "Grupo general de la variable",
+      "opciones": [
+        {
+          "valor": "cuantitativa",
+          "etiqueta": "Cuantitativa (expresa una cantidad numérica con la que se puede operar)"
+        },
+        {
+          "valor": "cualitativa",
+          "etiqueta": "Cualitativa (expresa un nombre o cualidad no numérica)"
+        }
+      ]
+    },
+    {
+      "id": "subtipo",
+      "tipo": "select",
+      "esperado": "discreta",
+      "label": "Subclasificación y razón matemática",
+      "opciones": [
+        {
+          "valor": "discreta",
+          "etiqueta": "Discreta, porque surge de un conteo exacto de materias enteras (0, 1, 2, 3, 4) sin valores intermedios"
+        },
+        {
+          "valor": "continua",
+          "etiqueta": "Continua, porque el promedio de materias puede dar con coma"
+        },
+        {
+          "valor": "ordinal",
+          "etiqueta": "Ordinal, porque son palabras ordenadas"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "discreta": "¡Excelente! Nadie reprueba 1,4 materias: el conteo de asignaturas toma valores enteros aislados.",
+          "continua": "Cuidado: aunque el promedio del curso pueda dar con decimales (por ejemplo, 1,2 materias), la variable observada en cada estudiante solo toma valores separados (0, 1, 2, 3, 4).",
+          "ordinal": "Los valores 0, 1, 2, 3, 4 son cantidades contadas, por lo que es cuantitativa discreta."
+        }
+      }
+    }
+  ],
+  "pistas": [
+    "¿Qué se observa en cada estudiante? La cantidad de materias reprobadas.",
+    "¿Puede un estudiante tener 2,5 materias reprobadas en el boletín, o se cuentan de a una entera?",
+    "Los conteos de unidades enteras corresponden a variables cuantitativas discretas.",
+    "Que el promedio de una variable discreta tenga decimales no convierte a la variable en continua."
+  ],
+  "solucion": [
+    "Grupo general: Variable Cuantitativa, ya que mide una cantidad numérica.",
+    "Subclasificación: Cuantitativa Discreta, porque proviene de contar asignaturas enteras (0, 1, 2, 3, 4) y no existen valores intermedios entre dos conteos consecutivos."
+  ],
+  "etiquetas": [
+    "Guía 1.4",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

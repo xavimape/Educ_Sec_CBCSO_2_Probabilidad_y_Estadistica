@@ -1,0 +1,107 @@
+{
+  "id": "I-04",
+  "titulo": "Integrador 4: Tiempo de recorrido a la escuela y efecto de un dato extremo",
+  "origen": "integrador",
+  "modulo": "M5",
+  "nivel": "desafio",
+  "habilidades": [
+    "cuantitativa-continua",
+    "media",
+    "mediana-impar",
+    "valores-extremos"
+  ],
+  "enunciado": "Se midió el tiempo en minutos que tardan 9 estudiantes en llegar al colegio (datos ficticios):\n10, 12, 12, 15, 15, 15, 18, 20, 63 (el último vive en otra localidad).\nClasificá la variable, hallá la media, la mediana y la moda, y decidí cuál medida describe mejor al grupo.",
+  "partes": [
+    {
+      "id": "clasif",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "1. ¿Cómo se clasifica la variable «tiempo de viaje a la escuela»?",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (el tiempo es una magnitud continua aunque se haya anotado en minutos enteros)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 20,
+      "label": "2a. Media aritmética (x̄) de los 9 tiempos en minutos (suma = 180)",
+      "unidad": "min"
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 15,
+      "label": "2b. Mediana (Me) en minutos (5.º dato ordenado)",
+      "unidad": "min"
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        15
+      ],
+      "label": "2c. Moda (Mo) en minutos",
+      "detalle": {
+        "maxFrequency": 3
+      }
+    },
+    {
+      "id": "eleccion",
+      "tipo": "select",
+      "esperado": "extremo_63",
+      "label": "3. ¿Por qué la mediana (15 min) representa mejor el tiempo típico de viaje que la media (20 min)?",
+      "opciones": [
+        {
+          "valor": "extremo_63",
+          "etiqueta": "Porque 7 de los 9 estudiantes tardan 18 minutos o menos, y la media (20 min) quedó inflada por el único valor extremo de 63 minutos"
+        },
+        {
+          "valor": "media_mejor",
+          "etiqueta": "La media de 20 min es más representativa porque coincide con el octavo estudiante"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "El tiempo es una magnitud física continua.",
+    "Sumá los 9 tiempos: 10 + 12 + 12 + 15 + 15 + 15 + 18 + 20 + 63 = 180 min → 180 ÷ 9 = 20 min.",
+    "El 5.º dato ordenado es 15 min (mediana) y el 15 aparece 3 veces (moda).",
+    "Observá que 8 de los 9 estudiantes tardan 20 minutos o menos; el dato de 63 minutos arrastra la media."
+  ],
+  "solucion": [
+    "1) Variable cuantitativa continua.",
+    "2) Suma = 180 min → Media x̄ = 180 ÷ 9 = 20 min; Mediana (posición 5) = 15 min; Moda = 15 min.",
+    "3) La mediana (15 min) y la moda (15 min) reflejan mejor el viaje típico, mientras que la media (20 min) está desplazada hacia arriba por el valor extremo de 63 min."
+  ],
+  "etiquetas": [
+    "Integrador I-04",
+    "integrador"
+  ],
+  "leccion": "L10",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      10,
+      12,
+      12,
+      15,
+      15,
+      15,
+      18,
+      20,
+      63
+    ]
+  }
+}

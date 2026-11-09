@@ -1,0 +1,101 @@
+{
+  "id": "G1-06",
+  "titulo": "Debate sobre el talle de calzado y la longitud del pie",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "desafio",
+  "habilidades": [
+    "criterio-clasificacion",
+    "discreta-vs-continua"
+  ],
+  "enunciado": "Martín afirma que el talle de calzado argentino (36, 37, 38, 39) es cualitativo porque refiere a una característica del cuerpo. Sofía sostiene que en la guía escolar se clasifica como cuantitativa discreta porque el sistema de talles está graduado en pasos numéricos separados (e incluso si hubiera medios talles como 37,5 seguirían siendo saltos fijos). Analizá el debate y comparalo con medir el pie en centímetros.",
+  "partes": [
+    {
+      "id": "modelo_escolar",
+      "tipo": "select",
+      "esperado": "discreta-escala",
+      "label": "1. ¿Cómo se clasifica el talle numérico de calzado (36, 37, 38, 39) en el criterio de nuestra guía escolar y por qué?",
+      "opciones": [
+        {
+          "valor": "discreta-escala",
+          "etiqueta": "Cuantitativa discreta, porque la escala de talles avanza en valores numéricos separados (pasos graduados de la horma)"
+        },
+        {
+          "valor": "nominal",
+          "etiqueta": "Cualitativa nominal, porque los talles 36, 37, 38 no tienen ningún orden de tamaño"
+        },
+        {
+          "valor": "continua",
+          "etiqueta": "Cuantitativa continua, porque se fabrican infinitos talles intermedios como 36,142"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "discreta-escala": "¡Muy bien! En la guía escolar se modela como cuantitativa discreta porque toma valores separados de una escala graduada.",
+          "nominal": "Los talles sí tienen orden de tamaño y provienen de una escala graduada.",
+          "continua": "El calzado comercial se fabrica en puntos separados (enteros o medios puntos), no en cualquier decimal continuo."
+        }
+      }
+    },
+    {
+      "id": "contraste_pie",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "2. En cambio, si medimos con una regla la longitud exacta del pie en centímetros (por ejemplo, 23,8 cm; 24,15 cm), ¿qué tipo de variable es?",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (la longitud física admite cualquier valor intermedio en el intervalo)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (porque se mide con regla)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (porque ordena pies cortos y largos)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cuantitativa-continua": "¡Exacto! La longitud del pie en centímetros es una magnitud continua, mientras que el talle comercial la agrupa en pasos discretos.",
+          "cuantitativa-discreta": "La longitud en centímetros no da saltos fijos: es una magnitud física continua.",
+          "cualitativa-ordinal": "Medir en centímetros arroja una cantidad numérica continua."
+        }
+      }
+    },
+    {
+      "id": "cuidado_concepto",
+      "tipo": "select",
+      "esperado": "no-solo-enteros",
+      "label": "3. ¿Cuál de estas advertencias es verdadera al justificar tu respuesta en un examen?",
+      "opciones": [
+        {
+          "valor": "no-solo-enteros",
+          "etiqueta": "Que esté escrito con números no basta por sí solo: hay que fijarse si representa una escala cuantitativa de valores separados y no confundir «talle 38» con «tener 38 zapatos»"
+        },
+        {
+          "valor": "todo-numero-es-discreto",
+          "etiqueta": "Cualquier dato que tenga números enteros es siempre un conteo discreto"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Distinguí entre la longitud real del pie (medida en cm con valores continuos) y la escala comercial de talles (36, 37, 38, 39).",
+    "En el solucionario de la guía escolar se adopta la postura de Sofía (cuantitativa discreta) porque los talles avanzan en valores aislados.",
+    "Aun así, recordá que «talle 38» es un punto de una escala graduada, no un conteo de 38 objetos.",
+    "No escribir como regla universal «si tiene números enteros siempre es un conteo»: diferenciar conteo, escala graduada y longitud continua."
+  ],
+  "solucion": [
+    "En el criterio de la guía escolar, Sofía tiene razón al clasificar el talle numérico (36, 37, 38, 39) como Cuantitativa Discreta, porque toma valores aislados de una escala numérica graduada.",
+    "Precisión importante: no es un conteo de objetos y, según el fabricante o país, algunos autores también lo tratan como escala ordinal si solo interesa el orden de tamaño. En cambio, la longitud del pie medida en centímetros (por ejemplo, 24,3 cm) es inequívocamente Cuantitativa Continua."
+  ],
+  "etiquetas": [
+    "Guía 1.6 (adaptado)",
+    "variables"
+  ],
+  "leccion": "L02",
+  "adaptacion": "Se explicita el criterio escolar que modela la escala graduada de talles como discreta, aclarando que ver números no alcanza, que no es un conteo de zapatos y contrastándola con la longitud continua del pie en centímetros.",
+  "variante": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "N3-07",
+  "titulo": "Identificar la barra mal dibujada comparando tabla y gráfico",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "detectar-errores-graficos",
+    "lectura-barras"
+  ],
+  "enunciado": "La tabla de una encuesta indica: Frutilla = 14, Chocolate = 18, Dulce de leche = 16, Vainilla = 8 (escala 1 cuadrito = 2 votos). Al revisar el dibujo de un compañero, ves que las alturas en cuadritos que trazó son: Frutilla = 7 cuadritos, Chocolate = 9 cuadritos, Dulce de leche = 6 cuadritos, Vainilla = 4 cuadritos. ¿Qué barra está mal trazada y qué altura debería tener?",
+  "partes": [
+    {
+      "id": "barra_erronea",
+      "tipo": "select",
+      "esperado": "ddl",
+      "label": "1. ¿Cuál de las cuatro barras no coincide con la tabla?",
+      "opciones": [
+        {
+          "valor": "ddl",
+          "etiqueta": "Dulce de leche (dibujó 6 cuadritos, que representan 12 votos en lugar de 16)"
+        },
+        {
+          "valor": "frutilla",
+          "etiqueta": "Frutilla (7 cuadritos × 2 = 14 votos)"
+        },
+        {
+          "valor": "chocolate",
+          "etiqueta": "Chocolate (9 cuadritos × 2 = 18 votos)"
+        },
+        {
+          "valor": "vainilla",
+          "etiqueta": "Vainilla (4 cuadritos × 2 = 8 votos)"
+        }
+      ]
+    },
+    {
+      "id": "altura_ddl_correcta",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "2. ¿Cuántos cuadritos de altura debe medir la barra de «Dulce de leche» (16 votos) con escala de 2 votos por cuadrito?"
+    }
+  ],
+  "pistas": [
+    "Multiplicá los cuadritos dibujados por 2 votos/cuadrito para ver qué valor representa cada barra.",
+    "Frutilla: 7×2 = 14 (bien); Chocolate: 9×2 = 18 (bien); Dulce de leche: 6×2 = 12 (¡pero la tabla dice 16!).",
+    "Para representar 16 votos con 2 votos por cuadrito se necesitan 16 ÷ 2 = 8 cuadritos.",
+    "Al terminar un gráfico, revisá barra por barra que su altura coincida con la fila correspondiente de la tabla."
+  ],
+  "solucion": [
+    "Con escala 1 cuadrito = 2 votos: Frutilla = 14÷2 = 7 cuadritos; Chocolate = 18÷2 = 9 cuadritos; Vainilla = 8÷2 = 4 cuadritos.",
+    "La barra de Dulce de leche fue dibujada de 6 cuadritos (12 votos), pero su frecuencia es 16 → debe medir 16 ÷ 2 = 8 cuadritos."
+  ],
+  "etiquetas": [
+    "Práctica N3-07",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

@@ -1,0 +1,90 @@
+{
+  "id": "N3-01",
+  "titulo": "Lectura directa de frecuencias desde un gráfico de barras",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "lectura-barras"
+  ],
+  "enunciado": "En el gráfico de barras de las fichas («Libros leídos por 10 estudiantes»), las alturas de las barras para 0, 1, 2, 3 y 4 libros son: barra de 0 = 2; barra de 1 = 4; barra de 2 = 2; barra de 3 = 1; barra de 4 = 1. Respondé leyendo los valores del gráfico.",
+  "partes": [
+    {
+      "id": "max_frec",
+      "tipo": "numero",
+      "esperado": 4,
+      "label": "1. ¿Cuántos estudiantes alcanzan la barra más alta (la de 1 libro)?",
+      "entero": true
+    },
+    {
+      "id": "total_lectura",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "2. Sumando la altura de todas las barras, ¿cuántos estudiantes fueron consultados en total?",
+      "entero": true
+    },
+    {
+      "id": "valor_moda",
+      "tipo": "numero",
+      "esperado": 1,
+      "label": "3. Mirando qué barra es la más alta, ¿cuál es la moda (Mo) de libros leídos?",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 4,
+            "message": "4 es la altura de la barra (4 estudiantes), pero el valor de la variable en el eje horizontal para esa barra es 1 libro."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "La altura en el eje Y indica cuántos estudiantes tienen ese valor.",
+    "Sumá las cinco alturas: 2 + 4 + 2 + 1 + 1.",
+    "La barra más alta está sobre el valor «1 libro» en el eje X.",
+    "En un gráfico de frecuencias, la moda se lee en la base de la barra más alta (eje X), mientras que la altura (eje Y) es su frecuencia."
+  ],
+  "solucion": [
+    "La barra más alta llega a 4 estudiantes (sobre el valor 1 libro).",
+    "Suma de las alturas: 2 + 4 + 2 + 1 + 1 = 10 estudiantes en total.",
+    "La moda es el valor en el eje X cuya barra es más alta: Mo = 1 libro."
+  ],
+  "etiquetas": [
+    "Práctica N3-01",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false,
+  "datos": {
+    "grafico": {
+      "title": "Libros leídos por 10 estudiantes",
+      "xAxisLabel": "Cantidad de libros",
+      "yAxisLabel": "Cantidad de estudiantes",
+      "yStep": 1,
+      "yMax": 4,
+      "bars": [
+        {
+          "label": "0",
+          "value": 2
+        },
+        {
+          "label": "1",
+          "value": 4
+        },
+        {
+          "label": "2",
+          "value": 2
+        },
+        {
+          "label": "3",
+          "value": 1
+        },
+        {
+          "label": "4",
+          "value": 1
+        }
+      ]
+    }
+  }
+}

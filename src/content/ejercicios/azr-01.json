@@ -1,0 +1,28 @@
+{
+  "id": "AZR-01",
+  "titulo": "Experimento aleatorio o determinístico",
+  "origen": "nuevo",
+  "modulo": "M6",
+  "nivel": "inicial",
+  "habilidades": ["azar", "clasificar-experimento"],
+  "enunciado": "Tirar un dado y observar qué número sale, ¿es un experimento aleatorio o determinístico?",
+  "partes": [
+    {
+      "id": "tipo",
+      "tipo": "select",
+      "esperado": "aleatorio",
+      "opciones": [
+        { "valor": "aleatorio", "etiqueta": "Aleatorio: el resultado depende del azar y no se puede predecir con certeza." },
+        { "valor": "deterministico", "etiqueta": "Determinístico: siempre sale el mismo número." }
+      ]
+    }
+  ],
+  "pistas": [
+    "Un experimento determinístico tiene un resultado seguro.",
+    "En un dado hay seis resultados posibles y ninguno es seguro de antemano."
+  ],
+  "solucion": [
+    "Es aleatorio: no se puede saber con certeza qué número va a salir, aunque sí se conocen los seis resultados posibles."
+  ],
+  "etiquetas": ["azar", "nuevo"]
+}

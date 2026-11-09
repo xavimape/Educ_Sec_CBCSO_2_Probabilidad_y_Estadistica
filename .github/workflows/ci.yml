@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run validate:content
+      # Se compila en subruta y en raíz para detectar enlaces fuera de base.
+      - run: npm run build
+        env:
+          BASE_PATH: /Educ_Sec_CBCSO_2_Probabilidad_y_Estadistica/
+      - run: npm run build
+        env:
+          BASE_PATH: /

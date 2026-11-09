@@ -1,0 +1,61 @@
+{
+  "id": "N2-09",
+  "titulo": "Encontrar el error en una tabla de frecuencias mal construida",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "desafio",
+  "habilidades": [
+    "detectar-errores-tabla",
+    "frecuencia-absoluta"
+  ],
+  "enunciado": "Un estudiante debía organizar los datos de n = 20 compañeros (valores 0, 1, 2, 3 y 4 con frecuencias 3, 8, 6, 2 y 1), pero en su hoja copió solo las filas de 0, 1 y 2 libros (frecuencias 3, 8 y 6), puso «Total = 17» y dividió todo por 17 diciendo que daba 100 %. Identificá el error y corregilo.",
+  "partes": [
+    {
+      "id": "error_detectado",
+      "tipo": "select",
+      "esperado": "omitio_filas",
+      "label": "1. ¿Cuál fue el error principal al armar esa tabla?",
+      "opciones": [
+        {
+          "valor": "omitio_filas",
+          "etiqueta": "Omitió las filas de 3 libros (f=2) y 4 libros (f=1), dejando afuera a 3 de los 20 estudiantes encuestados y alterando todos los porcentajes"
+        },
+        {
+          "valor": "ningun_error",
+          "etiqueta": "Ninguno, porque 3 + 8 + 6 da 17"
+        }
+      ]
+    },
+    {
+      "id": "pct_correcto_1",
+      "tipo": "numero",
+      "esperado": 40,
+      "label": "2. Con el total real de n = 20 estudiantes, ¿cuál es el porcentaje verdadero de la fila «1 libro» (f = 8)?",
+      "unidad": "%"
+    },
+    {
+      "id": "suma_faltante",
+      "tipo": "numero",
+      "esperado": 15,
+      "label": "3. ¿Qué porcentaje del curso representan en conjunto las dos filas que se había olvidado de incluir (f = 2 y f = 1 sobre n = 20)?",
+      "unidad": "%"
+    }
+  ],
+  "pistas": [
+    "Si el enunciado informa que se encuestó a 20 estudiantes, la suma de las frecuencias absolutas tiene que dar 20, no 17.",
+    "Al omitir 3 datos (las filas de 3 y 4 libros), cambió el denominador de todas las frecuencias relativas.",
+    "Con n = 20, 8 ÷ 20 = 0,40 (40 %) y los 3 alumnos omitidos representan (3 ÷ 20) × 100 = 15 %.",
+    "Control obligatorio: antes de calcular fr y %, comprobá siempre que Σf coincida con la cantidad de datos del enunciado."
+  ],
+  "solucion": [
+    "El error fue omitir las filas de 3 libros (f = 2) y 4 libros (f = 1), reduciendo artificialmente el total de 20 a 17.",
+    "Sobre el total correcto n = 20, la fila de 1 libro (f = 8) representa (8 ÷ 20) × 100 = 40 %.",
+    "Las dos filas omitidas suman 2 + 1 = 3 estudiantes, que equivalen al (3 ÷ 20) × 100 = 15 % del curso."
+  ],
+  "etiquetas": [
+    "Práctica N2-09",
+    "frecuencias"
+  ],
+  "leccion": "L03",
+  "variante": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "AZR-02",
+  "titulo": "Espacio muestral de una moneda",
+  "origen": "nuevo",
+  "modulo": "M6",
+  "nivel": "inicial",
+  "habilidades": ["espacio-muestral", "enumerar"],
+  "enunciado": "¿Cuántos resultados posibles tiene el espacio muestral de tirar una moneda?",
+  "partes": [
+    { "id": "total", "tipo": "numero", "esperado": 2, "entero": true }
+  ],
+  "pistas": [
+    "El espacio muestral es la lista de todos los resultados posibles.",
+    "Una moneda tiene dos caras: cara y ceca."
+  ],
+  "solucion": [
+    "Espacio muestral: {cara, ceca}.",
+    "Hay 2 resultados posibles."
+  ],
+  "etiquetas": ["azar", "espacio-muestral", "nuevo"]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "G4-06",
+  "titulo": "Quinta nota necesaria para alcanzar promedio 7",
+  "origen": "guia",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "media",
+    "valor-faltante"
+  ],
+  "enunciado": "Un estudiante obtuvo las siguientes notas en cuatro trabajos prácticos de matemática: 6, 7, 8 y 5. ¿Qué nota necesita obtener en el quinto trabajo práctico para lograr un promedio final exacto de 7,00 entre los 5 trabajos?",
+  "partes": [
+    {
+      "id": "suma_actual",
+      "tipo": "numero",
+      "esperado": 26,
+      "label": "1. ¿Cuánto suman las 4 notas que ya tiene (6 + 7 + 8 + 5)?",
+      "entero": true
+    },
+    {
+      "id": "suma_necesaria",
+      "tipo": "numero",
+      "esperado": 35,
+      "label": "2. Para que 5 notas tengan promedio 7, ¿cuánto deben sumar en total las 5 notas (5 × 7)?",
+      "entero": true
+    },
+    {
+      "id": "nota_faltante",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "3. ¿Qué nota debe obtener en el quinto trabajo práctico (35 − 26)?",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 6.5,
+            "message": "6,5 es el promedio actual de las 4 notas (26 ÷ 4 = 6,5). Lo que buscamos es qué 5.ª nota hace que la suma llegue a 35."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Pensalo primero como reparto: si el promedio de 5 notas es 7, es como si hubiera sacado 7 en cada una de las 5 pruebas (total acumulado = 5 × 7 = 35 puntos).",
+    "Sumá los puntos que ya reunió en los 4 primeros trabajos: 6 + 7 + 8 + 5 = 26 puntos.",
+    "Restá: 35 − 26 para saber cuántos puntos le faltan en el quinto trabajo.",
+    "Comprobar siempre reemplazando la nota hallada (9) en el promedio de las 5 notas."
+  ],
+  "solucion": [
+    "Razonamiento por total acumulado: para lograr promedio 7 en 5 trabajos, la suma de las 5 notas debe ser 5 × 7 = 35 puntos.",
+    "Suma de las 4 notas conocidas: 6 + 7 + 8 + 5 = 26 puntos.",
+    "Planteo algebraico: (6 + 7 + 8 + 5 + x) ÷ 5 = 7 → (26 + x) ÷ 5 = 7 → 26 + x = 35 → x = 35 − 26 = 9.",
+    "Comprobación: (6 + 7 + 8 + 5 + 9) ÷ 5 = 35 ÷ 5 = 7,00."
+  ],
+  "etiquetas": [
+    "Guía 4.6",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      6,
+      7,
+      8,
+      5
+    ]
+  }
+}

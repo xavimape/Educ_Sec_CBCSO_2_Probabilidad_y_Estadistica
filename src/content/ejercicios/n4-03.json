@@ -1,0 +1,68 @@
+{
+  "id": "N4-03",
+  "titulo": "Mediana con cantidad impar de datos desordenados (n = 7)",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "mediana-impar",
+    "ordenar-datos"
+  ],
+  "enunciado": "Las notas de 7 estudiantes se anotaron en este orden a medida que entregaban:\n9, 5, 10, 6, 8, 6, 7.\nOrdenalas de menor a mayor y hallá la posición central y el valor de la mediana (Me).",
+  "partes": [
+    {
+      "id": "posicion",
+      "tipo": "numero",
+      "esperado": 4,
+      "label": "1. ¿Qué número de posición ocupa el dato central cuando n = 7 ((7 + 1) ÷ 2)?",
+      "entero": true
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 7,
+      "label": "2. Una vez ordenados (5, 6, 6, 7, 8, 9, 10), ¿cuál es el valor de la mediana (Me)?",
+      "unidad": "puntos",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 6,
+            "message": "6 era el 4.º número de la lista desordenada (9, 5, 10, 6...), pero primero hay que ordenar de menor a mayor: 5, 6, 6, [7], 8, 9, 10."
+          },
+          {
+            "value": 4,
+            "message": "4 es la posición central, pero la nota ubicada en el 4.º lugar ordenado es 7."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "No busques el centro sin ordenar antes la lista.",
+    "Ordená los 7 datos de menor a mayor, incluyendo el 6 repetido: 5, 6, 6, 7, 8, 9, 10.",
+    "El 4.º dato de esa lista ordenada es la mediana.",
+    "Si tomás el centro sin ordenar (que era 6), obtenés un resultado incorrecto."
+  ],
+  "solucion": [
+    "Paso 1 (ordenar): 5, 6, 6, 7, 8, 9, 10.",
+    "Paso 2 (posición central para n = 7 impar): (7 + 1) ÷ 2 = 4 (cuarto lugar).",
+    "Paso 3 (valor): el 4.º dato ordenado es Me = 7 puntos."
+  ],
+  "etiquetas": [
+    "Práctica N4-03",
+    "medidas"
+  ],
+  "leccion": "L08",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      9,
+      5,
+      10,
+      6,
+      8,
+      6,
+      7
+    ]
+  }
+}

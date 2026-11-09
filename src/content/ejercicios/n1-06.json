@@ -1,0 +1,65 @@
+{
+  "id": "N1-06",
+  "titulo": "Orden correcto de categorías ordinales en una encuesta",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cualitativa-ordinal",
+    "orden-jerarquico"
+  ],
+  "enunciado": "Se consultó con qué frecuencia los estudiantes leen noticias científicas: «Nunca, Rara vez, A veces, Frecuentemente, Siempre». Identificá el tipo de variable y su orden lógico.",
+  "partes": [
+    {
+      "id": "tipo",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "1. Tipo de variable",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "orden",
+      "tipo": "select",
+      "esperado": "creciente",
+      "label": "2. ¿En qué orden deben disponerse las filas de la tabla para poder leer la columna acumulada (F)?",
+      "opciones": [
+        {
+          "valor": "creciente",
+          "etiqueta": "Nunca → Rara vez → A veces → Frecuentemente → Siempre (o exactamente al revés)"
+        },
+        {
+          "valor": "alfabetico",
+          "etiqueta": "A veces → Frecuentemente → Nunca → Rara vez → Siempre (orden alfabético)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Las opciones son palabras que indican menor o mayor asiduidad.",
+    "Para que la acumulación tenga sentido, las filas deben seguir esa escala gradual.",
+    "Si desordenás una variable ordinal en la tabla, la frecuencia acumulada pierde significado."
+  ],
+  "solucion": [
+    "Es una variable Cualitativa Ordinal porque sus categorías siguen una progresión de intensidad.",
+    "Deben ordenarse según esa escala: Nunca → Rara vez → A veces → Frecuentemente → Siempre."
+  ],
+  "etiquetas": [
+    "Práctica N1-06",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

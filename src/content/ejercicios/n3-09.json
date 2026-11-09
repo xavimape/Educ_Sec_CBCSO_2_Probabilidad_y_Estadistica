@@ -1,0 +1,50 @@
+{
+  "id": "N3-09",
+  "titulo": "Hallar la escala desconocida de un gráfico a partir de una barra",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "proporcionalidad-barras",
+    "lectura-barras"
+  ],
+  "enunciado": "En un gráfico de barras se borró la numeración del eje Y, pero sabemos por el texto que la barra de «Teatro» representa 18 estudiantes y tiene 6 cuadritos de altura. En ese mismo gráfico, la barra de «Coro» mide 4 cuadritos y la de «Orquesta» mide 5,5 cuadritos. Descubrí la escala y cuántos estudiantes hay en Coro y en Orquesta.",
+  "partes": [
+    {
+      "id": "escala",
+      "tipo": "numero",
+      "esperado": 3,
+      "label": "1. ¿Cuántos estudiantes representa cada cuadrito del eje Y (18 ÷ 6)?"
+    },
+    {
+      "id": "coro",
+      "tipo": "numero",
+      "esperado": 12,
+      "label": "2. ¿Cuántos estudiantes hay en «Coro» (4 cuadritos)?",
+      "entero": true
+    },
+    {
+      "id": "orquesta",
+      "tipo": "numero",
+      "esperado": 21,
+      "label": "3. Si hubiera otra barra de 7 cuadritos, ¿cuántos estudiantes representaría?",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Como la escala es uniforme, si 6 cuadritos equivalen a 18 estudiantes, 1 cuadrito equivale a 18 ÷ 6 = 3 estudiantes.",
+    "Multiplicá la altura en cuadritos de cada barra por 3 estudiantes/cuadrito.",
+    "La proporcionalidad directa entre altura y frecuencia permite deducir cualquier barra conociendo una sola referencia."
+  ],
+  "solucion": [
+    "Escala del eje Y: 18 estudiantes ÷ 6 cuadritos = 3 estudiantes por cuadrito.",
+    "Coro (4 cuadritos): 4 × 3 = 12 estudiantes.",
+    "Barra de 7 cuadritos: 7 × 3 = 21 estudiantes."
+  ],
+  "etiquetas": [
+    "Práctica N3-09",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

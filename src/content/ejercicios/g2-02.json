@@ -1,0 +1,89 @@
+{
+  "id": "G2-02",
+  "titulo": "Frecuencia relativa y porcentual de la nota 8",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "inicial",
+  "habilidades": [
+    "frecuencia-absoluta",
+    "frecuencia-relativa",
+    "porcentaje"
+  ],
+  "enunciado": "En una prueba corta de matemática realizada a n = 25 estudiantes, las notas obtenidas sobre 10 puntos fueron:\n6, 7, 8, 6, 9, 10, 7, 8, 8, 7, 6, 9, 8, 7, 10, 8, 9, 7, 6, 8, 7, 9, 8, 10, 7.\nCalculá cuántas veces aparece la nota 8, su frecuencia relativa (fr) y su frecuencia porcentual (%).",
+  "partes": [
+    {
+      "id": "f8",
+      "tipo": "numero",
+      "esperado": 7,
+      "label": "1. Frecuencia absoluta (f) de la nota 8 (cantidad de estudiantes que sacaron 8)",
+      "entero": true
+    },
+    {
+      "id": "fr8",
+      "tipo": "numero",
+      "esperado": {
+        "numerador": 7,
+        "denominador": 25
+      },
+      "label": "2. Frecuencia relativa (fr) de la nota 8",
+      "redondeo": 2,
+      "detalle": {
+        "subkind": "fr"
+      }
+    },
+    {
+      "id": "pct8",
+      "tipo": "numero",
+      "esperado": 28,
+      "label": "3. Frecuencia porcentual (%) de la nota 8",
+      "unidad": "%",
+      "redondeo": 2
+    }
+  ],
+  "pistas": [
+    "Recorré la lista de 25 notas contando únicamente cuántas veces aparece el número 8.",
+    "El 8 aparece 7 veces. Para hallar la frecuencia relativa (fr), dividí 7 entre el total de estudiantes (25).",
+    "Multiplicá el resultado de 7 ÷ 25 por 100 para obtener el porcentaje.",
+    "No dividir entre la nota máxima (10 puntos) sino entre la cantidad total de estudiantes (n = 25)."
+  ],
+  "solucion": [
+    "Contamos las apariciones de la nota 8 en los 25 datos: f = 7 estudiantes.",
+    "Frecuencia relativa: fr = 7 ÷ 25 = 0,28.",
+    "Frecuencia porcentual: % = 0,28 × 100 = 28 % (el 28 % del curso obtuvo un 8)."
+  ],
+  "etiquetas": [
+    "Guía 2.2",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      6,
+      7,
+      8,
+      6,
+      9,
+      10,
+      7,
+      8,
+      8,
+      7,
+      6,
+      9,
+      8,
+      7,
+      10,
+      8,
+      9,
+      7,
+      6,
+      8,
+      7,
+      9,
+      8,
+      10,
+      7
+    ]
+  }
+}

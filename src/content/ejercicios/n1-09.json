@@ -1,0 +1,65 @@
+{
+  "id": "N1-09",
+  "titulo": "Códigos numéricos de respuesta (1 = Sí, 2 = No, 3 = No sabe)",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "desafio",
+  "habilidades": [
+    "codigos-numericos",
+    "cualitativa-nominal"
+  ],
+  "enunciado": "Para cargar rápido una encuesta en una planilla, se codificó la respuesta a «¿Tenés bicicleta propia?» usando: 1 = Sí, 2 = No, 3 = No responde. Analizá si esa codificación convierte a la variable en cuantitativa.",
+  "partes": [
+    {
+      "id": "naturaleza",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "1. ¿Qué tipo de variable sigue siendo «tenencia de bicicleta» aunque se cargue con los códigos 1, 2 y 3?",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (los números 1, 2 y 3 son etiquetas que reemplazan a palabras sin orden)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (porque en la planilla hay números 1, 2 y 3)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "operacion_valida",
+      "tipo": "select",
+      "esperado": "contar_frecuencias",
+      "label": "2. ¿Qué cálculo sí es válido hacer con la columna de códigos 1, 2 y 3?",
+      "opciones": [
+        {
+          "valor": "contar_frecuencias",
+          "etiqueta": "Contar cuántos 1, cuántos 2 y cuántos 3 hay (frecuencias y porcentajes de cada categoría) y hallar la moda"
+        },
+        {
+          "valor": "promediar_codigos",
+          "etiqueta": "Sumar todos los 1, 2 y 3 y dividir por n para obtener una media de 1,65"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Si hubiéramos puesto 9 = Sí y 0 = No, el significado de la respuesta sería el mismo.",
+    "Por lo tanto, el 1, 2 y 3 son simples abreviaturas de categorías nominales.",
+    "Codificar categorías con números en una planilla no autoriza a calcularles media ni mediana."
+  ],
+  "solucion": [
+    "La variable es Cualitativa Nominal porque las respuestas reales («Sí», «No», «No responde») son categorías sin orden.",
+    "Con esos códigos solo corresponde contar frecuencias absolutas, relativas, porcentajes y determinar la moda; promediar los códigos carece de sentido."
+  ],
+  "etiquetas": [
+    "Práctica N1-09",
+    "variables"
+  ],
+  "leccion": "L01",
+  "variante": false
+}

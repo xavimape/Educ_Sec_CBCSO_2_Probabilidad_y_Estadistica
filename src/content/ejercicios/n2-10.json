@@ -1,0 +1,61 @@
+{
+  "id": "N2-10",
+  "titulo": "Completar una tabla con pistas cruzadas de f, fr y F (n = 40)",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "desafio",
+  "habilidades": [
+    "frecuencia-faltante",
+    "frecuencia-relativa",
+    "frecuencia-acumulada"
+  ],
+  "enunciado": "En un estudio de n = 40 observaciones con valores 0, 1, 2 y 3 se sabe que:\n• Fila 0: su frecuencia relativa es fr₁ = 0,15.\n• Fila 1: la frecuencia acumulada hasta 1 es F₂ = 22.\n• Fila 2: su porcentaje es 30 %.\n• Fila 3: completa los 40 datos.\nHallá las cuatro frecuencias absolutas f₁, f₂, f₃ y f₄.",
+  "partes": [
+    {
+      "id": "f1",
+      "tipo": "numero",
+      "esperado": 6,
+      "label": "1. Frecuencia absoluta f₁ (0,15 × 40)",
+      "entero": true
+    },
+    {
+      "id": "f2",
+      "tipo": "numero",
+      "esperado": 16,
+      "label": "2. Frecuencia absoluta f₂ (sabiendo que F₂ = f₁ + f₂ = 22)",
+      "entero": true
+    },
+    {
+      "id": "f3",
+      "tipo": "numero",
+      "esperado": 12,
+      "label": "3. Frecuencia absoluta f₃ (el 30 % de 40)",
+      "entero": true
+    },
+    {
+      "id": "f4",
+      "tipo": "numero",
+      "esperado": 6,
+      "label": "4. Frecuencia absoluta f₄ (para completar n = 40)",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Para la fila 0: f₁ = fr₁ × n = 0,15 × 40 = 6.",
+    "Para la fila 1: como F₂ = f₁ + f₂ = 22 y f₁ = 6, entonces f₂ = 22 − 6 = 16.",
+    "Para la fila 2: el 30 % de 40 es 0,30 × 40 = 12. Luego restá 40 − (6 + 16 + 12) para obtener f₄.",
+    "Todas las columnas de la tabla están conectadas: podés ir de fr a f multiplicando por n, y de F a f restando."
+  ],
+  "solucion": [
+    "f₁ = 0,15 × 40 = 6.",
+    "f₂ = F₂ − f₁ = 22 − 6 = 16.",
+    "f₃ = 0,30 × 40 = 12.",
+    "f₄ = 40 − (6 + 16 + 12) = 40 − 34 = 6."
+  ],
+  "etiquetas": [
+    "Práctica N2-10",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "variante": false
+}

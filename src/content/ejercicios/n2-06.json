@@ -1,0 +1,72 @@
+{
+  "id": "N2-06",
+  "titulo": "Diferencia entre «más de 1» y «al menos 1»",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-acumulada",
+    "interpretacion"
+  ],
+  "enunciado": "En un curso de n = 25 estudiantes se consultó cuántos deportes practican por semana: 0 deportes (f = 5), 1 deporte (f = 11), 2 deportes (f = 6), 3 deportes (f = 3). Calculá cuántos practican «al menos 1 deporte» y cuántos practican «más de 1 deporte».",
+  "partes": [
+    {
+      "id": "al_menos_1",
+      "tipo": "numero",
+      "esperado": 20,
+      "label": "1. Estudiantes que practican «al menos 1 deporte» (1 o más deportes)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 11,
+            "message": "11 practican exactamente 1 deporte. «Al menos 1» significa 1, 2 o 3 deportes: 11 + 6 + 3 = 20."
+          },
+          {
+            "value": 9,
+            "message": "9 son quienes practican más de 1 deporte (2 o 3). «Al menos 1» incluye también a los 11 que practican 1 deporte."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mas_de_1",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "2. Estudiantes que practican «más de 1 deporte» (2 o 3 deportes)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 20,
+            "message": "20 incluye a quienes practican 1 deporte. «Más de 1» exige estrictamente más que 1 (es decir, 2 o 3 deportes: 6 + 3 = 9)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pct_al_menos_1",
+      "tipo": "numero",
+      "esperado": 80,
+      "label": "3. ¿Qué porcentaje del curso practica al menos 1 deporte (%)?",
+      "unidad": "%"
+    }
+  ],
+  "pistas": [
+    "«Al menos 1» significa «como mínimo 1» (1, 2 o 3 deportes). También podés restar al total (25) los 5 que practican 0 deportes.",
+    "«Más de 1» significa estrictamente mayor que 1 (solo 2 o 3 deportes).",
+    "Para el porcentaje de 20 sobre 25: (20 ÷ 25) × 100.",
+    "«Al menos k» incluye al valor k (≥ k); «más de k» no incluye al valor k (> k)."
+  ],
+  "solucion": [
+    "Al menos 1 deporte (1, 2 o 3): 11 + 6 + 3 = 20 estudiantes (o 25 − 5 = 20).",
+    "Más de 1 deporte (2 o 3): 6 + 3 = 9 estudiantes.",
+    "Porcentaje con al menos 1 deporte: (20 ÷ 25) × 100 = 80 %."
+  ],
+  "etiquetas": [
+    "Práctica N2-06",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "variante": false
+}

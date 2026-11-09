@@ -1,0 +1,22 @@
+{
+  "id": "PRB-01",
+  "titulo": "Probabilidad de un número par",
+  "origen": "nuevo",
+  "modulo": "M7",
+  "nivel": "inicial",
+  "habilidades": ["probabilidad-clasica", "equiprobabilidad"],
+  "enunciado": "Al tirar un dado común (equilibrado), ¿cuál es la probabilidad de sacar un número par? Expresala como fracción.",
+  "partes": [
+    { "id": "probabilidad", "tipo": "probabilidad", "esperado": { "numerador": 1, "denominador": 2 }, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "Los pares son {2, 4, 6}: 3 casos favorables.",
+    "Casos posibles: 6. Probabilidad = favorables ÷ posibles = 3/6, que se simplifica a 1/2."
+  ],
+  "solucion": [
+    "Casos favorables (pares): 3 (2, 4, 6).",
+    "Casos posibles: 6.",
+    "P = 3/6 = 1/2 = 0,5."
+  ],
+  "etiquetas": ["probabilidad", "nuevo"]
+}

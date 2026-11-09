@@ -1,0 +1,127 @@
+{
+  "id": "G1-05",
+  "titulo": "Cuatro situaciones del ámbito escolar",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "clasificar-variable"
+  ],
+  "enunciado": "Determiná la clasificación exacta (cualitativa nominal, cualitativa ordinal, cuantitativa discreta o cuantitativa continua) para las siguientes cuatro situaciones:",
+  "partes": [
+    {
+      "id": "temp",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "1. Temperatura corporal tomada en grados Celsius (36,2 °C; 36,6 °C)",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ]
+    },
+    {
+      "id": "civil",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "2. Estado civil de los adultos consultados (Soltero, Casado, Divorciado, Viudo)",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ]
+    },
+    {
+      "id": "conducta",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "3. Calificación cualitativa de conducta (Excelente, Muy Buena, Buena, Regular)",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ]
+    },
+    {
+      "id": "hojas",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "4. Cantidad de hojas útiles que tiene la libreta de calificaciones",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "La temperatura es una magnitud física medible con termómetro; las hojas de una libreta se cuentan una por una.",
+    "Tanto el estado civil como la calificación verbal de conducta usan palabras (cualitativas).",
+    "Diferenciá cuál de las dos cualitativas tiene una jerarquía de nivel (Excelente > Muy Buena > Buena > Regular).",
+    "Distinguir siempre entre calificación verbal ordenada (cualitativa ordinal) y nota numérica en puntos (cuantitativa)."
+  ],
+  "solucion": [
+    "1) Temperatura corporal: Cuantitativa continua (magnitud física que admite valores intermedios en °C).",
+    "2) Estado civil: Cualitativa nominal (categorías sin orden jerárquico natural).",
+    "3) Calificación cualitativa de conducta: Cualitativa ordinal (sigue una jerarquía ordenada: Excelente > Muy Buena > Buena > Regular).",
+    "4) Hojas útiles de la libreta: Cuantitativa discreta (conteo en números enteros)."
+  ],
+  "etiquetas": [
+    "Guía 1.5",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

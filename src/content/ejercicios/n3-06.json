@@ -1,0 +1,57 @@
+{
+  "id": "N3-06",
+  "titulo": "Detectar un gráfico engañoso con el eje vertical cortado (sin empezar en 0)",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "detectar-errores-graficos"
+  ],
+  "enunciado": "Dos listas estudiantiles recibieron 52 votos (Lista Celeste) y 56 votos (Lista Blanca). Alguien dibujó un gráfico de barras haciendo que el eje vertical empiece en 50 en vez de 0: así, la barra de 52 sube 2 cuadritos y la de 56 sube 6 cuadritos (parece el triple de alta). Analizá por qué es engañoso.",
+  "partes": [
+    {
+      "id": "razon_real",
+      "tipo": "select",
+      "esperado": "rompe_proporcionalidad",
+      "label": "1. ¿Por qué es engañoso empezar el eje vertical de un gráfico de barras en 50 en lugar de 0?",
+      "opciones": [
+        {
+          "valor": "rompe_proporcionalidad",
+          "etiqueta": "Porque las alturas dejan de ser proporcionales a los datos reales: 56 no es el triple de 52 (apenas supera a 52 en 4 votos), pero al recortar la base parece tres veces mayor"
+        },
+        {
+          "valor": "es_correcto",
+          "etiqueta": "No tiene ningún problema, siempre conviene empezar el eje en 50"
+        }
+      ]
+    },
+    {
+      "id": "altura_correcta",
+      "tipo": "numero",
+      "esperado": 7,
+      "label": "2. Si el eje empieza correctamente en 0 con escala 1 cuadrito = 8 votos, ¿cuántos cuadritos mide la barra de 56 votos?"
+    },
+    {
+      "id": "altura_52",
+      "tipo": "numero",
+      "esperado": 6.5,
+      "label": "3. Y con esa misma escala desde 0 (1 cuadrito = 8 votos), ¿cuántos cuadritos mide la barra de 52 votos?"
+    }
+  ],
+  "pistas": [
+    "En un gráfico de barras la vista compara el largo completo de cada rectángulo desde la base.",
+    "Si la base no es 0, un rectángulo de 6 cuadritos parece el triple que uno de 2 cuadritos, aunque 56 y 52 sean casi iguales.",
+    "Desde 0 con 8 votos por cuadrito: 56 ÷ 8 = 7 cuadritos y 52 ÷ 8 = 6,5 cuadritos (se ve que son muy parecidos).",
+    "Regla fundamental: en todo gráfico de barras el eje de frecuencias o cantidades debe comenzar en 0."
+  ],
+  "solucion": [
+    "Un gráfico de barras debe tener su base en 0 para que la altura visual sea proporcional a la magnitud representada.",
+    "Con base en 0 y escala de 8 votos por cuadrito, 56 votos ocupa 7 cuadritos y 52 votos ocupa 6,5 cuadritos, reflejando fielmente la pequeña diferencia."
+  ],
+  "etiquetas": [
+    "Práctica N3-06",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

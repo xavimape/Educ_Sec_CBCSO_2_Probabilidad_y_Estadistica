@@ -1,0 +1,135 @@
+{
+  "id": "G4-05",
+  "titulo": "Respuestas correctas de 16 alumnos en una prueba corta",
+  "origen": "guia",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "media",
+    "mediana-par",
+    "moda",
+    "redondeo"
+  ],
+  "enunciado": "En una prueba corta de 10 preguntas, el número de respuestas correctas obtenido por n = 16 alumnos fue:\n5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10.\nDeterminá la suma total, la media (redondeada a 2 decimales), la mediana, la moda y si la serie es unimodal, bimodal o amodal.",
+  "partes": [
+    {
+      "id": "suma",
+      "tipo": "numero",
+      "esperado": 127,
+      "label": "1. Suma exacta de los 16 datos",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 128,
+            "message": "Revisá la suma con cuidado: 5 + (6×2) + (7×3) + (8×4) + (9×3) + (10×3) = 5 + 12 + 21 + 32 + 27 + 30 = 127 (no 128)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": {
+        "numerador": 127,
+        "denominador": 16
+      },
+      "label": "2. Media aritmética (x̄) redondeada a 2 decimales (o exacta 7,9375)",
+      "unidad": "aciertos",
+      "redondeo": 2,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 8,
+            "message": "La suma es 127 (no 128) y 127 ÷ 16 = 7,9375 ≈ 7,94. Escribí el valor con dos decimales (7,94) sin redondear a 8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "3. Mediana (Me) de los 16 datos (promedio de las posiciones 8 y 9)",
+      "unidad": "aciertos",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 8.5,
+            "message": "8,5 es la posición central ((16 + 1) ÷ 2 = 8,5). Mirá qué datos ocupan los lugares 8.º y 9.º: ambos valen 8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        8
+      ],
+      "label": "4. Moda (Mo) de la distribución",
+      "detalle": {
+        "maxFrequency": 4
+      }
+    },
+    {
+      "id": "tipo_moda",
+      "tipo": "select",
+      "esperado": "unimodal",
+      "label": "5. Según la cantidad de modas, ¿cómo se clasifica la serie?",
+      "opciones": [
+        {
+          "valor": "unimodal",
+          "etiqueta": "Unimodal (tiene una única moda: el valor 8 con frecuencia 4)"
+        },
+        {
+          "valor": "bimodal",
+          "etiqueta": "Bimodal (dos modas empatadas)"
+        },
+        {
+          "valor": "amodal",
+          "etiqueta": "Amodal (ningún valor se repite más que otros)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Podés sumar agrupando por frecuencias: 5×1 + 6×2 + 7×3 + 8×4 + 9×3 + 10×3 = 5 + 12 + 21 + 32 + 27 + 30 = 127.",
+    "Dividí 127 entre 16: da 7,9375, que redondeado a dos cifras decimales es ≈ 7,94.",
+    "En los 16 datos ordenados, tanto el 8.º como el 9.º dato son 8 (mediana = 8), y el 8 es el único valor que se repite 4 veces (moda = 8, unimodal).",
+    "Escribir siempre «≈ 7,94» al redondear 7,9375 a dos cifras decimales."
+  ],
+  "solucion": [
+    "Suma de las 16 observaciones: 5 + 12 + 21 + 32 + 27 + 30 = 127 aciertos.",
+    "Media aritmética: x̄ = 127 ÷ 16 = 7,9375 ≈ 7,94 aciertos.",
+    "Mediana (n = 16 par): posición = (16 + 1) ÷ 2 = 8,5. Los datos en las posiciones 8 y 9 son 8 y 8 → Me = (8 + 8) ÷ 2 = 8 aciertos.",
+    "Moda: la mayor frecuencia absoluta es f = 4, que corresponde únicamente al valor 8 → Mo = 8 aciertos (serie unimodal)."
+  ],
+  "etiquetas": [
+    "Guía 4.5 (verificado)",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "adaptacion": "Verifica la suma exacta 127 y expresa la media redondeada con el signo de aproximación: 127 ÷ 16 = 7,9375 ≈ 7,94.",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      5,
+      6,
+      6,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      8,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10
+    ]
+  }
+}

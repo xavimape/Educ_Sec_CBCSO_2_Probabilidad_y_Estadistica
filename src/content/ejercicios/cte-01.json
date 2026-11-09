@@ -1,0 +1,21 @@
+{
+  "id": "CTE-01",
+  "titulo": "Conteo de conjuntos de remera y pantalón",
+  "origen": "nuevo",
+  "modulo": "M7",
+  "nivel": "inicial",
+  "habilidades": ["conteo", "principio-multiplicativo"],
+  "enunciado": "Tenés 3 remeras (roja, azul, verde) y 2 pantalones (negro, blanco). ¿Cuántos conjuntos distintos de remera y pantalón podés armar?",
+  "partes": [
+    { "id": "conjuntos", "tipo": "numero", "esperado": 6, "entero": true }
+  ],
+  "pistas": [
+    "Por cada remera hay 2 pantalones posibles.",
+    "Multiplicá la cantidad de opciones de cada etapa: 3 × 2."
+  ],
+  "solucion": [
+    "Por cada una de las 3 remeras hay 2 pantalones.",
+    "Total: 3 × 2 = 6 conjuntos."
+  ],
+  "etiquetas": ["conteo", "nuevo"]
+}

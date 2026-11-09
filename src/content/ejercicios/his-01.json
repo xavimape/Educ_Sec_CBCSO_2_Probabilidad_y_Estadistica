@@ -1,0 +1,21 @@
+{
+  "id": "HIS-01",
+  "titulo": "Total de observaciones en un histograma",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": ["histograma", "frecuencia-absoluta"],
+  "enunciado": "Un histograma de tiempos de viaje tiene tres intervalos con estas frecuencias: 0–50 min → 4 estudiantes, 50–100 min → 7, 100–150 min → 3. ¿Cuántos estudiantes se registraron en total?",
+  "partes": [
+    { "id": "total", "tipo": "numero", "esperado": 14, "unidad": "estudiantes", "entero": true }
+  ],
+  "pistas": [
+    "El total es la suma de las frecuencias de todos los intervalos.",
+    "4 + 7 + 3 = 14."
+  ],
+  "solucion": [
+    "Sumá las frecuencias de los tres intervalos.",
+    "4 + 7 + 3 = 14 estudiantes."
+  ],
+  "etiquetas": ["histograma", "nuevo"]
+}

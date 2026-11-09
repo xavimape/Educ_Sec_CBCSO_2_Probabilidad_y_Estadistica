@@ -1,0 +1,22 @@
+{
+  "id": "COM-03",
+  "titulo": "Porcentaje del personaje más votado",
+  "origen": "nuevo",
+  "modulo": "M8",
+  "nivel": "intermedio",
+  "habilidades": ["lectura-de-datos", "porcentaje", "comunicar"],
+  "enunciado": "En una votación (datos ficticios), cinco personajes recibieron 184, 152, 111, 80 y 50 votos. ¿Qué porcentaje del total obtuvo el más votado? Redondeá a dos decimales.",
+  "partes": [
+    { "id": "porcentaje", "tipo": "numero", "esperado": 31.89, "redondeo": 2, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "Sumá todos los votos para hallar el total.",
+    "El total es 577 y el más votado tiene 184."
+  ],
+  "solucion": [
+    "Total: 184 + 152 + 111 + 80 + 50 = 577.",
+    "Más votado: 184 ÷ 577 ≈ 0,3189.",
+    "0,3189 × 100 ≈ 31,89 %."
+  ],
+  "etiquetas": ["comunicacion", "nuevo"]
+}

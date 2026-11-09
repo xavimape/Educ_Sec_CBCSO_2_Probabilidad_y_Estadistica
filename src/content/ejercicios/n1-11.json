@@ -1,0 +1,59 @@
+{
+  "id": "N1-11",
+  "titulo": "¿Cuándo un conjunto de datos discretos tiene promedio con coma?",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "desafio",
+  "habilidades": [
+    "cuantitativa-discreta",
+    "media-conceptual"
+  ],
+  "enunciado": "En el ejemplo de la guía de 20 estudiantes, la variable «cantidad de libros leídos» toma los valores 0, 1, 2, 3 y 4, y el promedio da 1,5 libros. Una compañera pregunta: «Si el promedio dio 1,5 con coma, ¿entonces la variable cantidad de libros leídos es continua?». Respondé y justificá.",
+  "partes": [
+    {
+      "id": "respuesta",
+      "tipo": "select",
+      "esperado": "discreta",
+      "label": "1. ¿Qué tipo de variable es «cantidad de libros completos leídos»?",
+      "opciones": [
+        {
+          "valor": "discreta",
+          "etiqueta": "Sigue siendo cuantitativa discreta: cada dato observado es un conteo entero (0, 1, 2, 3, 4); el 1,5 es un resumen (el promedio del grupo), no un dato individual obligatorio"
+        },
+        {
+          "valor": "continua",
+          "etiqueta": "Pasa a ser cuantitativa continua porque su promedio tiene coma"
+        }
+      ]
+    },
+    {
+      "id": "rúbrica",
+      "tipo": "rubrica",
+      "label": "2. Explicá con tus palabras la diferencia entre los valores que toma la variable y el valor del promedio",
+      "detalle": {
+        "placeholder": "Explicá qué valores puede responder cada estudiante y por qué el promedio puede tener decimales...",
+        "criteria": [
+          "Aclaré que cada estudiante respondió con un número entero de libros (0, 1, 2, 3 o 4), por lo que la variable es discreta.",
+          "Expliqué que 1,5 libros surge de dividir la suma (30) entre 20 estudiantes y representa un reparto promedio, no que alguien haya respondido 1,5."
+        ],
+        "modelAnswer": "La variable es cuantitativa discreta porque cada observación cuenta libros enteros (0, 1, 2, 3, 4). Que el promedio dé 1,5 libros es resultado de dividir el total (30) entre los 20 estudiantes, y no cambia la naturaleza discreta de los datos."
+      }
+    }
+  ],
+  "pistas": [
+    "Mirá qué valores respondió cada persona: 0, 1, 2, 3 o 4 libros.",
+    "Al dividir la suma de números enteros (30) entre 20 personas aparece el decimal 1,5.",
+    "La clasificación de la variable depende de los valores observados, no de si el promedio da con coma.",
+    "Casi todas las variables discretas (hermanos, hijos, goles, faltas) suelen tener promedios con decimales."
+  ],
+  "solucion": [
+    "La variable «cantidad de libros leídos» es Cuantitativa Discreta porque proviene de un conteo entero.",
+    "El promedio (1,5 libros) es una medida resumen que reparte los 30 libros entre 20 estudiantes; un promedio decimal no convierte en continua a una variable discreta."
+  ],
+  "etiquetas": [
+    "Práctica N1-11",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

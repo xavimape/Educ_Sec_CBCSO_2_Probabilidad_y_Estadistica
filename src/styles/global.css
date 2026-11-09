@@ -1,0 +1,38 @@
+:root {
+  --color-fondo: #f8f9fa;
+  --color-tinta: #111827;
+  --color-acento: #1d4ed8; /* azul-700: contraste > 4,5:1 sobre el fondo para texto normal (AA) */
+  --color-acento-secundario: #f59e0b;
+  --fuente: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --max-lectura: 68ch;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--fuente);
+  font-size: 112.5%; /* base cercana a 18px, en unidades relativas */
+  line-height: 1.6;
+  color: var(--color-tinta);
+  background: var(--color-fondo);
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: var(--max-lectura);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+a {
+  color: var(--color-acento);
+}
+
+h1 {
+  line-height: 1.2;
+}

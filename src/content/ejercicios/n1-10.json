@@ -1,0 +1,90 @@
+{
+  "id": "N1-10",
+  "titulo": "Dos formas de registrar el uso del celular en una misma encuesta",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "desafio",
+  "habilidades": [
+    "clasificar-variable",
+    "transferencia"
+  ],
+  "enunciado": "En un estudio sobre hábitos digitales (datos ficticios) se hacen tres preguntas distintas sobre el celular:\nA) ¿Para qué lo usás principalmente? (Estudiar, Juegos, Redes, Música).\nB) ¿Cuántas aplicaciones educativas tenés instaladas? (0, 1, 2, 3, 4...).\nC) ¿Cuánto tiempo total de pantalla marcó el contador hoy? (2,4 h; 3,15 h...).\nClasificá cada una.",
+  "partes": [
+    {
+      "id": "preg_a",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "Pregunta A: Uso principal del celular",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "preg_b",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "Pregunta B: Cantidad de aplicaciones educativas instaladas",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "preg_c",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "Pregunta C: Tiempo diario de pantalla en horas",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "«Celular» es el tema general, pero cada pregunta define una variable distinta.",
+    "El uso principal nombra actividades; las aplicaciones se cuentan de a una; el tiempo se mide de forma continua.",
+    "No clasificar por el objeto («el celular»), sino por la característica exacta que mide o pregunta cada ítem."
+  ],
+  "solucion": [
+    "A) Uso principal: Cualitativa nominal (categorías sin orden).",
+    "B) Cantidad de aplicaciones instaladas: Cuantitativa discreta (conteo entero).",
+    "C) Tiempo de pantalla: Cuantitativa continua (medición de tiempo)."
+  ],
+  "etiquetas": [
+    "Práctica N1-10",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

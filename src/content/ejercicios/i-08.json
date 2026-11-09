@@ -1,0 +1,72 @@
+{
+  "id": "I-08",
+  "titulo": "Integrador 8 (auditoría gráfica y de datos): Reconstruir el estudio correcto",
+  "origen": "integrador",
+  "modulo": "M8",
+  "nivel": "desafio",
+  "habilidades": [
+    "detectar-errores-graficos",
+    "frecuencia-faltante",
+    "porcentaje",
+    "media"
+  ],
+  "enunciado": "En un informe sobre la cantidad de libros prestados por la biblioteca a n = 20 socios (valores 1, 2, 3 y 4 libros), una mancha tapó la frecuencia de «2 libros». Se sabe que:\n• 1 libro: f₁ = 5 socios\n• 2 libros: f₂ = ? socios\n• 3 libros: f₃ = 4 socios\n• 4 libros: f₄ = 2 socios\nAdemás, quien hizo el gráfico dibujó la barra de «1 libro» de 5 cuadritos y la de «3 libros» de 4 cuadritos, pero puso el título del eje Y como «Libros» en vez de «Cantidad de socios». Hallá los valores correctos.",
+  "partes": [
+    {
+      "id": "f2_faltante",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "1. ¿Cuál es la frecuencia absoluta f₂ de «2 libros» para completar los n = 20 socios?",
+      "entero": true
+    },
+    {
+      "id": "pct_hasta_2",
+      "tipo": "numero",
+      "esperado": 70,
+      "label": "2. ¿Qué porcentaje de los 20 socios pidió prestados 2 libros o menos (F₂ = f₁ + f₂) (%)?",
+      "unidad": "%"
+    },
+    {
+      "id": "media_prestamos",
+      "tipo": "numero",
+      "esperado": 2.15,
+      "label": "3. ¿Cuál es la media aritmética (x̄) de libros prestados por socio (suma de productos ÷ 20)?",
+      "unidad": "libros",
+      "redondeo": 2
+    },
+    {
+      "id": "error_rotulo",
+      "tipo": "select",
+      "esperado": "x_libros_y_socios",
+      "label": "4. ¿Cómo deben rotularse correctamente los ejes del gráfico de barras?",
+      "opciones": [
+        {
+          "valor": "x_libros_y_socios",
+          "etiqueta": "Eje horizontal (X): Cantidad de libros prestados (1, 2, 3, 4) | Eje vertical (Y): Cantidad de socios (frecuencia)"
+        },
+        {
+          "valor": "x_socios_y_libros",
+          "etiqueta": "Eje horizontal (X): Cantidad de socios | Eje vertical (Y): Cantidad de libros"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Restá a 20 las frecuencias conocidas: 20 − (5 + 4 + 2) = 9 socios.",
+    "Hasta 2 libros inclusive: F₂ = 5 + 9 = 14 socios → (14 ÷ 20) × 100 = 70 %.",
+    "Suma de productos: 1×5 + 2×9 + 3×4 + 4×2 = 5 + 18 + 12 + 8 = 43 libros → dividí 43 entre 20.",
+    "En una distribución de frecuencias, el eje X lleva los valores de la variable y el eje Y lleva las frecuencias."
+  ],
+  "solucion": [
+    "1) Frecuencia faltante: f₂ = 20 − (5 + 4 + 2) = 9 socios.",
+    "2) Acumulada hasta 2 libros: F₂ = 5 + 9 = 14 socios → (14 ÷ 20) × 100 = 70 %.",
+    "3) Suma de productos: 1×5 + 2×9 + 3×4 + 4×2 = 43 → Media x̄ = 43 ÷ 20 = 2,15 libros por socio.",
+    "4) Eje X: «Cantidad de libros prestados»; Eje Y: «Cantidad de socios»."
+  ],
+  "etiquetas": [
+    "Integrador I-08",
+    "integrador"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

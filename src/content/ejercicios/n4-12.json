@@ -1,0 +1,83 @@
+{
+  "id": "N4-12",
+  "titulo": "Elegir la medida adecuada para tres preguntas distintas sobre un mismo negocio",
+  "origen": "nuevo",
+  "modulo": "M5",
+  "nivel": "desafio",
+  "habilidades": [
+    "eleccion-medida",
+    "pertinencia-medidas"
+  ],
+  "enunciado": "En una librería escolar se analizan tres consultas distintas. Asociá cada pregunta con la medida de tendencia central que mejor ayuda a responderla.",
+  "partes": [
+    {
+      "id": "q_stock",
+      "tipo": "select",
+      "esperado": "moda",
+      "label": "1. «¿Qué color de carpeta se vende más para encargar mayor cantidad al proveedor?»",
+      "opciones": [
+        {
+          "valor": "moda",
+          "etiqueta": "La moda (identifica la categoría o valor más frecuente)"
+        },
+        {
+          "valor": "media",
+          "etiqueta": "La media aritmética"
+        },
+        {
+          "valor": "mediana",
+          "etiqueta": "La mediana"
+        }
+      ]
+    },
+    {
+      "id": "q_reparto",
+      "tipo": "select",
+      "esperado": "media",
+      "label": "2. «Si juntamos la recaudación pareja de los 5 días hábiles, ¿cuánto ingresó por día en promedio?»",
+      "opciones": [
+        {
+          "valor": "media",
+          "etiqueta": "La media aritmética (reparte el total acumulado entre los 5 días)"
+        },
+        {
+          "valor": "moda",
+          "etiqueta": "La moda"
+        }
+      ]
+    },
+    {
+      "id": "q_extremo",
+      "tipo": "select",
+      "esperado": "mediana",
+      "label": "3. «De 9 compras del turno mañana, 8 fueron de entre $2.000 y $4.000 y una sola compra mayorista fue de $95.000. ¿Qué medida resume mejor el gasto típico de un cliente común?»",
+      "opciones": [
+        {
+          "valor": "mediana",
+          "etiqueta": "La mediana (porque no se distorsiona por la compra mayorista extrema de $95.000)"
+        },
+        {
+          "valor": "media",
+          "etiqueta": "La media (aunque dé más de $13.000 y ningún cliente común haya gastado eso)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Para saber «qué es lo que más sale» (y más aún si es color), buscás la moda.",
+    "Para repartir un total parejo entre los días, buscás la media.",
+    "Cuando hay un valor extremo ($95.000) que distorsiona el promedio, conviene la mediana.",
+    "La mejor medida depende siempre de la naturaleza de la variable, la presencia de extremos y la pregunta que queremos responder."
+  ],
+  "solucion": [
+    "1) Color más vendido → Moda (lo más frecuente).",
+    "2) Ingreso diario al repartir el total de 5 días parejos → Media.",
+    "3) Compra típica en presencia de un valor muy extremo ($95.000) → Mediana."
+  ],
+  "etiquetas": [
+    "Práctica N4-12",
+    "medidas"
+  ],
+  "leccion": "L10",
+  "variante": false
+}

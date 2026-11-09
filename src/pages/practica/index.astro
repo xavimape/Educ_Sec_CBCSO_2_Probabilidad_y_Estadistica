@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/practica.css';
+
+const ejercicios = (await getCollection('ejercicios')).sort((a, b) =>
+  a.data.modulo === b.data.modulo ? a.data.id.localeCompare(b.data.id) : a.data.modulo.localeCompare(b.data.modulo),
+);
+const modulos = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8'];
+---
+
+<Layout titulo="Práctica" descripcion="Banco de ejercicios de Estadística y Probabilidad.">
+  <main>
+    <h1>Práctica</h1>
+    <p>Elegí un ejercicio. Corregí, usá pistas y consultá la solución cuando lo necesites.</p>
+    {modulos.map((m) => {
+      const delModulo = ejercicios.filter((e) => e.data.modulo === m);
+      if (delModulo.length === 0) return null;
+      return (
+        <section class="grupo">
+          <h2>{m}</h2>
+          <ul>
+            {delModulo.map((e) => (
+              <li><a href={`./${e.id}/`}>{e.data.titulo}</a> <span class="nivel">({e.data.nivel})</span></li>
+            ))}
+          </ul>
+        </section>
+      );
+    })}
+    <p><a href="../">Volver al inicio</a>.</p>
+  </main>
+</Layout>

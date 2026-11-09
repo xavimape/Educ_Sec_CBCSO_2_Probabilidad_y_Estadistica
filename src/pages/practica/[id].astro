@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Ejercicio from '../../components/Ejercicio.tsx';
+import { getCollection } from 'astro:content';
+import '../../styles/practica.css';
+
+export async function getStaticPaths() {
+  const ejercicios = await getCollection('ejercicios');
+  return ejercicios.map((e) => ({ params: { id: e.id }, props: { ejercicio: e } }));
+}
+
+const { ejercicio } = Astro.props;
+const serializado = JSON.stringify(ejercicio.data);
+---
+
+<Layout titulo={ejercicio.data.titulo} descripcion="Ejercicio de práctica de Estadística y Probabilidad.">
+  <main>
+    <p><a href="../">← Volver a la lista de práctica</a></p>
+    <Ejercicio client:load ejercicio={serializado} />
+  </main>
+</Layout>

@@ -1,0 +1,104 @@
+{
+  "id": "G4-03",
+  "titulo": "Salarios en un comercio y efecto de un valor extremo",
+  "origen": "guia",
+  "modulo": "M5",
+  "nivel": "intermedio",
+  "habilidades": [
+    "media",
+    "mediana-impar",
+    "eleccion-medida",
+    "valores-extremos"
+  ],
+  "enunciado": "En un comercio (datos ficticios del ejercicio), 4 empleados cobran un salario mensual de $300.000 cada uno y el gerente cobra $2.800.000 (total n = 5 personas).\n1) Calculá la media y la mediana de los 5 sueldos.\n2) Explicá cuál de las dos medidas representa mejor la situación salarial típica de los trabajadores y por qué.",
+  "partes": [
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 800000,
+      "label": "1. Media aritmética (x̄) de los 5 sueldos en pesos (podés escribir 800000 o 800.000)",
+      "unidad": "$",
+      "detalle": {
+        "allowThousandsDot": true,
+        "commonErrors": [
+          {
+            "value": 1550000,
+            "message": "Promediaste solo $300.000 y $2.800.000 como si fueran 2 personas, pero hay 4 empleados que cobran $300.000 y 1 gerente ($4.000.000 ÷ 5)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 300000,
+      "label": "2. Mediana (Me) de los 5 sueldos ordenados en pesos",
+      "unidad": "$",
+      "detalle": {
+        "allowThousandsDot": true,
+        "commonErrors": [
+          {
+            "value": 3,
+            "message": "3 es la posición central ((5 + 1) ÷ 2 = 3), pero el sueldo que ocupa el tercer lugar es $300.000."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mejor_medida",
+      "tipo": "select",
+      "esperado": "mediana",
+      "label": "3. ¿Cuál de las dos medidas representa de manera más fiel el sueldo típico de los trabajadores del comercio?",
+      "opciones": [
+        {
+          "valor": "mediana",
+          "etiqueta": "La mediana ($300.000), porque el promedio ($800.000) se ve fuertemente distorsionado hacia arriba por el sueldo extremo del gerente"
+        },
+        {
+          "valor": "media",
+          "etiqueta": "La media ($800.000), porque siempre que se puede calcular el promedio es la mejor medida"
+        }
+      ]
+    },
+    {
+      "id": "justificacion",
+      "tipo": "rubrica",
+      "label": "4. Redactá tu conclusión y comprobá los criterios en la rúbrica",
+      "detalle": {
+        "placeholder": "Explicá cuál medida elegís y qué efecto produce el sueldo de $2.800.000 sobre la media...",
+        "criteria": [
+          "Indiqué que la mediana ($300.000) representa mejor a la mayoría (4 de los 5 trabajadores ganan $300.000).",
+          "Expliqué que la media ($800.000) es sensible al valor extremo ($2.800.000) y no refleja lo que gana ningún empleado."
+        ],
+        "modelAnswer": "La mediana ($300.000) describe mucho mejor la realidad salarial típica del comercio, ya que 4 de las 5 personas cobran ese monto, mientras que la media ($800.000) queda distorsionada por el valor extremo del sueldo del gerente."
+      }
+    }
+  ],
+  "pistas": [
+    "Escribí los 5 sueldos uno por uno: 300.000; 300.000; 300.000; 300.000; 2.800.000.",
+    "Sumá los 5 sueldos (da 4.000.000) y dividí entre 5 para la media. Para la mediana, mirá cuál es el 3.º sueldo ordenado.",
+    "Compará $800.000 y $300.000 con lo que realmente cobran los 4 empleados.",
+    "No promediar solo 300.000 y 2.800.000: hay cuatro sueldos de $300.000 que deben incluirse en la suma y en el orden."
+  ],
+  "solucion": [
+    "Datos ordenados (n = 5): $300.000, $300.000, $300.000, $300.000, $2.800.000.",
+    "Media: suma = $4.000.000 → x̄ = 4.000.000 ÷ 5 = $800.000.",
+    "Mediana: posición central = (5 + 1) ÷ 2 = 3 → el tercer dato ordenado es Me = $300.000.",
+    "Conclusión: la mediana ($300.000) es más representativa porque la media ($800.000) se ve arrastrada por el valor atípico/extremo del gerente."
+  ],
+  "etiquetas": [
+    "Guía 4.3",
+    "medidas"
+  ],
+  "leccion": "L10",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      300000,
+      300000,
+      300000,
+      300000,
+      2800000
+    ]
+  }
+}

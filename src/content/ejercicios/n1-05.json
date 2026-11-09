@@ -1,0 +1,69 @@
+{
+  "id": "N1-05",
+  "titulo": "Masa de mochilas escolares y cantidad de carpetas",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cuantitativa-continua",
+    "cuantitativa-discreta"
+  ],
+  "enunciado": "En un proyecto de salud postural (datos ficticios) se pesa cada mochila en kilogramos (3,4 kg; 4,15 kg; 5,0 kg) y se cuenta cuántas carpetas lleva adentro (1, 2, 3, 4). Clasificá ambas variables.",
+  "partes": [
+    {
+      "id": "peso_mochila",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "1. Masa/peso de la mochila en kilogramos (kg)",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (magnitud física continua que admite valores intermedios)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "cant_carpetas",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "2. Cantidad de carpetas dentro de la mochila",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (conteo de objetos enteros)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Los kilogramos se miden con balanza y admiten cualquier fracción de gramo intermedia.",
+    "Las carpetas se cuentan de a unidades enteras.",
+    "Que una mochila pese justo «5,0 kg» no hace discreto al peso: la magnitud admite valores intermedios."
+  ],
+  "solucion": [
+    "Masa/peso de la mochila en kg: Cuantitativa continua (proviene de medir una magnitud continua).",
+    "Cantidad de carpetas: Cuantitativa discreta (proviene de contar unidades enteras)."
+  ],
+  "etiquetas": [
+    "Práctica N1-05",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

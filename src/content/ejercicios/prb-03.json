@@ -1,0 +1,22 @@
+{
+  "id": "PRB-03",
+  "titulo": "Probabilidad de dos caras",
+  "origen": "nuevo",
+  "modulo": "M7",
+  "nivel": "intermedio",
+  "habilidades": ["probabilidad-clasica", "diagrama-de-arbol"],
+  "enunciado": "Se lanzan dos monedas. ¿Cuál es la probabilidad de que salgan dos caras? Expresala como fracción.",
+  "partes": [
+    { "id": "probabilidad", "tipo": "probabilidad", "esperado": { "numerador": 1, "denominador": 4 }, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "Los resultados posibles son CC, CS, SC, SS (4 en total).",
+    "Solo uno de ellos es «dos caras» (CC)."
+  ],
+  "solucion": [
+    "Espacio muestral: CC, CS, SC, SS (4 resultados).",
+    "Favorable (CC): 1.",
+    "P = 1/4 = 0,25."
+  ],
+  "etiquetas": ["probabilidad", "nuevo"]
+}

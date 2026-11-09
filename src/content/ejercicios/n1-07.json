@@ -1,0 +1,61 @@
+{
+  "id": "N1-07",
+  "titulo": "Estatura anotada en centímetros enteros: ¿discreta o continua?",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "magnitud-vs-registro",
+    "cuantitativa-continua"
+  ],
+  "enunciado": "En la ficha médica se anotaron las estaturas redondeadas en centímetros sin decimales: 158 cm, 161 cm, 164 cm, 170 cm. Un alumno afirma que como están escritas sin coma decimal, la estatura es una variable discreta. Analizá la afirmación.",
+  "partes": [
+    {
+      "id": "clasif_estatura",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "1. ¿Qué tipo de variable es la estatura?",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "explicacion",
+      "tipo": "select",
+      "esperado": "crecimiento_continuo",
+      "label": "2. ¿Por qué sigue siendo continua aunque se haya anotado en centímetros enteros?",
+      "opciones": [
+        {
+          "valor": "crecimiento_continuo",
+          "etiqueta": "Porque nadie crece pegando saltos de 1 cm de golpe: la longitud es una magnitud continua y anotar números enteros es solo un redondeo de registro"
+        },
+        {
+          "valor": "cambia_segun_unidad",
+          "etiqueta": "Porque en metros es continua pero en centímetros se vuelve discreta"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Pensá si una persona pasa de medir 160 cm a 161 cm sin pasar por 160,4 cm.",
+    "Cambiar de metros (1,64 m) a centímetros (164 cm) o redondear el milímetro no cambia la naturaleza física de la longitud.",
+    "No confundir «cómo se redondeó al anotar» con «qué tipo de magnitud es»."
+  ],
+  "solucion": [
+    "La estatura es una variable Cuantitativa Continua.",
+    "Ni el cambio de unidad (metros a centímetros) ni el redondeo del instrumento alteran el hecho de que la longitud admite infinitos valores intermedios."
+  ],
+  "etiquetas": [
+    "Práctica N1-07",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

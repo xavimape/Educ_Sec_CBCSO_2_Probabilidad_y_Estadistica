@@ -1,0 +1,93 @@
+{
+  "id": "G4-04",
+  "titulo": "Media y mediana de las estaturas de 8 jugadores de básquetbol",
+  "origen": "guia",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "media",
+    "mediana-par"
+  ],
+  "enunciado": "Las estaturas expresadas en centímetros de n = 8 jugadores del equipo de básquetbol (ejemplo de la guía) son:\n162, 165, 168, 170, 172, 175, 180, 188.\nCalculá la suma total, la media aritmética (x̄) y la mediana (Me) detallando los valores centrales en las posiciones 4 y 5.",
+  "partes": [
+    {
+      "id": "suma",
+      "tipo": "numero",
+      "esperado": 1380,
+      "label": "1. Suma de las 8 estaturas (en cm)",
+      "entero": true
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 172.5,
+      "label": "2. Media aritmética (x̄) en cm",
+      "unidad": "cm",
+      "redondeo": 2
+    },
+    {
+      "id": "centrales",
+      "tipo": "select",
+      "esperado": "170_172",
+      "label": "3. ¿Cuáles son los dos valores que ocupan las posiciones centrales 4.ª y 5.ª?",
+      "opciones": [
+        {
+          "valor": "170_172",
+          "etiqueta": "170 cm (posición 4) y 172 cm (posición 5)"
+        },
+        {
+          "valor": "168_170",
+          "etiqueta": "168 cm (posición 3) y 170 cm (posición 4)"
+        },
+        {
+          "valor": "172_175",
+          "etiqueta": "172 cm (posición 5) y 175 cm (posición 6)"
+        }
+      ]
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 171,
+      "label": "4. Mediana (Me) en cm (semisuma de los dos valores centrales)",
+      "unidad": "cm",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 4.5,
+            "message": "4,5 indica que el centro está entre las posiciones 4 y 5. Promediá las estaturas que están en esas posiciones: (170 + 172) ÷ 2."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Sumá las 8 estaturas: 162 + 165 + 168 + 170 + 172 + 175 + 180 + 188 = 1380 cm.",
+    "Dividí 1380 entre 8 para hallar la media.",
+    "Como los 8 datos ya están ordenados de menor a mayor, tomá el 4.º dato (170) y el 5.º dato (172) y calculá (170 + 172) ÷ 2.",
+    "Fijate que 171 cm no figura en la lista original: con cantidad par de datos numéricos, la mediana es el punto medio entre los dos centrales."
+  ],
+  "solucion": [
+    "Suma de los 8 datos: 1380 cm.",
+    "Media aritmética: x̄ = 1380 ÷ 8 = 172,5 cm.",
+    "Mediana (n = 8 par): posición = (8 + 1) ÷ 2 = 4,5. Promediamos el 4.º dato (170 cm) y el 5.º dato (172 cm): Me = (170 + 172) ÷ 2 = 342 ÷ 2 = 171 cm."
+  ],
+  "etiquetas": [
+    "Guía 4.4",
+    "medidas"
+  ],
+  "leccion": "L08",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      162,
+      165,
+      168,
+      170,
+      172,
+      175,
+      180,
+      188
+    ]
+  }
+}

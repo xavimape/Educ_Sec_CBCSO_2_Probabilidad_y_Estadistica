@@ -1,0 +1,68 @@
+{
+  "id": "N2-07",
+  "titulo": "Detectar el efecto del redondeo en una tabla con n = 12",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "redondeo",
+    "frecuencia-relativa",
+    "porcentaje"
+  ],
+  "enunciado": "Tres categorías empatan con frecuencia f = 4 cada una en un grupo de n = 12 estudiantes (4 + 4 + 4 = 12). Al calcular la frecuencia relativa de cada fila obtenemos 4 ÷ 12 = 1/3 = 0,3333... Si redondeamos cada fila a dos decimales (0,33 y 33,33 %), analizá qué pasa con la suma.",
+  "partes": [
+    {
+      "id": "fr_fila",
+      "tipo": "numero",
+      "esperado": {
+        "numerador": 4,
+        "denominador": 12
+      },
+      "label": "1. ¿Cuál es la frecuencia relativa redondeada a 2 decimales de cada una de las tres filas?",
+      "redondeo": 2,
+      "detalle": {
+        "subkind": "fr"
+      }
+    },
+    {
+      "id": "suma_redondeada",
+      "tipo": "numero",
+      "esperado": 0.99,
+      "label": "2. Si sumás tres veces 0,33 (los tres valores redondeados), ¿cuánto da esa suma?",
+      "redondeo": 2
+    },
+    {
+      "id": "explicacion_redondeo",
+      "tipo": "select",
+      "esperado": "no_es_redondeo",
+      "label": "3. ¿Significa ese 0,99 (o 99,99 %) que la tabla está mal hecha?",
+      "opciones": [
+        {
+          "valor": "no_es_redondeo",
+          "etiqueta": "No: en fracción exacta 4/12 + 4/12 + 4/12 = 12/12 = 1; la diferencia de 0,01 se debe únicamente a haber truncado los decimales periódicos al mostrar"
+        },
+        {
+          "valor": "si_falta_alumno",
+          "etiqueta": "Sí, significa que nos olvidamos de contar a un estudiante"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "4 ÷ 12 = 0,3333..., que redondeado a dos cifras decimales se escribe 0,33.",
+    "0,33 + 0,33 + 0,33 = 0,99.",
+    "Pero las fracciones exactas suman 4/12 + 4/12 + 4/12 = 12/12 = 1.",
+    "Nunca alteres una frecuencia verdadera para forzar el redondeo; explicá que la diferencia de un centésimo proviene del redondeo."
+  ],
+  "solucion": [
+    "Cada fila tiene fr = 4/12 ≈ 0,33 (33,33 %).",
+    "La suma de los redondeos da 0,33 + 0,33 + 0,33 = 0,99 (y 33,33 % × 3 = 99,99 %).",
+    "No es un error de conteo ni hay que inventar un dato: antes del redondeo la suma exacta es 12/12 = 1 (100 %)."
+  ],
+  "etiquetas": [
+    "Práctica N2-07",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": false
+}

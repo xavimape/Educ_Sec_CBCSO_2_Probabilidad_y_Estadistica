@@ -1,0 +1,70 @@
+{
+  "id": "G2-03",
+  "titulo": "Interpretación de «2 o menos faltas»",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-acumulada",
+    "porcentaje",
+    "interpretacion"
+  ],
+  "enunciado": "En el registro mensual de faltas de n = 15 alumnos (Ejercicio 2.1), las frecuencias absolutas fueron: 0 faltas → 5 alumnos; 1 falta → 6 alumnos; 2 faltas → 3 alumnos; 3 faltas → 1 alumno. Respondé:\n1) ¿Cuántos alumnos registraron 2 o menos faltas en el mes?\n2) ¿Qué porcentaje del total representa dicho grupo (redondeado a 2 decimales)?",
+  "partes": [
+    {
+      "id": "acum_2",
+      "tipo": "numero",
+      "esperado": 14,
+      "label": "1. Cantidad de alumnos con 2 o menos faltas (F hasta 2)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 3,
+            "message": "3 es la cantidad de alumnos con exactamente 2 faltas. «2 o menos faltas» incluye también a quienes tuvieron 0 faltas (5) y 1 falta (6): 5 + 6 + 3 = 14."
+          },
+          {
+            "value": 11,
+            "message": "11 suma solo quienes tuvieron 0 o 1 falta (5 + 6). Como pide «2 o menos», sumá también los 3 alumnos con 2 faltas."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pct_2",
+      "tipo": "numero",
+      "esperado": {
+        "numerador": 1400,
+        "denominador": 15
+      },
+      "label": "2. Porcentaje del total que representa ese grupo (%)",
+      "unidad": "%",
+      "redondeo": 2,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 20,
+            "message": "20 % corresponde solo a quienes tuvieron exactamente 2 faltas (3 de 15). Calculá el porcentaje para los 14 alumnos de 15."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "«2 o menos faltas» significa haber tenido 0 faltas, 1 falta o 2 faltas.",
+    "Sumá las frecuencias absolutas de esas tres filas: 5 + 6 + 3 (que es la frecuencia acumulada F₃).",
+    "Para el porcentaje, dividí esa cantidad acumulada entre el total (15) y multiplicá por 100.",
+    "Distinguir siempre «exactamente 2 faltas» (f = 3) de «2 o menos faltas» (F = 14)."
+  ],
+  "solucion": [
+    "Alumnos con 2 o menos faltas: corresponde a la frecuencia acumulada hasta x = 2 → F₃ = 5 + 6 + 3 = 14 alumnos.",
+    "Porcentaje del total: (14 ÷ 15) × 100 = 93,333... % ≈ 93,33 %."
+  ],
+  "etiquetas": [
+    "Guía 2.3",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "adaptacion": "Incluye los datos y frecuencias del Ejercicio 2.1 en el propio enunciado para poder resolverlo de forma autónoma.",
+  "variante": true
+}

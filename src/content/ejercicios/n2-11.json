@@ -1,0 +1,61 @@
+{
+  "id": "N2-11",
+  "titulo": "Comparar dos cursos de distinto tamaño usando porcentajes",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "desafio",
+  "habilidades": [
+    "frecuencia-relativa",
+    "porcentaje",
+    "comparacion"
+  ],
+  "enunciado": "En el Curso A (de 20 estudiantes), 9 alumnos aprobaron con nota sobresaliente. En el Curso B (de 25 estudiantes), 10 alumnos aprobaron con nota sobresaliente. ¿En cuál de los dos cursos hubo mayor proporción (porcentaje) de notas sobresalientes?",
+  "partes": [
+    {
+      "id": "pct_a",
+      "tipo": "numero",
+      "esperado": 45,
+      "label": "1. Porcentaje de sobresalientes en el Curso A (9 de 20) (%)",
+      "unidad": "%"
+    },
+    {
+      "id": "pct_b",
+      "tipo": "numero",
+      "esperado": 40,
+      "label": "2. Porcentaje de sobresalientes en el Curso B (10 de 25) (%)",
+      "unidad": "%"
+    },
+    {
+      "id": "comparacion",
+      "tipo": "select",
+      "esperado": "curso_a_mayor_pct",
+      "label": "3. ¿Qué conclusión es correcta?",
+      "opciones": [
+        {
+          "valor": "curso_a_mayor_pct",
+          "etiqueta": "Aunque el Curso B tiene 1 alumno más en cantidad absoluta (10 frente a 9), el Curso A tiene mayor proporción de sobresalientes (45 % frente a 40 %)"
+        },
+        {
+          "valor": "curso_b_mayor_pct",
+          "etiqueta": "El Curso B tiene mayor porcentaje porque 10 es mayor que 9"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Cuando los grupos tienen distinto total n (20 y 25), no alcanza con comparar las frecuencias absolutas (9 y 10).",
+    "Calculá el porcentaje en cada curso: (9 ÷ 20) × 100 y (10 ÷ 25) × 100.",
+    "Para comparar partes de muestras de distinto tamaño (n distinto), usá siempre frecuencias relativas o porcentajes."
+  ],
+  "solucion": [
+    "Curso A: fr = 9 ÷ 20 = 0,45 → 45 %.",
+    "Curso B: fr = 10 ÷ 25 = 0,40 → 40 %.",
+    "Conclusión: las frecuencias relativas y porcentuales permiten comparar de forma justa grupos de distinto tamaño; el Curso A tuvo mayor porcentaje (45 % > 40 %)."
+  ],
+  "etiquetas": [
+    "Práctica N2-11",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": false
+}

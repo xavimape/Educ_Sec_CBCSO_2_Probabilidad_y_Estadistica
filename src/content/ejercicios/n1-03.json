@@ -1,0 +1,64 @@
+{
+  "id": "N1-03",
+  "titulo": "Nivel de batería indicado con palabras ordenadas",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "cualitativa-ordinal"
+  ],
+  "enunciado": "Una aplicación muestra el estado de carga de una tablet con cuatro categorías verbales: «Crítico, Bajo, Medio, Completo». Clasificá la variable y contrastala con el porcentaje exacto de carga.",
+  "partes": [
+    {
+      "id": "categoria_verbal",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "1. Estado de carga expresado como «Crítico, Bajo, Medio, Completo»",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (categorías no numéricas con orden creciente de carga)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (palabras sin ningún orden)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ]
+    },
+    {
+      "id": "contraste_mah",
+      "tipo": "select",
+      "esperado": "cuantitativa",
+      "label": "2. Si en cambio se mide la energía almacenada en miliamperios-hora (mAh) o voltios con un instrumento de laboratorio, ¿de qué tipo general es?",
+      "opciones": [
+        {
+          "valor": "cuantitativa",
+          "etiqueta": "Cuantitativa (mide una magnitud física numérica)"
+        },
+        {
+          "valor": "cualitativa",
+          "etiqueta": "Cualitativa nominal"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Las palabras «Crítico, Bajo, Medio, Completo» no son números, pero sí están ordenadas de menor a mayor nivel.",
+    "Por eso se trata de una variable cualitativa ordinal.",
+    "Una misma característica puede registrarse como cualitativa ordinal (categorías de nivel) o cuantitativa (medición numérica)."
+  ],
+  "solucion": [
+    "La escala verbal «Crítico < Bajo < Medio < Completo» es Cualitativa Ordinal.",
+    "Cuando esa misma característica se mide numéricamente en unidades físicas, pasa a ser una variable Cuantitativa."
+  ],
+  "etiquetas": [
+    "Práctica N1-03",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "N4-04",
+  "titulo": "Mediana con cantidad par de datos desordenados (n = 6)",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "mediana-par",
+    "ordenar-datos"
+  ],
+  "enunciado": "Se registraron los goles convertidos por un equipo en 6 fechas: 3, 0, 8, 1, 4, 2. Ordenalos de menor a mayor y calculá la mediana (Me).",
+  "partes": [
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 2.5,
+      "label": "Mediana (Me) de los 6 datos ordenados (0, 1, 2, 3, 4, 8)",
+      "unidad": "goles",
+      "redondeo": 2,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 4.5,
+            "message": "Tomaste el 3.º y 4.º dato de la lista desordenada (8 y 1 → 4,5). Ordená primero: 0, 1, 2, 3, 4, 8 y promediá 2 y 3."
+          },
+          {
+            "value": 3.5,
+            "message": "3,5 es la posición central ((6 + 1) ÷ 2 = 3,5). Los valores en las posiciones 3 y 4 son 2 y 3, cuyo promedio es 2,5."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Ordená primero los 6 datos: 0, 1, 2, 3, 4, 8.",
+    "Como n = 6 es par, tomá los dos valores centrales (posiciones 3 y 4): son el 2 y el 3.",
+    "Promediá ambos: (2 + 3) ÷ 2.",
+    "Cuando n es par, la mediana puede dar un decimal (2,5) aunque todos los datos sean enteros."
+  ],
+  "solucion": [
+    "Datos ordenados (n = 6): 0, 1, 2, 3, 4, 8.",
+    "Posiciones centrales: 3.ª (valor 2) y 4.ª (valor 3).",
+    "Mediana: Me = (2 + 3) ÷ 2 = 2,5 goles."
+  ],
+  "etiquetas": [
+    "Práctica N4-04",
+    "medidas"
+  ],
+  "leccion": "L08",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      3,
+      0,
+      8,
+      1,
+      4,
+      2
+    ]
+  }
+}

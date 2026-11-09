@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const lecciones = (await getCollection('lecciones')).sort((a, b) => a.data.orden - b.data.orden);
+---
+
+<Layout
+  titulo="Lecciones"
+  descripcion="Lecciones de Estadística y Probabilidad para segundo año."
+>
+  <main>
+    <h1>Lecciones</h1>
+    {lecciones.length === 0 ? (
+      <p>Todavía no hay lecciones publicadas.</p>
+    ) : (
+      <ul>
+        {lecciones.map((leccion) => (
+          <li>
+            <a href={`./${leccion.id}/`}>{leccion.data.titulo}</a>
+            <span> · {leccion.data.modulo}</span>
+            <p>{leccion.data.objetivo}</p>
+          </li>
+        ))}
+      </ul>
+    )}
+    <p><a href="../">Volver al inicio</a>.</p>
+  </main>
+</Layout>

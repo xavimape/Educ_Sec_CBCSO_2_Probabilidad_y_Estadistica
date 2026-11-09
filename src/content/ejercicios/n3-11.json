@@ -1,0 +1,61 @@
+{
+  "id": "N3-11",
+  "titulo": "Comparación de dos gráficos con distintas escalas verticales",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "comparar-graficos",
+    "elegir-escala"
+  ],
+  "enunciado": "Dos grupos graficaron cuántas plantas germinaron en el vivero. En el Gráfico 1 (usando 1 cuadrito = 1 planta), la barra de «Tomate» mide 8 cuadritos. En el Gráfico 2 (usando 1 cuadrito = 3 plantas), la barra de «Tomate» mide 4 cuadritos. ¿En cuál de los dos gráficos hubo mayor cantidad de plantas de tomate germinadas?",
+  "partes": [
+    {
+      "id": "plantas_g1",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "1. ¿Cuántas plantas representa la barra de 8 cuadritos en el Gráfico 1 (1 cuadrito = 1 planta)?",
+      "entero": true
+    },
+    {
+      "id": "plantas_g2",
+      "tipo": "numero",
+      "esperado": 12,
+      "label": "2. ¿Cuántas plantas representa la barra de 4 cuadritos en el Gráfico 2 (1 cuadrito = 3 plantas)?",
+      "entero": true
+    },
+    {
+      "id": "conclusion",
+      "tipo": "select",
+      "esperado": "mirar_escala",
+      "label": "3. ¿Qué conclusión sacás al comparar dos gráficos separados?",
+      "opciones": [
+        {
+          "valor": "mirar_escala",
+          "etiqueta": "Antes de comparar alturas visuales entre dos gráficos distintos, hay que leer la escala del eje Y: en el Gráfico 2 hay más plantas (12 > 8) aunque su barra ocupe menos cuadritos"
+        },
+        {
+          "valor": "mas_cuadritos_siempre_gana",
+          "etiqueta": "Siempre tiene mayor valor la barra que ocupa más cuadritos sin importar la escala"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "En el Gráfico 1: 8 cuadritos × 1 planta/cuadrito = 8 plantas.",
+    "En el Gráfico 2: 4 cuadritos × 3 plantas/cuadrito = 12 plantas.",
+    "12 plantas es mayor que 8 plantas, aunque 4 cuadritos sea más bajo en el papel que 8 cuadritos.",
+    "Si dos gráficos se van a presentar juntos para compararlos a simple vista, conviene dibujarlos con la misma escala."
+  ],
+  "solucion": [
+    "Gráfico 1: 8 × 1 = 8 plantas.",
+    "Gráfico 2: 4 × 3 = 12 plantas.",
+    "Al comparar dos gráficos diferentes, siempre hay que verificar primero la escala graduada de cada eje Y."
+  ],
+  "etiquetas": [
+    "Práctica N3-11",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

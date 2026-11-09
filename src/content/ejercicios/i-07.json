@@ -1,0 +1,67 @@
+{
+  "id": "I-07",
+  "titulo": "Integrador 7 (auditoría de errores): Corregir un informe con 3 errores graves",
+  "origen": "integrador",
+  "modulo": "M8",
+  "nivel": "desafio",
+  "habilidades": [
+    "detectar-errores-tabla",
+    "media-tabla",
+    "moda",
+    "mediana-par"
+  ],
+  "enunciado": "Un alumno analizó la cantidad de hermanos de n = 10 compañeros con esta tabla correcta: 0 hermanos (f=2), 1 hermano (f=4), 2 hermanos (f=3), 3 hermanos (f=1). Sin embargo, en sus conclusiones escribió tres errores:\n• Error A: «La suma de hermanos es 0+1+2+3 = 6, y como hay 4 filas la media es 6 ÷ 4 = 1,5».\n• Error B: «La moda es 4 porque 4 es el número más grande de la columna f».\n• Error C: «La mediana es 5,5 porque (10 + 1) ÷ 2 = 5,5».\nCalculá los tres valores verdaderos para corregir el informe.",
+  "partes": [
+    {
+      "id": "media_real",
+      "tipo": "numero",
+      "esperado": 1.3,
+      "label": "1. Corregí el Error A: ¿cuál es la verdadera media aritmética (suma de productos = 0×2 + 1×4 + 2×3 + 3×1 = 13, dividida entre n = 10)?",
+      "unidad": "hermanos",
+      "redondeo": 2
+    },
+    {
+      "id": "moda_real",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        1
+      ],
+      "label": "2. Corregí el Error B: ¿cuál es el verdadero valor de la moda (Mo)?",
+      "detalle": {
+        "maxFrequency": 4
+      }
+    },
+    {
+      "id": "mediana_real",
+      "tipo": "numero",
+      "esperado": 1,
+      "label": "3. Corregí el Error C: ¿cuál es el verdadero valor de la mediana (datos en las posiciones 5 y 6)?",
+      "unidad": "hermanos",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 5.5,
+            "message": "5,5 es la posición central. Mirá las frecuencias acumuladas: F(0)=2 y F(1)=2+4=6, así que en las posiciones 5 y 6 el dato vale 1 hermano."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Para la media desde tabla, multiplicá cada x por su f (0×2 + 1×4 + 2×3 + 3×1 = 13) y dividí entre n = 10.",
+    "Para la moda, mirá qué valor de hermanos tiene f = 4: es «1 hermano».",
+    "Para la mediana, 5,5 indica que busques las posiciones 5 y 6: ambas caen en la fila de «1 hermano» (porque F₁ = 2 y F₂ = 6).",
+    "Este ejercicio reúne los tres errores más frecuentes en un examen: dividir por filas, dar f como moda y dar la posición como mediana."
+  ],
+  "solucion": [
+    "Corrección A (Media): Σ(x · f) = 0 + 4 + 6 + 3 = 13 hermanos → x̄ = 13 ÷ 10 = 1,3 hermanos (no se suman x sin frecuencia ni se divide por 4 filas).",
+    "Corrección B (Moda): 4 es la frecuencia máxima, pero el valor del dato más repetido es Mo = 1 hermano.",
+    "Corrección C (Mediana): 5,5 es la posición central; los datos en las posiciones 5 y 6 valen 1 y 1 → Me = 1 hermano."
+  ],
+  "etiquetas": [
+    "Integrador I-07",
+    "integrador"
+  ],
+  "leccion": "L07",
+  "variante": false
+}

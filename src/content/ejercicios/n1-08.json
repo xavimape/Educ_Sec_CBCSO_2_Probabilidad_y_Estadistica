@@ -1,0 +1,94 @@
+{
+  "id": "N1-08",
+  "titulo": "Identificar la única variable cuantitativa discreta del grupo",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cuantitativa-discreta",
+    "clasificar-variable"
+  ],
+  "enunciado": "Observá estas cuatro variables registradas en un club deportivo (ejemplo ficticio) y clasificá cada una para identificar cuál es cuantitativa discreta.",
+  "partes": [
+    {
+      "id": "v1",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "1. Cantidad de partidos ganados en el campeonato (0, 1, 2, 3...)",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "2. Duración exacta de cada entrenamiento medida con reloj",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "v3",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "3. Categoría de edad del torneo («Sub-13, Sub-15, Sub-17»)",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Los partidos ganados se cuentan uno por uno con números enteros.",
+    "La duración es tiempo (magnitud continua), y las divisiones Sub-13 < Sub-15 < Sub-17 son categorías ordenadas por etapa.",
+    "En «Sub-13, Sub-15, Sub-17» el número forma parte del nombre de una categoría ordenada por edad."
+  ],
+  "solucion": [
+    "1) Cantidad de partidos ganados: Cuantitativa discreta (conteo entero).",
+    "2) Duración del entrenamiento: Cuantitativa continua (magnitud tiempo).",
+    "3) Categoría del torneo (Sub-13, Sub-15, Sub-17): Cualitativa ordinal (categorías ordenadas)."
+  ],
+  "etiquetas": [
+    "Práctica N1-08",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

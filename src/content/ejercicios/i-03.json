@@ -1,0 +1,138 @@
+{
+  "id": "I-03",
+  "titulo": "Integrador 3: Trabajos prácticos entregados a término (n = 20)",
+  "origen": "integrador",
+  "modulo": "M8",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-absoluta",
+    "porcentaje",
+    "frecuencia-acumulada",
+    "construir-barras",
+    "media",
+    "mediana-par",
+    "moda"
+  ],
+  "enunciado": "Se registró cuántos de los 4 trabajos prácticos del bimestre entregó en fecha cada uno de los n = 20 estudiantes de un grupo (datos ficticios):\n• 1 trabajo: 2 estudiantes\n• 2 trabajos: 5 estudiantes\n• 3 trabajos: 8 estudiantes\n• 4 trabajos: 5 estudiantes\nCompletá la tabla, armá el gráfico de barras y hallá la media, mediana y moda.",
+  "partes": [
+    {
+      "id": "tabla",
+      "tipo": "tabla",
+      "label": "1. Completá f, fr, % y F (total n = 20)",
+      "detalle": {
+        "totalN": 20,
+        "columns": [
+          "f",
+          "fr",
+          "pct",
+          "F"
+        ],
+        "rows": [
+          {
+            "x": 1,
+            "label": "1 TP",
+            "f": 2,
+            "F": 2
+          },
+          {
+            "x": 2,
+            "label": "2 TP",
+            "f": 5,
+            "F": 7
+          },
+          {
+            "x": 3,
+            "label": "3 TP",
+            "f": 8,
+            "F": 15
+          },
+          {
+            "x": 4,
+            "label": "4 TP",
+            "f": 5,
+            "F": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "barras",
+      "tipo": "barras",
+      "label": "2. Construí el gráfico de barras con escala uniforme",
+      "unidad": "estudiantes",
+      "detalle": {
+        "inputMode": "value",
+        "maxGridCells": 12,
+        "validScaleSteps": [
+          1,
+          2
+        ],
+        "bars": [
+          {
+            "key": "tp1",
+            "label": "1 TP",
+            "value": 2
+          },
+          {
+            "key": "tp2",
+            "label": "2 TP",
+            "value": 5
+          },
+          {
+            "key": "tp3",
+            "label": "3 TP",
+            "value": 8
+          },
+          {
+            "key": "tp4",
+            "label": "4 TP",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 2.8,
+      "label": "3a. Media aritmética (x̄) de trabajos entregados (suma de productos = 56, n = 20)",
+      "unidad": "trabajos",
+      "redondeo": 2
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 3,
+      "label": "3b. Mediana (Me) en trabajos (posiciones 10 y 11)",
+      "unidad": "trabajos"
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        3
+      ],
+      "label": "3c. Moda (Mo) en trabajos",
+      "detalle": {
+        "maxFrequency": 8
+      }
+    }
+  ],
+  "pistas": [
+    "Con n = 20, las frecuencias relativas son 2/20=0,10; 5/20=0,25; 8/20=0,40; 5/20=0,25.",
+    "Suma de productos: 1×2 + 2×5 + 3×8 + 4×5 = 2 + 10 + 24 + 20 = 56 → media = 56 ÷ 20 = 2,8.",
+    "Como F₂ = 7 y F₃ = 15, las posiciones 10 y 11 están en «3 trabajos» (Me = 3), que también es la mayor frecuencia (Mo = 3).",
+    "El 65 % del curso (8 + 5 = 13 de 20) entregó 3 o 4 trabajos prácticos."
+  ],
+  "solucion": [
+    "Tabla (n = 20): 1 TP (2, 0,10, 10 %, F=2); 2 TP (5, 0,25, 25 %, F=7); 3 TP (8, 0,40, 40 %, F=15); 4 TP (5, 0,25, 25 %, F=20).",
+    "Suma de productos: 2 + 10 + 24 + 20 = 56 → Media x̄ = 56 ÷ 20 = 2,8 trabajos.",
+    "Mediana Me = 3 trabajos y Moda Mo = 3 trabajos."
+  ],
+  "etiquetas": [
+    "Integrador I-03",
+    "integrador"
+  ],
+  "leccion": "L07",
+  "variante": false
+}

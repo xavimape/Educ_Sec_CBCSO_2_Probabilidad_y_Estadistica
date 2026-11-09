@@ -1,0 +1,79 @@
+{
+  "id": "N4-06",
+  "titulo": "Distribución bimodal: identificar las dos modas empatadas",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "moda",
+    "bimodal"
+  ],
+  "enunciado": "En un registro de 12 entregas de actividades, las calificaciones fueron:\n6, 7, 7, 7, 8, 8, 9, 9, 9, 10, 10, 6.\nDeterminá cuál o cuáles son las modas y cómo se clasifica la distribución.",
+  "partes": [
+    {
+      "id": "modas",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        7,
+        9
+      ],
+      "label": "1. Ingresá las modas de la serie (separadas por «y» o por punto y coma, por ejemplo: 7 y 9)",
+      "detalle": {
+        "maxFrequency": 3
+      }
+    },
+    {
+      "id": "clasificacion",
+      "tipo": "select",
+      "esperado": "bimodal",
+      "label": "2. ¿Cómo se clasifica esta serie según sus modas?",
+      "opciones": [
+        {
+          "valor": "bimodal",
+          "etiqueta": "Bimodal (dos valores empatan en la frecuencia máxima de 3 repeticiones)"
+        },
+        {
+          "valor": "unimodal",
+          "etiqueta": "Unimodal (una sola moda)"
+        },
+        {
+          "valor": "amodal",
+          "etiqueta": "Amodal (sin moda)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Contá cuántas veces aparece cada nota: el 6 está 2 veces; el 7 está 3 veces; el 8 está 2 veces; el 9 está 3 veces; el 10 está 2 veces.",
+    "La frecuencia más alta es 3, y la alcanzan tanto el 7 como el 9.",
+    "Cuando dos valores empatan en el máximo superando al resto, la serie es bimodal.",
+    "Cuando hay empate entre dos valores con la frecuencia más alta, no se promedian las modas: se informan ambas (7 y 9)."
+  ],
+  "solucion": [
+    "Frecuencias absolutas: f(6)=2, f(7)=3, f(8)=2, f(9)=3, f(10)=2.",
+    "La frecuencia máxima es 3 y corresponde a dos valores: 7 y 9.",
+    "Por lo tanto, Mo = 7 y 9, y la distribución es bimodal."
+  ],
+  "etiquetas": [
+    "Práctica N4-06",
+    "medidas"
+  ],
+  "leccion": "L09",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      6,
+      7,
+      7,
+      7,
+      8,
+      8,
+      9,
+      9,
+      9,
+      10,
+      10,
+      6
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "id": "G4-07",
+  "titulo": "Tardanzas en el trimestre: comparación con y sin el valor extremo",
+  "origen": "guia",
+  "modulo": "M5",
+  "nivel": "desafio",
+  "habilidades": [
+    "media",
+    "mediana-impar",
+    "mediana-par",
+    "valores-extremos"
+  ],
+  "enunciado": "Se registra el número de tardanzas durante un trimestre de n = 11 alumnos (ejemplo de la guía):\n0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 11.\n1) Calculá la media aritmética y la mediana de los 11 datos.\n2) Si se excluye el dato extremo (11 tardanzas), recalculá la media y la mediana para los 10 alumnos restantes.\n3) Compará cuánto cambió cada medida y explicá qué observás.",
+  "partes": [
+    {
+      "id": "media_11",
+      "tipo": "numero",
+      "esperado": {
+        "numerador": 20,
+        "denominador": 11
+      },
+      "label": "1a. Media aritmética (x̄) con los 11 datos (suma = 20; redondeá a 2 decimales o escribí 20/11)",
+      "unidad": "tardanzas",
+      "redondeo": 2
+    },
+    {
+      "id": "mediana_11",
+      "tipo": "numero",
+      "esperado": 1,
+      "label": "1b. Mediana (Me) con los 11 datos (valor en la 6.ª posición ordenada)",
+      "unidad": "tardanzas",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 0,
+            "message": "Contá con cuidado las posiciones: hay cinco ceros en las posiciones 1 a 5, y en la posición 6 (la central de 11 datos) está el primer 1."
+          },
+          {
+            "value": 6,
+            "message": "6 es la posición central ((11 + 1) ÷ 2 = 6), pero el dato que ocupa la posición 6 es 1 tardanza."
+          }
+        ]
+      }
+    },
+    {
+      "id": "media_10",
+      "tipo": "numero",
+      "esperado": 0.9,
+      "label": "2a. Media aritmética (x̄) sin el extremo (quedan n = 10 datos que suman 9)",
+      "unidad": "tardanzas",
+      "redondeo": 2
+    },
+    {
+      "id": "mediana_10",
+      "tipo": "numero",
+      "esperado": 0.5,
+      "label": "2b. Mediana (Me) sin el extremo (promedio entre las posiciones 5.ª y 6.ª de los 10 datos)",
+      "unidad": "tardanzas",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 1,
+            "message": "Con 10 datos (par), las posiciones centrales son la 5.ª (que vale 0) y la 6.ª (que vale 1). Su promedio es (0 + 1) ÷ 2 = 0,5."
+          },
+          {
+            "value": 0,
+            "message": "En la posición 5 hay un 0, pero en la posición 6 hay un 1. Promediá ambos valores centrales: (0 + 1) ÷ 2 = 0,5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "comparacion",
+      "tipo": "select",
+      "esperado": "ambas_cambian_mediana_resistente",
+      "label": "3. Al comparar los resultados antes y después de quitar el 11, ¿qué ocurrió con ambas medidas?",
+      "opciones": [
+        {
+          "valor": "ambas_cambian_mediana_resistente",
+          "etiqueta": "Ambas cambiaron: la media bajó fuertemente a la mitad (de ≈ 1,82 a 0,90) por ser muy sensible al extremo, mientras que la mediana tuvo un cambio menor (de 1 a 0,5) mostrando mayor resistencia"
+        },
+        {
+          "valor": "mediana_invariable",
+          "etiqueta": "La mediana jamás puede cambiar al quitar un dato extremo"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Con 11 datos: 0+0+0+0+0+1+1+2+2+3+11 = 20 → media = 20 ÷ 11 ≈ 1,82. Como n = 11 es impar, la posición central es la 6.ª: contá 5 ceros y el 6.º dato es 1.",
+    "Al quitar el 11 quedan 10 datos: 0, 0, 0, 0, 0, 1, 1, 2, 2, 3. La suma es 9 → media = 9 ÷ 10 = 0,90.",
+    "Con 10 datos (par), los centrales están en las posiciones 5 (valor 0) y 6 (valor 1): Me = (0 + 1) ÷ 2 = 0,5.",
+    "La mediana es más resistente que la media ante extremos, pero puede cambiar al agregar o quitar observaciones."
+  ],
+  "solucion": [
+    "1) Con los 11 alumnos: suma = 20 → media x̄ = 20 ÷ 11 ≈ 1,82 tardanzas. Posición central = (11 + 1) ÷ 2 = 6 → el 6.º dato ordenado es Me = 1 tardanza.",
+    "2) Sin el dato extremo (n = 10): suma = 9 → media x̄ = 9 ÷ 10 = 0,90 tardanzas. Posición central = (10 + 1) ÷ 2 = 5,5 → promedio entre el 5.º dato (0) y el 6.º dato (1): Me = (0 + 1) ÷ 2 = 0,5 tardanzas.",
+    "3) Conclusión: al retirar el valor extremo (11), la media se redujo fuertemente (de ≈ 1,82 a 0,90). La mediana también cambió (de 1 a 0,5) porque se desplazó la posición central de 6 a 5,5, pero varió mucho menos y representa mejor que la mayoría tuvo entre 0 y 1 tardanza."
+  ],
+  "etiquetas": [
+    "Guía 4.7 (reformulado)",
+    "medidas"
+  ],
+  "leccion": "L10",
+  "adaptacion": "Verifica las medianas 1 (con 11 datos) y 0,5 (con 10 datos) y reformula la consigna final como «Compará cuánto cambió cada medida y explicá qué observás», evitando sugerir que la mediana permaneció invariable.",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      11
+    ]
+  }
+}

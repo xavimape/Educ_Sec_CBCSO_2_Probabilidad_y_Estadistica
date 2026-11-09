@@ -1,0 +1,29 @@
+{
+  "id": "AZR-04",
+  "titulo": "Suceso imposible",
+  "origen": "nuevo",
+  "modulo": "M6",
+  "nivel": "inicial",
+  "habilidades": ["suceso", "espacio-muestral"],
+  "enunciado": "Al tirar un dado común, el suceso «sale un 7» es…",
+  "partes": [
+    {
+      "id": "clasificacion",
+      "tipo": "select",
+      "esperado": "imposible",
+      "opciones": [
+        { "valor": "imposible", "etiqueta": "Imposible: el 7 no está en el espacio muestral." },
+        { "valor": "seguro", "etiqueta": "Seguro: siempre sale un 7." },
+        { "valor": "probable", "etiqueta": "Probable: tiene más chance que los demás números." }
+      ]
+    }
+  ],
+  "pistas": [
+    "El espacio muestral del dado es {1, 2, 3, 4, 5, 6}.",
+    "Un suceso imposible es el que no puede ocurrir."
+  ],
+  "solucion": [
+    "Es imposible: el 7 no es un resultado posible en un dado de seis caras."
+  ],
+  "etiquetas": ["azar", "suceso", "nuevo"]
+}

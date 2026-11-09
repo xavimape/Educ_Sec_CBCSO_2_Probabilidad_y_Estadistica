@@ -1,0 +1,63 @@
+{
+  "id": "G1-07",
+  "titulo": "Volumen diario de agua potable consumido",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cuantitativa-continua",
+    "justificar-variable"
+  ],
+  "enunciado": "En una consulta de salud escolar se mide el volumen diario de agua potable consumido por cada estudiante (1,5 L; 2,0 L; 2,25 L). Clasificá la variable y justificá usando la idea de valores intermedios en un intervalo.",
+  "partes": [
+    {
+      "id": "clasif",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "Clasificación de la variable «volumen diario de agua en litros»",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    },
+    {
+      "id": "explicacion",
+      "tipo": "rubrica",
+      "label": "Redactá con tus palabras por qué es continua y verificá los criterios en la rúbrica",
+      "detalle": {
+        "placeholder": "Explicá qué magnitud se mide y por qué admite valores intermedios entre dos cantidades como 1,5 L y 2,0 L...",
+        "criteria": [
+          "Mencioné que el volumen (en litros) es una magnitud física medible.",
+          "Expliqué que entre dos valores cualesquiera (como 1,5 L y 2,0 L) puede tomar valores intermedios (como 1,75 L o 1,8 L) dentro de un intervalo."
+        ],
+        "modelAnswer": "Es una variable cuantitativa continua porque mide una magnitud física (el volumen de agua en litros) que puede tomar cualquier valor intermedio dentro de un intervalo numérico (por ejemplo, entre 1,5 L y 2,0 L existen valores como 1,75 L)."
+      }
+    }
+  ],
+  "pistas": [
+    "El volumen se mide en litros (L) o mililitros (mL).",
+    "¿El consumo de agua salta de 1 litro a 2 litros sin pasar por el medio, o puede tomar cualquier cantidad intermedia?",
+    "En tu explicación nombrá la magnitud (volumen) y la posibilidad de tomar valores intermedios en un intervalo.",
+    "Si alguien toma exactamente «2 litros», la variable sigue siendo continua porque la magnitud volumen admite valores intermedios."
+  ],
+  "solucion": [
+    "Clasificación: Variable Cuantitativa Continua.",
+    "Justificación: El volumen es una magnitud física medible que no avanza a saltos enteros, sino que admite valores reales intermedios dentro de un intervalo (por ejemplo, 1,5 L; 1,75 L; 2,25 L)."
+  ],
+  "etiquetas": [
+    "Guía 1.7",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

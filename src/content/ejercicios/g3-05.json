@@ -1,0 +1,62 @@
+{
+  "id": "G3-05",
+  "titulo": "Proporción y altura de la barra «Cumbia» en géneros musicales",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "porcentaje",
+    "lectura-barras"
+  ],
+  "enunciado": "En un gráfico de barras sobre géneros musicales preferidos por n = 40 alumnos, la barra de «Cumbia» alcanza una frecuencia absoluta de 16 alumnos. Calculá qué porcentaje del total representa esa barra y analizá cómo se lee su altura en un eje porcentual.",
+  "partes": [
+    {
+      "id": "pct_cumbia",
+      "tipo": "numero",
+      "esperado": 40,
+      "label": "1. ¿Qué porcentaje del total de 40 alumnos representa la barra de «Cumbia» (f = 16)?",
+      "unidad": "%",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 16,
+            "message": "16 es la frecuencia absoluta sobre 40 alumnos. Para hallar el porcentaje hacé (16 ÷ 40) × 100."
+          }
+        ]
+      }
+    },
+    {
+      "id": "lectura_eje",
+      "tipo": "select",
+      "esperado": "marca_40",
+      "label": "2. Si construimos el gráfico con un eje vertical en porcentajes (%), ¿hasta qué marca del eje llega la barra de Cumbia?",
+      "opciones": [
+        {
+          "valor": "marca_40",
+          "etiqueta": "Llega hasta la marca de 40 % en el eje vertical (que sería el 40 % de un eje que llegara hasta el 100 % del curso, aunque el gráfico suele graduarse hasta un poco más de la categoría máxima)"
+        },
+        {
+          "valor": "marca_16",
+          "etiqueta": "Llega hasta 16 % porque 16 alumnos es igual a 16 %"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Dividí la frecuencia de Cumbia (16) entre el total del curso (40) y multiplicá por 100.",
+    "16 ÷ 40 = 0,40 → 0,40 × 100 = 40 %.",
+    "En un eje graduado en porcentajes, la barra sube hasta la línea del 40 %.",
+    "La altura de una barra se lee siempre contra la escala graduada del eje Y, no a ojo según dónde termine el recuadro."
+  ],
+  "solucion": [
+    "Cálculo del porcentaje: (16 ÷ 40) × 100 = 0,40 × 100 = 40 %.",
+    "Interpretación gráfica: en un eje vertical porcentual, la barra llega a la marca de 40 % (representa dos quintas partes, es decir el 40 %, del total de 40 estudiantes)."
+  ],
+  "etiquetas": [
+    "Guía 3.5 (precisado)",
+    "barras"
+  ],
+  "leccion": "L06",
+  "adaptacion": "Aclara la diferencia entre alcanzar el valor 40 % en un eje porcentual y ocupar el 40 % de la altura visible si el eje termina en otra cifra.",
+  "variante": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": "HIS-02",
+  "titulo": "¿Por qué se tocan los rectángulos del histograma?",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": ["histograma", "justificar-grafico"],
+  "enunciado": "¿Por qué en un histograma los rectángulos se dibujan pegados, a diferencia de las barras de un gráfico de barras?",
+  "partes": [
+    {
+      "id": "justificacion",
+      "tipo": "select",
+      "esperado": "intervalos",
+      "opciones": [
+        { "valor": "intervalos", "etiqueta": "Porque representan intervalos numéricos consecutivos, sin huecos entre uno y el siguiente." },
+        { "valor": "barras", "etiqueta": "Porque es un gráfico de barras igual que los demás." },
+        { "valor": "estetica", "etiqueta": "Por una cuestión estética, sin relación con los datos." }
+      ]
+    }
+  ],
+  "pistas": [
+    "Pensá en el eje horizontal: en un histograma es numérico y continuo.",
+    "El final de un intervalo es el comienzo del siguiente."
+  ],
+  "solucion": [
+    "Los rectángulos se tocan porque cada uno abarca un intervalo numérico y los intervalos son consecutivos: donde termina uno empieza el otro."
+  ],
+  "etiquetas": ["histograma", "nuevo"]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "G2-07",
+  "titulo": "Porcentaje de rendimiento «Bueno o superior»",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cualitativa-ordinal",
+    "porcentaje",
+    "acumulacion-ordinal"
+  ],
+  "enunciado": "En una evaluación de n = 50 alumnos, los resultados según la escala ordenada (Insuficiente < Regular < Bueno < Sobresaliente) fueron: 15 obtuvieron «Sobresaliente», 20 «Bueno», 10 «Regular» y 5 «Insuficiente». ¿Cuántos estudiantes obtuvieron un rendimiento de «Bueno» o superior y qué porcentaje del total representan?",
+  "partes": [
+    {
+      "id": "cant",
+      "tipo": "numero",
+      "esperado": 35,
+      "label": "1. Cantidad de estudiantes con rendimiento «Bueno» o «Sobresaliente»",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 20,
+            "message": "20 son solo quienes obtuvieron «Bueno». Como pide «Bueno o superior», sumá también los 15 de «Sobresaliente»."
+          },
+          {
+            "value": 15,
+            "message": "15 son solo los de «Sobresaliente». Incluí también a los 20 que obtuvieron «Bueno»."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pct",
+      "tipo": "numero",
+      "esperado": 70,
+      "label": "2. Porcentaje del total de 50 alumnos (%)",
+      "unidad": "%",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 35,
+            "message": "35 es la cantidad de alumnos sobre un total de 50. Para pasar a porcentaje (sobre 100), hacé (35 ÷ 50) × 100."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "En la jerarquía de calificaciones, «Bueno o superior» abarca dos categorías: «Bueno» y «Sobresaliente».",
+    "Sumá las frecuencias de esas dos categorías: 20 + 15 = 35 alumnos.",
+    "Calculá qué porcentaje representa 35 sobre un total de n = 50 alumnos: (35 ÷ 50) × 100.",
+    "Cuando n = 50, cada alumno representa 2 % (no 1 %): 35 alumnos equivalen al 70 %."
+  ],
+  "solucion": [
+    "Estudiantes con «Bueno» o «Sobresaliente»: 20 + 15 = 35 alumnos.",
+    "Porcentaje sobre el total (n = 50): (35 ÷ 50) × 100 = 0,70 × 100 = 70 %."
+  ],
+  "etiquetas": [
+    "Guía 2.7",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "variante": false
+}

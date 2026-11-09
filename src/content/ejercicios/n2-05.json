@@ -1,0 +1,60 @@
+{
+  "id": "N2-05",
+  "titulo": "Reconstruir frecuencias absolutas a partir de porcentajes (n = 50)",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "porcentaje",
+    "frecuencia-absoluta"
+  ],
+  "enunciado": "En un relevamiento a n = 50 estudiantes sobre su taller artístico elegido, se informó que el 40 % eligió Música, el 30 % Teatro, el 20 % Pintura y el 10 % Danza. Calculá cuántos estudiantes (frecuencia absoluta f) eligieron cada taller.",
+  "partes": [
+    {
+      "id": "f_musica",
+      "tipo": "numero",
+      "esperado": 20,
+      "label": "1. Estudiantes en Música (40 % de 50)",
+      "entero": true
+    },
+    {
+      "id": "f_teatro",
+      "tipo": "numero",
+      "esperado": 15,
+      "label": "2. Estudiantes en Teatro (30 % de 50)",
+      "entero": true
+    },
+    {
+      "id": "f_pintura",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "3. Estudiantes en Pintura (20 % de 50)",
+      "entero": true
+    },
+    {
+      "id": "f_danza",
+      "tipo": "numero",
+      "esperado": 5,
+      "label": "4. Estudiantes en Danza (10 % de 50)",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Si f ÷ n = fr, entonces para recuperar f multiplicamos el total n por la frecuencia relativa (o hacemos porcentaje × n ÷ 100).",
+    "Por ejemplo, el 40 % de 50 es 0,40 × 50 = 20 estudiantes.",
+    "Comprobá al final que las cuatro cantidades enteras sumen 50.",
+    "El porcentaje no es la cantidad de personas salvo cuando n = 100; con n = 50 cada 10 % equivale a 5 personas."
+  ],
+  "solucion": [
+    "Música: 0,40 × 50 = 20 estudiantes.",
+    "Teatro: 0,30 × 50 = 15 estudiantes.",
+    "Pintura: 0,20 × 50 = 10 estudiantes.",
+    "Danza: 0,10 × 50 = 5 estudiantes. Comprobación: 20 + 15 + 10 + 5 = 50."
+  ],
+  "etiquetas": [
+    "Práctica N2-05",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": false
+}

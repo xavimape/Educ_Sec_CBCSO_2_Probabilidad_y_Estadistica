@@ -1,0 +1,21 @@
+{
+  "id": "PIC-01",
+  "titulo": "Valor de media figura en un pictograma",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": ["pictograma", "leyenda"],
+  "enunciado": "En un pictograma, una figura completa representa 20 alumnos. ¿Cuántos alumnos representa media figura?",
+  "partes": [
+    { "id": "media_figura", "tipo": "numero", "esperado": 10, "unidad": "alumnos", "entero": true }
+  ],
+  "pistas": [
+    "Media figura es la mitad de una figura completa.",
+    "20 ÷ 2 = 10."
+  ],
+  "solucion": [
+    "Media figura vale la mitad de una figura completa.",
+    "20 ÷ 2 = 10 alumnos."
+  ],
+  "etiquetas": ["pictograma", "nuevo"]
+}

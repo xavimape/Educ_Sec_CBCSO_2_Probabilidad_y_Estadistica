@@ -1,0 +1,19 @@
+{
+  "name": "Estadística y Probabilidad · 2.º año",
+  "short_name": "Estadística",
+  "description": "Consultá, aprendé, repasá y practicá Estadística y Probabilidad para el segundo año de secundaria.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#f8f9fa",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Simulacro from '../components/Simulacro.tsx';
+import { getCollection } from 'astro:content';
+import '../styles/practica.css';
+import '../styles/simulacro.css';
+
+const ejercicios = await getCollection('ejercicios');
+const datos = JSON.stringify(ejercicios.map((e) => e.data));
+---
+
+<Layout titulo="Simulacro" descripcion="Práctica integradora con devolución al final.">
+  <main>
+    <h1>Simulacro</h1>
+    <Simulacro client:load ejercicios={datos} />
+    <p><a href="../">Volver al inicio</a>.</p>
+  </main>
+</Layout>

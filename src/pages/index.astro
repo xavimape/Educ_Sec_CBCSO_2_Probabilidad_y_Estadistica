@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const modulos = ['M1 · Dato y variable', 'M2 · Tablas de frecuencias', 'M3 · Gráficos', 'M4 · Medidas de tendencia central', 'M5 · Elección de la medida', 'M6 · Azar y espacio muestral', 'M7 · Conteo y probabilidad', 'M8 · Comunicación y lectura crítica'];
+---
+
+<Layout
+  titulo="Estadística y Probabilidad · 2.º año"
+  descripcion="Consultá, aprendé, repasá y practicá Estadística y Probabilidad para el segundo año de secundaria."
+>
+  <main>
+    <h1>Estadística y Probabilidad</h1>
+    <p>Material de estudio de segundo año. En construcción: la fase 1 deja el esqueleto, el motor matemático y las colecciones de contenido; las lecciones y el banco se completan en la fase 2.</p>
+    <h2>Contenido previsto</h2>
+    <ul>
+      {modulos.map((m) => <li>{m}</li>)}
+    </ul>
+    <p><a href="./lecciones/">Ver las lecciones disponibles</a>.</p>
+    <p><a href="./practica/">Ir a practicar (banco de ejercicios)</a>.</p>
+    <p><a href="./laboratorio/">Abrir el laboratorio de datos</a>.</p>
+    <p><a href="./simulacro/">Hacer un simulacro</a>.</p>
+    <h2>Actividades de prueba (fase 1)</h2>
+    <ul>
+      <li><a href="./actividades/barras/">Construir un gráfico de barras</a></li>
+      <li><a href="./actividades/arbol/">Construir un árbol de probabilidad</a></li>
+    </ul>
+  </main>
+</Layout>

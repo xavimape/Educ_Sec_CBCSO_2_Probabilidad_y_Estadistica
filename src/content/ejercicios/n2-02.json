@@ -1,0 +1,71 @@
+{
+  "id": "N2-02",
+  "titulo": "Paso de frecuencia absoluta a relativa y porcentaje (n = 10)",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "inicial",
+  "habilidades": [
+    "frecuencia-relativa",
+    "porcentaje"
+  ],
+  "enunciado": "Con la tabla de 10 estudiantes (0 libros: f=2; 1 libro: f=4; 2 libros: f=2; 3 libros: f=1; 4 libros: f=1), completá las columnas de frecuencia relativa (fr) y porcentaje (%).",
+  "partes": [
+    {
+      "id": "tabla_fr_pct",
+      "tipo": "tabla",
+      "label": "Completá fr y % para cada fila (n = 10)",
+      "detalle": {
+        "totalN": 10,
+        "columns": [
+          "fr",
+          "pct"
+        ],
+        "rows": [
+          {
+            "x": 0,
+            "label": "0 libros (f = 2)",
+            "f": 2
+          },
+          {
+            "x": 1,
+            "label": "1 libro (f = 4)",
+            "f": 4
+          },
+          {
+            "x": 2,
+            "label": "2 libros (f = 2)",
+            "f": 2
+          },
+          {
+            "x": 3,
+            "label": "3 libros (f = 1)",
+            "f": 1
+          },
+          {
+            "x": 4,
+            "label": "4 libros (f = 1)",
+            "f": 1
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Como n = 10, dividir por 10 corre la coma un lugar a la izquierda: 2 ÷ 10 = 0,20; 4 ÷ 10 = 0,40; 1 ÷ 10 = 0,10.",
+    "Para el porcentaje, multiplicá cada fr por 100: 20 %, 40 %, 20 %, 10 %, 10 %.",
+    "Recordá que en la columna fr va la proporción sobre 1 (como 0,40) y en la columna % va sobre 100 (40 %)."
+  ],
+  "solucion": [
+    "0 libros: fr = 2/10 = 0,20 → 20 %.",
+    "1 libro: fr = 4/10 = 0,40 → 40 %.",
+    "2 libros: fr = 2/10 = 0,20 → 20 %.",
+    "3 libros: fr = 1/10 = 0,10 → 10 %.",
+    "4 libros: fr = 1/10 = 0,10 → 10 %. Suma de fr = 1,00 y suma de % = 100 %."
+  ],
+  "etiquetas": [
+    "Práctica N2-02",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": true
+}

@@ -1,0 +1,66 @@
+{
+  "id": "N4-08",
+  "titulo": "Comparar el efecto de cambiar un extremo de 6 a 16 (ejemplo de Ficha 9)",
+  "origen": "nuevo",
+  "modulo": "M5",
+  "nivel": "intermedio",
+  "habilidades": [
+    "valores-extremos",
+    "media",
+    "mediana-impar",
+    "moda"
+  ],
+  "enunciado": "En la Ficha 9 comparamos dos listas de 5 datos:\n• Lista original: 0, 1, 1, 2, 6 (suma = 10, media = 2, mediana = 1, moda = 1).\n• Lista modificada (cambiando el 6 por un 16): 0, 1, 1, 2, 16.\nCalculá la nueva media, mediana y moda de la lista modificada y observá cuál cambió.",
+  "partes": [
+    {
+      "id": "nueva_media",
+      "tipo": "numero",
+      "esperado": 4,
+      "label": "1. Nueva media aritmética (x̄) de 0, 1, 1, 2, 16",
+      "unidad": "libros"
+    },
+    {
+      "id": "nueva_mediana",
+      "tipo": "numero",
+      "esperado": 1,
+      "label": "2. Nueva mediana (Me) de 0, 1, 1, 2, 16",
+      "unidad": "libros"
+    },
+    {
+      "id": "nueva_moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        1
+      ],
+      "label": "3. Nueva moda (Mo) de 0, 1, 1, 2, 16",
+      "detalle": {
+        "maxFrequency": 2
+      }
+    }
+  ],
+  "pistas": [
+    "Sumá los nuevos datos: 0 + 1 + 1 + 2 + 16 = 20 → dividí entre 5.",
+    "El dato central (3.º lugar) sigue siendo 1 y el valor más repetido sigue siendo 1.",
+    "Cuando se reemplaza el valor máximo por uno aún mayor sin cambiar la cantidad de datos n, la mediana no se mueve pero la media sube."
+  ],
+  "solucion": [
+    "Nueva suma: 0 + 1 + 1 + 2 + 16 = 20 → Nueva media: 20 ÷ 5 = 4 libros (se duplicó de 2 a 4 por efecto del extremo 16).",
+    "Nueva mediana: el 3.º dato ordenado sigue siendo Me = 1 libro.",
+    "Nueva moda: el valor que más se repite sigue siendo Mo = 1 libro."
+  ],
+  "etiquetas": [
+    "Práctica N4-08",
+    "medidas"
+  ],
+  "leccion": "L10",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      0,
+      1,
+      1,
+      2,
+      16
+    ]
+  }
+}

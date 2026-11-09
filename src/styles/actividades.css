@@ -1,0 +1,79 @@
+/* Estilos de las actividades interactivas (fase 1). */
+
+.actividad {
+  display: grid;
+  gap: 1rem;
+}
+
+.barras-svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.barras-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.barra-control,
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.barra-control input,
+.campo input,
+.campo select {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--color-tinta);
+  border-radius: 4px;
+}
+
+.hojas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hoja {
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--color-tinta);
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hoja[aria-pressed='true'] {
+  background: var(--color-acento);
+  color: #ffffff;
+  border-color: var(--color-acento);
+}
+
+.resultado {
+  min-height: 1.5em;
+}
+
+.resultado.ok {
+  color: #15803d;
+  font-weight: 600;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--color-acento);
+  background: var(--color-acento);
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e40af;
+}

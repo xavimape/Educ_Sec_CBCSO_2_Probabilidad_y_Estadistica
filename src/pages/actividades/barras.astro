@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BarrasBuilder from '../../components/BarrasBuilder.tsx';
+import '../../styles/actividades.css';
+---
+
+<Layout
+  titulo="Actividad · Gráfico de barras"
+  descripcion="Construí un gráfico de barras y comprobá tu trabajo."
+>
+  <main>
+    <h1>Construí el gráfico de barras</h1>
+    <BarrasBuilder client:load />
+    <p><a href="../">Volver al inicio</a>.</p>
+  </main>
+</Layout>

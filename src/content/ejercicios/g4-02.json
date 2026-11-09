@@ -1,0 +1,108 @@
+{
+  "id": "G4-02",
+  "titulo": "Marca de zapatillas preferida por 12 adolescentes",
+  "origen": "guia",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "moda-categorica",
+    "pertinencia-medidas"
+  ],
+  "enunciado": "Se consultó a n = 12 adolescentes sobre su marca de zapatillas preferida (ejemplo de la guía):\nNike, Adidas, Puma, Nike, Topper, Nike, Adidas, Puma, Nike, Topper, Adidas, Nike.\nRespondé si se pueden calcular la media y la mediana para esta variable, justificá por qué y determiná la medida correspondiente.",
+  "partes": [
+    {
+      "id": "pertinencia",
+      "tipo": "select",
+      "esperado": "no_nominal",
+      "label": "1. ¿Se pueden calcular la media y la mediana para «marca de zapatillas»? ¿Por qué?",
+      "opciones": [
+        {
+          "valor": "no_nominal",
+          "etiqueta": "No, porque es una variable cualitativa nominal: no se pueden sumar nombres (sin media) ni tienen un orden jerárquico natural (sin mediana)"
+        },
+        {
+          "valor": "si_frecuencias",
+          "etiqueta": "Sí, promediando cuántas letras tiene cada marca"
+        },
+        {
+          "valor": "si_orden_alfabetico",
+          "etiqueta": "Sí, ordenando alfabéticamente y tomando la marca del medio como mediana"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "no_nominal": "¡Exacto! En variables cualitativas nominales la única medida de tendencia central aplicable es la moda.",
+          "si_frecuencias": "Eso mediría el largo de las palabras, no la preferencia de marca.",
+          "si_orden_alfabetico": "El orden alfabético es una convención de diccionario, no una jerarquía de magnitud: no define una mediana estadística."
+        }
+      }
+    },
+    {
+      "id": "moda_marca",
+      "tipo": "select",
+      "esperado": "Nike",
+      "label": "2. ¿Cuál es la moda (Mo) de esta distribución?",
+      "opciones": [
+        {
+          "valor": "Nike",
+          "etiqueta": "Nike (es la categoría más frecuente, elegida 5 veces)"
+        },
+        {
+          "valor": "5",
+          "etiqueta": "5 (porque es el número más alto)"
+        },
+        {
+          "valor": "Adidas",
+          "etiqueta": "Adidas (elegida 3 veces)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "5": "Cuidado: 5 es la frecuencia absoluta máxima (cuántas veces se eligió), pero la moda es la categoría: «Nike».",
+          "Nike": "¡Correcto! Nike se repite 5 veces (frente a 3 de Adidas, 2 de Puma y 2 de Topper), por lo que Mo = Nike.",
+          "Adidas": "Contá de nuevo: Adidas aparece 3 veces, pero Nike aparece 5 veces."
+        }
+      }
+    },
+    {
+      "id": "frec_nike",
+      "tipo": "numero",
+      "esperado": 5,
+      "label": "3. ¿Cuál es la frecuencia absoluta de «Nike»?",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Contá cuántas veces aparece cada marca en los 12 datos: Nike, Adidas, Puma y Topper.",
+    "Preguntate si se pueden sumar palabras para sacar un promedio o si hay una marca «mayor» que otra.",
+    "Recordá que la moda es el nombre de la marca más elegida, no cuántas veces salió.",
+    "En una variable cualitativa nominal, la moda es el nombre de la categoría más repetida («Nike»), nunca el número 5."
+  ],
+  "solucion": [
+    "Conteo de frecuencias (n = 12): Nike = 5, Adidas = 3, Puma = 2, Topper = 2.",
+    "No es posible calcular la media ni la mediana porque la variable es Cualitativa Nominal (no admite suma aritmética ni orden jerárquico).",
+    "La única medida aplicable es la Moda: Mo = Nike (con frecuencia absoluta f = 5)."
+  ],
+  "etiquetas": [
+    "Guía 4.2",
+    "medidas"
+  ],
+  "leccion": "L09",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      "Nike",
+      "Adidas",
+      "Puma",
+      "Nike",
+      "Topper",
+      "Nike",
+      "Adidas",
+      "Puma",
+      "Nike",
+      "Topper",
+      "Adidas",
+      "Nike"
+    ]
+  }
+}

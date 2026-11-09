@@ -1,0 +1,89 @@
+{
+  "id": "G1-02",
+  "titulo": "Encuesta sobre el estado de las computadoras",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "cualitativa-ordinal",
+    "orden-jerarquico"
+  ],
+  "enunciado": "En un relevamiento escolar (ejemplo de estudio) para evaluar el estado de las computadoras del laboratorio, las respuestas posibles son: «Excelente, Bueno, Regular, Defectuoso». ¿Qué tipo de variable estadística representa esta medición y cuál es su orden lógico?",
+  "partes": [
+    {
+      "id": "clasificacion",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "Clasificación de la variable «estado de las computadoras»",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cualitativa-ordinal": "¡Muy bien! Expresa una cualidad mediante categorías que siguen una escala de calidad ordenada.",
+          "cualitativa-nominal": "Aunque son palabras, no da lo mismo el orden: hay una progresión clara desde Defectuoso hasta Excelente.",
+          "cuantitativa-discreta": "Las respuestas son palabras de calidad, no cantidades numéricas.",
+          "cuantitativa-continua": "Son categorías de estado, no mediciones continuas."
+        }
+      }
+    },
+    {
+      "id": "orden",
+      "tipo": "select",
+      "esperado": "def-reg-bue-exc",
+      "label": "Elegí la secuencia ordenada de menor a mayor calidad de funcionamiento",
+      "opciones": [
+        {
+          "valor": "def-reg-bue-exc",
+          "etiqueta": "Defectuoso → Regular → Bueno → Excelente"
+        },
+        {
+          "valor": "bue-def-exc-reg",
+          "etiqueta": "Bueno → Defectuoso → Excelente → Regular (orden alfabético)"
+        },
+        {
+          "valor": "reg-def-bue-exc",
+          "etiqueta": "Regular → Defectuoso → Bueno → Excelente"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "def-reg-bue-exc": "¡Exacto! Ese orden gradual permite incluso calcular frecuencias acumuladas o identificar la mediana ordinal.",
+          "bue-def-exc-reg": "El orden alfabético no respeta la jerarquía real de calidad del equipo.",
+          "reg-def-bue-exc": "«Defectuoso» indica peor estado que «Regular», por lo que va en el extremo inferior."
+        }
+      }
+    }
+  ],
+  "pistas": [
+    "Observá las cuatro respuestas posibles: «Excelente, Bueno, Regular, Defectuoso». ¿Son números o palabras?",
+    "Como son palabras que describen un atributo, la variable es cualitativa.",
+    "Fijate si esas cuatro palabras tienen una jerarquía de calidad entre sí.",
+    "Ordenar categorías ordinales alfabéticamente en una tabla en lugar de respetar su jerarquía de nivel."
+  ],
+  "solucion": [
+    "Las respuestas («Excelente, Bueno, Regular, Defectuoso») son categorías no numéricas, por lo que la variable es cualitativa.",
+    "Como expresan una escala graduada de calidad (Defectuoso < Regular < Bueno < Excelente), su subclasificación es Cualitativa Ordinal."
+  ],
+  "etiquetas": [
+    "Guía 1.2",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

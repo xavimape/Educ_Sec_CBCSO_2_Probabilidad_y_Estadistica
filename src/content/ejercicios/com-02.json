@@ -1,0 +1,29 @@
+{
+  "id": "COM-02",
+  "titulo": "Efecto de un eje que no empieza en cero",
+  "origen": "nuevo",
+  "modulo": "M8",
+  "nivel": "inicial",
+  "habilidades": ["lectura-critica", "grafico-engano"],
+  "enunciado": "Un gráfico de barras tiene el eje vertical empezando en 50 (y no en 0). ¿Qué efecto produce esto al comparar dos barras de 52 y 54?",
+  "partes": [
+    {
+      "id": "efecto",
+      "tipo": "select",
+      "esperado": "exagera",
+      "opciones": [
+        { "valor": "exagera", "etiqueta": "Hace que la diferencia parezca mucho más grande de lo que realmente es." },
+        { "valor": "ninguno", "etiqueta": "No produce ningún efecto en la comparación." },
+        { "valor": "iguales", "etiqueta": "Hace que las dos barras se vean iguales." }
+      ]
+    }
+  ],
+  "pistas": [
+    "La diferencia real es 2 (de 52 a 54).",
+    "Al empezar en 50, esa diferencia de 2 ocupa casi todo el gráfico."
+  ],
+  "solucion": [
+    "Exagera la diferencia: al cortar el eje en 50, una diferencia real de 2 parece enorme. El eje debe empezar en 0."
+  ],
+  "etiquetas": ["comunicacion", "grafico-engano", "nuevo"]
+}

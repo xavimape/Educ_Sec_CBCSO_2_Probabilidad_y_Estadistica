@@ -1,0 +1,53 @@
+{
+  "id": "N4-05",
+  "titulo": "Hallar la mediana directamente desde una tabla de frecuencias (n = 15)",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "mediana-tabla",
+    "frecuencia-acumulada"
+  ],
+  "enunciado": "En el ejemplo resuelto de la guía sobre notas de n = 15 alumnos, la tabla muestra:\n• Nota 6: f₁ = 2 → F₁ = 2\n• Nota 7: f₂ = 3 → F₂ = 5\n• Nota 8: f₃ = 5 → F₃ = 10\n• Nota 9: f₄ = 3 → F₄ = 13\n• Nota 10: f₅ = 2 → F₅ = 15\nUbicá la posición central usando la columna F y determiná la mediana.",
+  "partes": [
+    {
+      "id": "pos_central",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "1. Como n = 15 es impar, ¿qué posición central buscamos ((15 + 1) ÷ 2)?",
+      "entero": true
+    },
+    {
+      "id": "mediana_tabla",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "2. Mirando la columna acumulada F (F₂ = 5 cubre hasta el 5.º lugar y F₃ = 10 cubre del 6.º al 10.º lugar), ¿cuál es la nota mediana (Me)?",
+      "unidad": "puntos",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 5,
+            "message": "5 es la frecuencia absoluta f₃ de la nota 8, pero la mediana es el valor de la nota: 8 puntos."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Con 15 datos ordenados, el dato central está en la posición (15 + 1) ÷ 2 = 8.",
+    "Las notas 6 y 7 llegan hasta la posición acumulada F₂ = 5.",
+    "Las cinco notas 8 ocupan las posiciones 6, 7, 8, 9 y 10 (hasta F₃ = 10). Por lo tanto, en la posición 8 hay un 8.",
+    "Para hallar la mediana en una tabla ordenada, buscá la primera fila cuya frecuencia acumulada F sea mayor o igual a la posición central."
+  ],
+  "solucion": [
+    "Posición central: (15 + 1) ÷ 2 = 8 (octavo dato ordenado).",
+    "La primera acumulada que alcanza o supera a 8 es F₃ = 10, que corresponde a la fila de Nota 8.",
+    "Por lo tanto, Me = 8 puntos."
+  ],
+  "etiquetas": [
+    "Práctica N4-05",
+    "medidas"
+  ],
+  "leccion": "L08",
+  "variante": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "AZR-03",
+  "titulo": "Espacio muestral de un dado",
+  "origen": "nuevo",
+  "modulo": "M6",
+  "nivel": "inicial",
+  "habilidades": ["espacio-muestral", "enumerar"],
+  "enunciado": "¿Cuántos resultados posibles tiene el espacio muestral de tirar un dado común de seis caras?",
+  "partes": [
+    { "id": "total", "tipo": "numero", "esperado": 6, "entero": true }
+  ],
+  "pistas": [
+    "El dado tiene caras numeradas del 1 al 6.",
+    "Contá todos los números que pueden salir."
+  ],
+  "solucion": [
+    "Espacio muestral: {1, 2, 3, 4, 5, 6}.",
+    "Hay 6 resultados posibles."
+  ],
+  "etiquetas": ["azar", "espacio-muestral", "nuevo"]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "G3-04",
+  "titulo": "Puntos anotados por partido en el torneo de básquetbol",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "rotular-ejes",
+    "elegir-escala",
+    "construir-barras"
+  ],
+  "enunciado": "En un torneo interclases de básquetbol (ejemplo ficticio), los puntos anotados por 2.º A en 5 partidos fueron: Partido 1 (12 pts), Partido 2 (20 pts), Partido 3 (16 pts), Partido 4 (24 pts) y Partido 5 (8 pts). Elegí el rótulo correcto del eje vertical y calculá la altura en cuadritos de cada barra usando la escala sugerida de 1 cuadrito = 4 puntos.",
+  "partes": [
+    {
+      "id": "rotulo_y",
+      "tipo": "select",
+      "esperado": "puntos",
+      "label": "1. ¿Cuál es el rótulo correcto para el eje vertical (Eje Y) en este gráfico?",
+      "opciones": [
+        {
+          "valor": "puntos",
+          "etiqueta": "Puntos anotados (porque la altura de cada barra mide los tantos convertidos en ese partido)"
+        },
+        {
+          "valor": "frecuencia_partidos",
+          "etiqueta": "Cantidad de partidos (frecuencia de partidos)"
+        },
+        {
+          "valor": "porcentaje",
+          "etiqueta": "Porcentaje de alumnos"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "puntos": "¡Exacto! Acá no estamos contando cuántos partidos tuvieron cierto puntaje, sino mostrando los puntos anotados en cada partido.",
+          "frecuencia_partidos": "Atención: cada barra es un partido y su altura representa los puntos anotados (12, 20, 16, 24, 8 pts).",
+          "porcentaje": "Los datos están expresados en puntos anotados por partido."
+        }
+      }
+    },
+    {
+      "id": "constructor_cuadritos",
+      "tipo": "barras",
+      "label": "2. Con la escala 1 cuadrito = 4 puntos, ingresá cuántos cuadritos de altura tendrá cada una de las 5 barras",
+      "unidad": "cuadritos",
+      "detalle": {
+        "inputMode": "cells",
+        "maxGridCells": 10,
+        "validScaleSteps": [
+          4
+        ],
+        "bars": [
+          {
+            "key": "p1",
+            "label": "Partido 1 (12 pts)",
+            "value": 12
+          },
+          {
+            "key": "p2",
+            "label": "Partido 2 (20 pts)",
+            "value": 20
+          },
+          {
+            "key": "p3",
+            "label": "Partido 3 (16 pts)",
+            "value": 16
+          },
+          {
+            "key": "p4",
+            "label": "Partido 4 (24 pts)",
+            "value": 24
+          },
+          {
+            "key": "p5",
+            "label": "Partido 5 (8 pts)",
+            "value": 8
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Observá que todos los puntajes (12, 20, 16, 24 y 8) son múltiplos de 4.",
+    "Si 1 cuadrito representa 4 puntos, el eje Y se gradúa: 0, 4, 8, 12, 16, 20, 24 puntos.",
+    "Para saber cuántos cuadritos sube cada barra, dividí los puntos del partido entre 4.",
+    "Rotular siempre la magnitud real representada en el eje vertical («Puntos anotados» en un gráfico de puntos por partido)."
+  ],
+  "solucion": [
+    "Rótulo del eje Y: «Puntos anotados» (y en el eje X: «Partido 1 a Partido 5»).",
+    "Escala sugerida en eje Y: 1 cuadrito = 4 puntos (marcas en 0, 4, 8, 12, 16, 20, 24).",
+    "Alturas en cuadritos: Partido 1 = 12 ÷ 4 = 3 cuadritos; Partido 2 = 20 ÷ 4 = 5 cuadritos; Partido 3 = 16 ÷ 4 = 4 cuadritos; Partido 4 = 24 ÷ 4 = 6 cuadritos; Partido 5 = 8 ÷ 4 = 2 cuadritos."
+  ],
+  "etiquetas": [
+    "Guía 3.4",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

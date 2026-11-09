@@ -1,0 +1,63 @@
+{
+  "id": "G3-07",
+  "titulo": "Elección de escala para frecuencia máxima 25 en 15 cuadritos",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "elegir-escala",
+    "proporcionalidad-barras"
+  ],
+  "enunciado": "En un examen debés elaborar un gráfico de barras donde hay tres barras de frecuencias 15, 20 y 25 (la máxima es f = 25), pero tu hoja cuadriculada solo dispone de 15 cuadritos de altura vertical útil. Usando la escala graduada de 1 cuadrito = 2 unidades (0, 2, 4, 6, ..., 26), calculá cuántos cuadritos de altura mide cada una de las tres barras.",
+  "partes": [
+    {
+      "id": "altura_15",
+      "tipo": "numero",
+      "esperado": 7.5,
+      "label": "1. Con escala 1 cuadrito = 2 unidades, ¿cuántos cuadritos de alto mide la barra de frecuencia 15?"
+    },
+    {
+      "id": "altura_20",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "2. Con esa misma escala, ¿cuántos cuadritos de alto mide la barra de frecuencia 20?"
+    },
+    {
+      "id": "altura_25",
+      "tipo": "numero",
+      "esperado": 12.5,
+      "label": "3. ¿Y cuántos cuadritos de alto mide la barra máxima de frecuencia 25?",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 13,
+            "message": "13 cuadritos corresponde a la marca de 26 unidades (26 ÷ 2 = 13). Para representar 25 unidades hacé 25 ÷ 2 = 12,5 cuadritos (a mitad de camino entre la línea 12 y la línea 13)."
+          },
+          {
+            "value": 25,
+            "message": "25 es la frecuencia en unidades, pero como cada cuadrito vale 2 unidades, dividí 25 ÷ 2 para hallar los cuadritos."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Si 1 cuadrito representa 2 unidades, para saber cuántos cuadritos ocupa cualquier frecuencia simplemente dividís esa frecuencia por 2.",
+    "Cuando la frecuencia es par (como 20), cae justo sobre una línea de la cuadrícula: 20 ÷ 2 = 10 cuadritos.",
+    "Cuando la frecuencia es impar (como 15 o 25), termina en «,5» cuadritos: justo a la mitad entre dos líneas consecutivas.",
+    "También sería matemáticamente válida una escala de 1 cuadrito = 5 unidades (donde 15, 20 y 25 medirían 3, 4 y 5 cuadritos), aunque usar 2 unidades por cuadrito aprovecha mejor la altura de la hoja."
+  ],
+  "solucion": [
+    "Con 15 cuadritos disponibles, una escala de 1 cuadrito = 1 unidad no entra (necesitaría 25 cuadritos). Elegimos 1 cuadrito = 2 unidades, graduando el eje Y de 2 en 2 hasta 26 (13 cuadritos de alto).",
+    "Barra de frecuencia 15: 15 ÷ 2 = 7,5 cuadritos (mitad entre los cuadritos 7 y 8).",
+    "Barra de frecuencia 20: 20 ÷ 2 = 10 cuadritos exactos.",
+    "Barra de frecuencia 25 (máxima): 25 ÷ 2 = 12,5 cuadritos (mitad entre los cuadritos 12 y 13)."
+  ],
+  "etiquetas": [
+    "Guía 3.7 (completado)",
+    "barras"
+  ],
+  "leccion": "L06",
+  "adaptacion": "Incluye explícitamente el cálculo de la altura de la barra máxima de 25 (12,5 cuadritos con escala de 2 por cuadrito), que faltaba en el solucionario original, además de las barras de 15 y 20.",
+  "variante": false
+}

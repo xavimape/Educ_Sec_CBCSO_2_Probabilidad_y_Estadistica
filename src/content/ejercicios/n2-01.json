@@ -1,0 +1,86 @@
+{
+  "id": "N2-01",
+  "titulo": "Conteo de frecuencias absolutas en el ejemplo de 10 estudiantes",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "inicial",
+  "habilidades": [
+    "frecuencia-absoluta"
+  ],
+  "enunciado": "En el ejemplo de las fichas didácticas, n = 10 estudiantes respondieron cuántos libros leyeron:\n0, 1, 1, 2, 0, 1, 3, 2, 1, 4.\nCompletá la columna de frecuencias absolutas (f) y verificá que sumen 10.",
+  "partes": [
+    {
+      "id": "tabla_f",
+      "tipo": "tabla",
+      "label": "Completá la frecuencia absoluta (f) de cada valor (n = 10)",
+      "detalle": {
+        "totalN": 10,
+        "columns": [
+          "f"
+        ],
+        "rows": [
+          {
+            "x": 0,
+            "label": "0 libros",
+            "f": 2,
+            "F": 2
+          },
+          {
+            "x": 1,
+            "label": "1 libro",
+            "f": 4,
+            "F": 6
+          },
+          {
+            "x": 2,
+            "label": "2 libros",
+            "f": 2,
+            "F": 8
+          },
+          {
+            "x": 3,
+            "label": "3 libros",
+            "f": 1,
+            "F": 9
+          },
+          {
+            "x": 4,
+            "label": "4 libros",
+            "f": 1,
+            "F": 10
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Contá cuántas veces aparece cada número del 0 al 4 en la lista de 10 datos.",
+    "El 0 está 2 veces; el 1 está 4 veces; el 2 está 2 veces; el 3 está 1 vez; el 4 está 1 vez.",
+    "Verificá: 2 + 4 + 2 + 1 + 1 = 10.",
+    "No confundir este ejemplo de 10 estudiantes (frecuencias 2, 4, 2, 1, 1) con el de la guía de 20 estudiantes (3, 8, 6, 2, 1)."
+  ],
+  "solucion": [
+    "f(0) = 2; f(1) = 4; f(2) = 2; f(3) = 1; f(4) = 1.",
+    "Suma de frecuencias absolutas: 2 + 4 + 2 + 1 + 1 = 10 (coincide con los n = 10 estudiantes)."
+  ],
+  "etiquetas": [
+    "Práctica N2-01",
+    "frecuencias"
+  ],
+  "leccion": "L03",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      1,
+      3,
+      2,
+      1,
+      4
+    ]
+  }
+}

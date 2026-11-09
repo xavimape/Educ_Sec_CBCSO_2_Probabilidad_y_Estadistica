@@ -1,0 +1,50 @@
+/* Simulacro. */
+
+.sim-config {
+  display: grid;
+  gap: 1rem;
+  max-width: 30rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.campo input,
+.campo select {
+  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--color-tinta);
+  border-radius: 4px;
+}
+
+.progreso {
+  font-weight: 600;
+}
+
+.nota {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.sim-resultado {
+  display: grid;
+  gap: 1rem;
+}
+
+.resumen-ejercicio {
+  border: 1px solid var(--color-tinta);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+
+.resumen-ejercicio h2 {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+.feedback.auto {
+  color: #555;
+}

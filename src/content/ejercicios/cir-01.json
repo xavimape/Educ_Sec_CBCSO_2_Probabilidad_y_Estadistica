@@ -1,0 +1,21 @@
+{
+  "id": "CIR-01",
+  "titulo": "Ángulo de un sector del 25 %",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": ["grafico-circular", "porcentaje-a-angulo"],
+  "enunciado": "En un gráfico circular, el total representa 100 % y 360°. ¿Qué ángulo le corresponde a un sector que representa el 25 % de los datos?",
+  "partes": [
+    { "id": "angulo", "tipo": "numero", "esperado": 90, "unidad": "grados", "entero": true }
+  ],
+  "pistas": [
+    "El ángulo se calcula como (porcentaje ÷ 100) × 360°.",
+    "25 % es la cuarta parte de 100 %, y 90° es la cuarta parte de 360°."
+  ],
+  "solucion": [
+    "25 % → 25 ÷ 100 = 0,25.",
+    "0,25 × 360° = 90°."
+  ],
+  "etiquetas": ["circular", "nuevo"]
+}

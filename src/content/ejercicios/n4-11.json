@@ -1,0 +1,46 @@
+{
+  "id": "N4-11",
+  "titulo": "Construir un conjunto de 5 datos que cumpla condiciones dadas",
+  "origen": "nuevo",
+  "modulo": "M5",
+  "nivel": "desafio",
+  "habilidades": [
+    "media",
+    "mediana-impar",
+    "moda"
+  ],
+  "enunciado": "Queremos completar una lista ordenada de 5 números enteros de menor a mayor: 2, 2, 4, 6, [ ? ] de modo que su moda sea 2, su mediana sea 4 y su media aritmética sea exactamente 5. ¿Qué número debe ir en el quinto lugar?",
+  "partes": [
+    {
+      "id": "suma_5_datos",
+      "tipo": "numero",
+      "esperado": 25,
+      "label": "1. Para que 5 datos tengan media 5, ¿cuánto deben sumar en total (5 × 5)?",
+      "entero": true
+    },
+    {
+      "id": "quinto_dato",
+      "tipo": "numero",
+      "esperado": 11,
+      "label": "2. Como los cuatro primeros suman 2 + 2 + 4 + 6 = 14, ¿cuál debe ser el quinto número?",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Si 5 números tienen promedio 5, su suma total es 5 × 5 = 25.",
+    "Restá a 25 la suma de los cuatro primeros (2 + 2 + 4 + 6 = 14).",
+    "Verificá que con 2, 2, 4, 6, 11 la moda sigue siendo 2 y el dato central (3.º) sigue siendo 4.",
+    "Modificar el último dato hacia arriba permite ajustar la media sin cambiar la mediana (4) ni la moda (2)."
+  ],
+  "solucion": [
+    "Suma necesaria para media 5 con n = 5 datos: 5 × 5 = 25.",
+    "Suma de los 4 primeros datos: 2 + 2 + 4 + 6 = 14 → quinto dato = 25 − 14 = 11.",
+    "Verificación de 2, 2, 4, 6, 11: moda = 2 (se repite dos veces), mediana = 4 (3.º dato ordenado) y media = 25 ÷ 5 = 5."
+  ],
+  "etiquetas": [
+    "Práctica N4-11",
+    "medidas"
+  ],
+  "leccion": "L10",
+  "variante": false
+}

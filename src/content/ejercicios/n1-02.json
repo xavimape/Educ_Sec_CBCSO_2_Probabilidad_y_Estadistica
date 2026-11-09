@@ -1,0 +1,69 @@
+{
+  "id": "N1-02",
+  "titulo": "Barrio de residencia y cantidad de cuadras caminadas",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "cualitativa-nominal",
+    "cuantitativa-discreta"
+  ],
+  "enunciado": "En una planilla ficticia de movilidad se anotan dos datos de cada estudiante: el barrio donde vive (San Martín, San Miguel, Don Bosco) y la cantidad entera de cuadras que camina hasta la parada (1, 2, 3, 4). Clasificá ambas variables.",
+  "partes": [
+    {
+      "id": "barrio",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "1. Barrio de residencia",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (nombres de barrios sin jerarquía)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (tienen un orden numérico obligatorio)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "cuadras",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "2. Cantidad entera de cuadras caminadas hasta la parada",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (conteo de cuadras enteras)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "El nombre del barrio es una palabra sin orden jerárquico.",
+    "Contar cuántas cuadras enteras se caminan arroja números enteros (1, 2, 3, 4).",
+    "Un mismo relevamiento puede incluir variables cualitativas y cuantitativas a la vez."
+  ],
+  "solucion": [
+    "Barrio de residencia: Cualitativa nominal.",
+    "Cantidad de cuadras contadas: Cuantitativa discreta."
+  ],
+  "etiquetas": [
+    "Práctica N1-02",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

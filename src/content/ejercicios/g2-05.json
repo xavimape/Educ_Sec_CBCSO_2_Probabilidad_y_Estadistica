@@ -1,0 +1,88 @@
+{
+  "id": "G2-05",
+  "titulo": "Medio de transporte de 40 estudiantes",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "inicial",
+  "habilidades": [
+    "frecuencia-relativa",
+    "porcentaje",
+    "variable-nominal"
+  ],
+  "enunciado": "En una consulta a n = 40 estudiantes sobre el medio de transporte usado para asistir a clase, se obtuvieron las siguientes frecuencias absolutas:\nColectivo (16), Moto (10), Bicicleta (8) y Caminando (6).\nCompletá las columnas de frecuencia relativa (fr) y porcentual (%), y respondé por qué no se incluye la columna de frecuencia acumulada (F).",
+  "partes": [
+    {
+      "id": "tabla",
+      "tipo": "tabla",
+      "label": "1. Completá fr y % para cada medio de transporte (n = 40)",
+      "detalle": {
+        "totalN": 40,
+        "columns": [
+          "fr",
+          "pct"
+        ],
+        "rows": [
+          {
+            "x": "Colectivo",
+            "label": "Colectivo (f = 16)",
+            "f": 16
+          },
+          {
+            "x": "Moto",
+            "label": "Moto (f = 10)",
+            "f": 10
+          },
+          {
+            "x": "Bicicleta",
+            "label": "Bicicleta (f = 8)",
+            "f": 8
+          },
+          {
+            "x": "Caminando",
+            "label": "Caminando (f = 6)",
+            "f": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "por_que_sin_F",
+      "tipo": "select",
+      "esperado": "nominal-sin-orden",
+      "label": "2. ¿Por qué no corresponde interpretar una frecuencia acumulada «menor o igual» en esta tabla?",
+      "opciones": [
+        {
+          "valor": "nominal-sin-orden",
+          "etiqueta": "Porque el medio de transporte es una variable cualitativa nominal y sus categorías no tienen un orden natural"
+        },
+        {
+          "valor": "porque-son-40",
+          "etiqueta": "Porque cuando n = 40 no se puede sumar"
+        },
+        {
+          "valor": "porque-da-100",
+          "etiqueta": "Porque los porcentajes ya suman 100 %"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "El total de estudiantes es n = 16 + 10 + 8 + 6 = 40.",
+    "Dividí cada frecuencia absoluta entre 40: 16÷40 = 0,40; 10÷40 = 0,25; 8÷40 = 0,20; 6÷40 = 0,15.",
+    "Multiplicá cada fr por 100 y comprobá que 40 % + 25 % + 20 % + 15 % = 100 %.",
+    "No imponer un orden acumulado («menor o igual») a categorías nominales."
+  ],
+  "solucion": [
+    "Colectivo: fr = 16 ÷ 40 = 0,40 → 40 %.",
+    "Moto: fr = 10 ÷ 40 = 0,25 → 25 %.",
+    "Bicicleta: fr = 8 ÷ 40 = 0,20 → 20 %.",
+    "Caminando: fr = 6 ÷ 40 = 0,15 → 15 %.",
+    "Comprobación: 40 % + 25 % + 20 % + 15 % = 100 %. No se interpreta F como «hasta» porque las categorías son nominales."
+  ],
+  "etiquetas": [
+    "Guía 2.5",
+    "frecuencias"
+  ],
+  "leccion": "L04",
+  "variante": false
+}

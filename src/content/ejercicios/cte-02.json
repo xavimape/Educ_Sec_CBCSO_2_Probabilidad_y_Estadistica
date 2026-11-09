@@ -1,0 +1,21 @@
+{
+  "id": "CTE-02",
+  "titulo": "Conteo de resultados de dos monedas",
+  "origen": "nuevo",
+  "modulo": "M7",
+  "nivel": "inicial",
+  "habilidades": ["conteo", "diagrama-de-arbol"],
+  "enunciado": "Se lanzan dos monedas. ¿Cuántos resultados distintos pueden salir?",
+  "partes": [
+    { "id": "resultados", "tipo": "numero", "esperado": 4, "entero": true }
+  ],
+  "pistas": [
+    "Cada moneda tiene 2 resultados: cara o ceca.",
+    "Multiplicá las opciones de cada lanzamiento: 2 × 2."
+  ],
+  "solucion": [
+    "Primer lanzamiento: 2 opciones; segundo: otras 2.",
+    "Total: 2 × 2 = 4 resultados (CC, CS, SC, SS)."
+  ],
+  "etiquetas": ["conteo", "nuevo"]
+}

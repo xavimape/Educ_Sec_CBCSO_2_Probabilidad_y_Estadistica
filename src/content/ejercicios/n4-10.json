@@ -1,0 +1,55 @@
+{
+  "id": "N4-10",
+  "titulo": "Detectar el error de dividir por la cantidad de filas en lugar de n",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "desafio",
+  "habilidades": [
+    "media-tabla",
+    "detectar-errores"
+  ],
+  "enunciado": "En una tabla sobre cantidad de mascotas en n = 25 hogares, los valores son 0, 1, 2 y 3 mascotas (4 filas), y la suma de los productos Σ(x · f) dio 35 mascotas en total. Un compañero calculó la media haciendo 35 ÷ 4 = 8,75 mascotas por hogar. Explicá por qué es imposible ese resultado y calculá la media correcta.",
+  "partes": [
+    {
+      "id": "por_que_imposible",
+      "tipo": "select",
+      "esperado": "fuera_de_rango",
+      "label": "1. Sin hacer cuentas siquiera, ¿cómo te das cuenta enseguida de que una media de 8,75 mascotas es imposible en esta tabla?",
+      "opciones": [
+        {
+          "valor": "fuera_de_rango",
+          "etiqueta": "Porque los datos van de 0 a 3 mascotas: el promedio jamás puede ser mayor que el dato máximo (3); el error fue dividir entre las 4 filas en vez de dividir entre los 25 hogares"
+        },
+        {
+          "valor": "porque_tiene_coma",
+          "etiqueta": "Porque un promedio nunca puede tener decimales"
+        }
+      ]
+    },
+    {
+      "id": "media_correcta",
+      "tipo": "numero",
+      "esperado": 1.4,
+      "label": "2. ¿Cuál es la media aritmética correcta (35 ÷ 25) en mascotas por hogar?",
+      "unidad": "mascotas",
+      "redondeo": 2
+    }
+  ],
+  "pistas": [
+    "Todo promedio tiene que quedar comprendido entre el valor mínimo (0) y el valor máximo (3) de los datos.",
+    "El compañero dividió por 4 (las filas) en vez de dividir por n = 25 hogares.",
+    "Hacé 35 ÷ 25.",
+    "Control rápido de cualquier media o mediana: el resultado siempre debe estar entre el valor mínimo y el valor máximo de la lista."
+  ],
+  "solucion": [
+    "Comprobación de sentido: si ningún hogar tiene más de 3 mascotas, el promedio no puede ser 8,75.",
+    "El error fue dividir la suma de productos (35) entre la cantidad de filas (4) en lugar del total de hogares (n = 25).",
+    "Media correcta: x̄ = 35 ÷ 25 = 1,4 mascotas por hogar."
+  ],
+  "etiquetas": [
+    "Práctica N4-10",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "variante": false
+}

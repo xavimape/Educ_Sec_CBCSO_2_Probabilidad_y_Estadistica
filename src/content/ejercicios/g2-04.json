@@ -1,0 +1,107 @@
+{
+  "id": "G2-04",
+  "titulo": "Tabla de horas diarias de estudio de 20 alumnos",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-absoluta",
+    "frecuencia-relativa",
+    "porcentaje",
+    "frecuencia-acumulada"
+  ],
+  "enunciado": "Los siguientes datos representan las horas diarias dedicadas a tareas fuera del colegio (registradas en horas enteras) por n = 20 alumnos de 2.º año:\n1, 2, 0, 1, 3, 2, 1, 2, 0, 1, 2, 3, 1, 4, 2, 1, 0, 2, 1, 2.\nNota conceptual: aunque acá se hayan anotado números enteros (0 a 4) y los organicemos por valores en la tabla, recordá que el tiempo es por naturaleza una magnitud continua.\nConstruí la tabla de frecuencias completa (f, fr, % y F).",
+  "partes": [
+    {
+      "id": "tabla",
+      "tipo": "tabla",
+      "label": "Completá la tabla de frecuencias para 0, 1, 2, 3 y 4 horas (n = 20)",
+      "detalle": {
+        "totalN": 20,
+        "columns": [
+          "f",
+          "fr",
+          "pct",
+          "F"
+        ],
+        "rows": [
+          {
+            "x": 0,
+            "label": "0 h",
+            "f": 3,
+            "F": 3
+          },
+          {
+            "x": 1,
+            "label": "1 h",
+            "f": 7,
+            "F": 10
+          },
+          {
+            "x": 2,
+            "label": "2 h",
+            "f": 7,
+            "F": 17
+          },
+          {
+            "x": 3,
+            "label": "3 h",
+            "f": 2,
+            "F": 19
+          },
+          {
+            "x": 4,
+            "label": "4 h",
+            "f": 1,
+            "F": 20
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Contá cada valor en la lista de 20 datos: el 0 aparece 3 veces, el 1 aparece 7 veces, el 2 aparece 7 veces, el 3 aparece 2 veces y el 4 aparece 1 vez.",
+    "Al dividir entre n = 20, cada unidad de frecuencia equivale a 1 ÷ 20 = 0,05 (es decir, 5 %).",
+    "Sumá las frecuencias de arriba hacia abajo para la columna F: 3, 10, 17, 19, 20.",
+    "Cuando n = 20, verificá que la última acumulada F₅ dé exactamente 20."
+  ],
+  "solucion": [
+    "0 h: f = 3 → fr = 3/20 = 0,15 → 15 % → F₁ = 3.",
+    "1 h: f = 7 → fr = 7/20 = 0,35 → 35 % → F₂ = 3 + 7 = 10.",
+    "2 h: f = 7 → fr = 7/20 = 0,35 → 35 % → F₃ = 10 + 7 = 17.",
+    "3 h: f = 2 → fr = 2/20 = 0,10 → 10 % → F₄ = 17 + 2 = 19.",
+    "4 h: f = 1 → fr = 1/20 = 0,05 → 5 % → F₅ = 19 + 1 = 20.",
+    "Verificación: Σf = 20, Σfr = 1,00, Σ% = 100 %."
+  ],
+  "etiquetas": [
+    "Guía 2.4",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "adaptacion": "Agrega aclaración conceptual de que registrar el tiempo en horas enteras redondeadas no transforma al tiempo en una magnitud discreta.",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      1,
+      2,
+      0,
+      1,
+      3,
+      2,
+      1,
+      2,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4,
+      2,
+      1,
+      0,
+      2,
+      1,
+      2
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+/* Vista de práctica (un ejercicio por vez). */
+
+.ejercicio {
+  display: grid;
+  gap: 1rem;
+}
+
+.ejercicio-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--color-tinta);
+  border-radius: 999px;
+}
+
+.enunciado {
+  white-space: pre-line;
+}
+
+.partes {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.2rem;
+}
+
+.parte {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.parte input,
+.parte select {
+  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--color-tinta);
+  border-radius: 4px;
+  max-width: 22rem;
+}
+
+.label {
+  margin: 0;
+}
+
+.feedback {
+  margin: 0;
+}
+
+.feedback.ok {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.feedback.error {
+  color: #b91c1c;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pistas {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pista {
+  margin: 0;
+  font-style: italic;
+}
+
+.no-auto {
+  margin: 0;
+  color: #555;
+}
+
+.grupo ul {
+  padding-left: 1.2rem;
+}
+
+.nivel {
+  color: #555;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,49 @@
+{
+  "id": "N3-12",
+  "titulo": "Redactar una conclusión completa a partir de un gráfico de barras",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "comunicar-resultados",
+    "lectura-barras"
+  ],
+  "enunciado": "En un gráfico sobre el tipo de lectura preferida por n = 40 estudiantes, las frecuencias son: Cuentos = 18, Novelas = 10, Historietas = 8, Poesía = 4. Calculá el porcentaje de la categoría más elegida y redactá una conclusión clara que comunique los resultados.",
+  "partes": [
+    {
+      "id": "pct_cuentos",
+      "tipo": "numero",
+      "esperado": 45,
+      "label": "1. ¿Qué porcentaje del total de 40 estudiantes eligió «Cuentos» (f = 18) (%)?",
+      "unidad": "%"
+    },
+    {
+      "id": "conclusion_rubrica",
+      "tipo": "rubrica",
+      "label": "2. Redactá una conclusión breve sobre el gráfico y autoevaluala con la rúbrica",
+      "detalle": {
+        "placeholder": "Mencioná cuál fue la categoría más elegida (moda), su cantidad o porcentaje, y el total de encuestados...",
+        "criteria": [
+          "Identifiqué a «Cuentos» como la categoría más frecuente (moda), con 18 de los 40 estudiantes (45 %).",
+          "Mencioné el contraste con las demás categorías o con la menos elegida («Poesía», con 4 estudiantes o 10 %)."
+        ],
+        "modelAnswer": "Sobre un total de 40 estudiantes consultados, la opción más elegida (moda) fue Cuentos con 18 respuestas (el 45 % del grupo), seguida por Novelas (10) e Historietas (8), mientras que Poesía fue la menos frecuente con 4 respuestas (10 %)."
+      }
+    }
+  ],
+  "pistas": [
+    "Calculá (18 ÷ 40) × 100 = 45 %.",
+    "Una buena conclusión estadística nombra el total (40 estudiantes), la moda (Cuentos, 18 o 45 %) y el contraste con la menor frecuencia.",
+    "Comunicar resultados no es solo repetir la lista de números: es destacar qué predomina y en qué proporción."
+  ],
+  "solucion": [
+    "Porcentaje de Cuentos: (18 ÷ 40) × 100 = 45 %.",
+    "Conclusión: Cuentos es la moda de la distribución (18 de 40 estudiantes, 45 %), superando ampliamente a las demás opciones."
+  ],
+  "etiquetas": [
+    "Práctica N3-12",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

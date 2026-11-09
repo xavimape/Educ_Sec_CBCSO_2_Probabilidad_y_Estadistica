@@ -1,0 +1,21 @@
+{
+  "id": "CIR-03",
+  "titulo": "Porcentaje de un sector de 72°",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": ["grafico-circular", "angulo-a-porcentaje"],
+  "enunciado": "Un sector de un gráfico circular mide 72°. ¿Qué porcentaje del total representa?",
+  "partes": [
+    { "id": "porcentaje", "tipo": "numero", "esperado": 20, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "Dividí el ángulo entre 360° y multiplicá por 100.",
+    "72° es una quinta parte de 360°."
+  ],
+  "solucion": [
+    "72° ÷ 360° = 0,2.",
+    "0,2 × 100 = 20 %."
+  ],
+  "etiquetas": ["circular", "nuevo"]
+}

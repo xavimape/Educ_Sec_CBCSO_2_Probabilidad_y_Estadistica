@@ -1,0 +1,76 @@
+{
+  "id": "N3-10",
+  "titulo": "Calcular una medida de tendencia central leyendo un gráfico de barras",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "desafio",
+  "habilidades": [
+    "lectura-barras",
+    "media"
+  ],
+  "enunciado": "Un gráfico de barras muestra la cantidad de hermanos de un grupo de estudiantes: la barra de «0 hermanos» llega a 3; la de «1 hermano» llega a 5; la de «2 hermanos» llega a 2. A partir del gráfico, calculá cuántos estudiantes hay en total, cuántos hermanos suman en conjunto y cuál es el promedio de hermanos por estudiante.",
+  "partes": [
+    {
+      "id": "n_total",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "1. Total de estudiantes (n = suma de alturas)",
+      "entero": true
+    },
+    {
+      "id": "suma_hermanos",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "2. Suma total de hermanos (0×3 + 1×5 + 2×2)",
+      "entero": true
+    },
+    {
+      "id": "media_hermanos",
+      "tipo": "numero",
+      "esperado": 0.9,
+      "label": "3. Promedio (media x̄) de hermanos por estudiante",
+      "unidad": "hermanos",
+      "redondeo": 2
+    }
+  ],
+  "pistas": [
+    "Sumá las alturas de las tres barras para hallar n: 3 + 5 + 2 = 10 estudiantes.",
+    "Multiplicá cada valor del eje X por la altura de su barra: 0×3 = 0; 1×5 = 5; 2×2 = 4 → suma = 9 hermanos.",
+    "Dividí 9 hermanos entre 10 estudiantes.",
+    "No promedies las alturas de las barras ((3+5+2)÷3): lo que se promedia son los valores de la variable ponderados por su frecuencia."
+  ],
+  "solucion": [
+    "Total de estudiantes: n = 3 + 5 + 2 = 10.",
+    "Suma de productos (x · f): 0×3 + 1×5 + 2×2 = 0 + 5 + 4 = 9 hermanos.",
+    "Media aritmética: x̄ = 9 ÷ 10 = 0,9 hermanos por estudiante."
+  ],
+  "etiquetas": [
+    "Práctica N3-10",
+    "barras"
+  ],
+  "leccion": "L07",
+  "variante": false,
+  "datos": {
+    "grafico": {
+      "title": "Cantidad de hermanos en un grupo de 10 estudiantes",
+      "xAxisLabel": "Número de hermanos",
+      "yAxisLabel": "Cantidad de estudiantes",
+      "yStep": 1,
+      "yMax": 5,
+      "bars": [
+        {
+          "label": "0",
+          "value": 3
+        },
+        {
+          "label": "1",
+          "value": 5
+        },
+        {
+          "label": "2",
+          "value": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "G3-01",
+  "titulo": "Gráfico de barras para colores de remera de viaje",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "construir-barras",
+    "elegir-escala"
+  ],
+  "enunciado": "Un grupo de 30 estudiantes votó por el color de su remera: Azul (12 votos), Rojo (8 votos), Verde (6 votos) y Amarillo (4 votos). Elegí una escala uniforme válida para el eje vertical (Eje Y) e indicá la altura de cada barra.",
+  "partes": [
+    {
+      "id": "constructor",
+      "tipo": "barras",
+      "label": "1. Elegí cuántas unidades vale cada cuadrito (por ejemplo, 1 o 2 votos por cuadrito) y completá los votos que alcanza cada barra",
+      "unidad": "votos",
+      "detalle": {
+        "inputMode": "value",
+        "maxGridCells": 15,
+        "validScaleSteps": [
+          1,
+          2
+        ],
+        "bars": [
+          {
+            "key": "azul",
+            "label": "Azul",
+            "value": 12
+          },
+          {
+            "key": "rojo",
+            "label": "Rojo",
+            "value": 8
+          },
+          {
+            "key": "verde",
+            "label": "Verde",
+            "value": 6
+          },
+          {
+            "key": "amarillo",
+            "label": "Amarillo",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "cuadritos_azul",
+      "tipo": "numero",
+      "esperado": 6,
+      "label": "2. Si en tu hoja cuadriculada elegís la escala 1 cuadrito = 2 votos, ¿cuántos cuadritos de alto mide la barra de «Azul» (12 votos)?"
+    }
+  ],
+  "pistas": [
+    "La mayor frecuencia es 12 votos (Azul). En una hoja con 15 cuadritos entran tanto la escala de 1 voto por cuadrito (12 cuadritos) como la de 2 votos por cuadrito (6 cuadritos).",
+    "Cada barra debe subir hasta su frecuencia: Azul = 12, Rojo = 8, Verde = 6, Amarillo = 4.",
+    "Si cada cuadrito vale 2 votos, para llegar a 12 votos necesitás 12 ÷ 2 = 6 cuadritos.",
+    "No existe una única escala correcta mientras empiece en 0, avance en pasos iguales y entre en el espacio disponible."
+  ],
+  "solucion": [
+    "Eje X (horizontal): colocamos las 4 categorías (Azul, Rojo, Verde, Amarillo) usando 2 cuadritos de ancho por barra y 1 cuadrito libre de separación.",
+    "Eje Y (vertical): graduamos desde 0 con escala uniforme, por ejemplo de 2 en 2 (0, 2, 4, 6, 8, 10, 12 votos), donde 1 cuadrito = 2 votos (o de 1 en 1 si disponemos de 12 cuadritos).",
+    "Con 1 cuadrito = 2 votos, las barras miden: Azul = 6 cuadritos (12 votos), Rojo = 4 cuadritos (8 votos), Verde = 3 cuadritos (6 votos) y Amarillo = 2 cuadritos (4 votos)."
+  ],
+  "etiquetas": [
+    "Guía 3.1",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

@@ -1,0 +1,81 @@
+/* Laboratorio de datos. */
+
+.lab {
+  display: grid;
+  gap: 1rem;
+}
+
+.lab-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lab-campo textarea {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  border: 1px solid var(--color-tinta);
+  border-radius: 4px;
+  max-width: 30rem;
+}
+
+.lab-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lab-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lab-tipo {
+  font-weight: 600;
+}
+
+.lab-tabla {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.lab-tabla th,
+.lab-tabla td {
+  border: 1px solid var(--color-tinta);
+  padding: 0.3rem 0.5rem;
+  text-align: right;
+}
+
+.lab-tabla th:first-child,
+.lab-tabla td:first-child {
+  text-align: left;
+}
+
+.lab-svg {
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+}
+
+.lab-medidas p {
+  margin: 0.2rem 0;
+}
+
+.lab-comparador {
+  border: 1px solid var(--color-tinta);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  max-width: 34rem;
+}
+
+.lab-comparador h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.no-auto {
+  color: #555;
+}

@@ -1,0 +1,66 @@
+{
+  "id": "N1-04",
+  "titulo": "Número de línea de colectivo y código de aula",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "codigos-numericos",
+    "cualitativa-nominal"
+  ],
+  "enunciado": "En una planilla escolar se anota la línea de colectivo que usa cada estudiante («25», «40», «60», «70»). Un compañero dice: «Como son números enteros, es cuantitativa discreta y podemos calcular la línea promedio sumando 25 + 40 + 60». ¿Es correcto ese razonamiento?",
+  "partes": [
+    {
+      "id": "clasif_linea",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "1. ¿Qué tipo de variable es el número de línea de colectivo?",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (el número funciona como nombre o etiqueta del recorrido)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (porque se escribe con cifras)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua"
+        }
+      ]
+    },
+    {
+      "id": "promedio_linea",
+      "tipo": "select",
+      "esperado": "no_etiqueta",
+      "label": "2. ¿Tiene sentido matemático calcular el promedio de los números de línea (por ejemplo, decir que el promedio es la línea 41,6)?",
+      "opciones": [
+        {
+          "valor": "no_etiqueta",
+          "etiqueta": "No, porque «60» no representa el triple de cantidad que «20»: son códigos identificadores y solo admite calcular la moda"
+        },
+        {
+          "valor": "si_suma",
+          "etiqueta": "Sí, siempre que haya números se debe calcular el promedio"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Preguntate si la Línea 60 «mide o cuenta el doble» que la Línea 30.",
+    "No: el número de línea es simplemente un código que identifica el recorrido.",
+    "Cuando un número actúa como etiqueta sin medir cantidad, la variable es cualitativa nominal.",
+    "Regla clave: «ver números no alcanza para que sea cuantitativa». Distinguí siempre cantidad de etiqueta."
+  ],
+  "solucion": [
+    "El número de línea de colectivo identifica una categoría (el recorrido), no una cantidad.",
+    "Por lo tanto, es una variable Cualitativa Nominal y no tiene sentido sumar ni promediar sus códigos."
+  ],
+  "etiquetas": [
+    "Práctica N1-04",
+    "variables"
+  ],
+  "leccion": "L01",
+  "variante": false
+}

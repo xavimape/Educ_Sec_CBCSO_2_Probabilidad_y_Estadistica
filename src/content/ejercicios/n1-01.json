@@ -1,0 +1,90 @@
+{
+  "id": "N1-01",
+  "titulo": "Distinguir variable, valor observado y frecuencia",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "dato-variable-frecuencia"
+  ],
+  "enunciado": "En una actividad de aula (datos ficticios) se preguntó a 18 estudiantes cuántos útiles había en su cartuchera. La respuesta «6 útiles» apareció 5 veces. Identificá qué papel cumple cada elemento.",
+  "partes": [
+    {
+      "id": "variable",
+      "tipo": "select",
+      "esperado": "cant_utiles",
+      "label": "1. ¿Cuál es la variable estadística estudiada?",
+      "opciones": [
+        {
+          "valor": "cant_utiles",
+          "etiqueta": "La cantidad de útiles por cartuchera"
+        },
+        {
+          "valor": "18_est",
+          "etiqueta": "Los 18 estudiantes consultados"
+        },
+        {
+          "valor": "5_veces",
+          "etiqueta": "Las 5 repeticiones"
+        }
+      ]
+    },
+    {
+      "id": "valor_x",
+      "tipo": "select",
+      "esperado": "valor",
+      "label": "2. ¿Qué representa «6 útiles» en ese registro?",
+      "opciones": [
+        {
+          "valor": "valor",
+          "etiqueta": "Un valor observado de la variable (x = 6)"
+        },
+        {
+          "valor": "frecuencia",
+          "etiqueta": "La frecuencia absoluta (f = 6)"
+        },
+        {
+          "valor": "muestra",
+          "etiqueta": "El tamaño total de la muestra (n = 6)"
+        }
+      ]
+    },
+    {
+      "id": "frec_f",
+      "tipo": "select",
+      "esperado": "frecuencia",
+      "label": "3. ¿Qué representa «5 veces»?",
+      "opciones": [
+        {
+          "valor": "frecuencia",
+          "etiqueta": "La frecuencia absoluta de ese valor (f = 5)"
+        },
+        {
+          "valor": "valor",
+          "etiqueta": "El valor de la variable (x = 5)"
+        },
+        {
+          "valor": "total",
+          "etiqueta": "El total de estudiantes (n = 5)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "La variable es la pregunta o característica general que se observa en cada integrante.",
+    "El dato o valor (x) es una respuesta posible a esa pregunta («6 útiles»).",
+    "La frecuencia (f) indica cuántas personas dieron esa misma respuesta («5 veces»).",
+    "No confundir el valor observado (6 útiles) con su frecuencia (5 estudiantes)."
+  ],
+  "solucion": [
+    "Variable estadística: «cantidad de útiles por cartuchera».",
+    "Valor de la variable (x): «6 útiles».",
+    "Frecuencia absoluta (f): 5 (hay 5 estudiantes con 6 útiles). El total de la muestra es n = 18."
+  ],
+  "etiquetas": [
+    "Práctica N1-01",
+    "variables"
+  ],
+  "leccion": "L01",
+  "variante": false
+}

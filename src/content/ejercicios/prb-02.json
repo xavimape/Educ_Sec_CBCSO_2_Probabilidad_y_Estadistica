@@ -1,0 +1,21 @@
+{
+  "id": "PRB-02",
+  "titulo": "Probabilidad de no sacar un 6",
+  "origen": "nuevo",
+  "modulo": "M7",
+  "nivel": "intermedio",
+  "habilidades": ["probabilidad-clasica", "complemento"],
+  "enunciado": "Al tirar un dado común, ¿cuál es la probabilidad de NO sacar un 6? Expresala como fracción.",
+  "partes": [
+    { "id": "probabilidad", "tipo": "probabilidad", "esperado": { "numerador": 5, "denominador": 6 }, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "P(no sacar 6) = 1 − P(sacar 6).",
+    "P(sacar 6) = 1/6, así que P(no 6) = 1 − 1/6."
+  ],
+  "solucion": [
+    "P(sacar 6) = 1/6.",
+    "P(no sacar 6) = 1 − 1/6 = 5/6."
+  ],
+  "etiquetas": ["probabilidad", "complemento", "nuevo"]
+}

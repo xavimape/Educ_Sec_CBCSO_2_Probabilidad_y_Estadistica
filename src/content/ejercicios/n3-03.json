@@ -1,0 +1,70 @@
+{
+  "id": "N3-03",
+  "titulo": "Construir el gráfico del ejemplo de 20 estudiantes de la guía",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "construir-barras",
+    "elegir-escala"
+  ],
+  "enunciado": "Con la tabla del ejemplo guiado de la guía (n = 20 estudiantes: 0 libros → 3; 1 libro → 8; 2 libros → 6; 3 libros → 2; 4 libros → 1), configurá el gráfico de barras.",
+  "partes": [
+    {
+      "id": "constructor",
+      "tipo": "barras",
+      "label": "Elegí una escala uniforme (1 o 2 estudiantes por cuadrito) y completá la frecuencia de cada barra",
+      "unidad": "estudiantes",
+      "detalle": {
+        "inputMode": "value",
+        "maxGridCells": 12,
+        "validScaleSteps": [
+          1,
+          2
+        ],
+        "bars": [
+          {
+            "key": "b0",
+            "label": "0 libros",
+            "value": 3
+          },
+          {
+            "key": "b1",
+            "label": "1 libro",
+            "value": 8
+          },
+          {
+            "key": "b2",
+            "label": "2 libros",
+            "value": 6
+          },
+          {
+            "key": "b3",
+            "label": "3 libros",
+            "value": 2
+          },
+          {
+            "key": "b4",
+            "label": "4 libros",
+            "value": 1
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Como la frecuencia máxima es 8, la escala de 1 cuadrito = 1 estudiante ocupa apenas 8 cuadritos de alto.",
+    "Copiá en cada barra su frecuencia absoluta correspondiente: 3, 8, 6, 2 y 1.",
+    "Verificá que la suma de las alturas de las barras (3 + 8 + 6 + 2 + 1 = 20) coincida con n = 20."
+  ],
+  "solucion": [
+    "Escala en Eje Y: 1 cuadrito = 1 estudiante (de 0 a 8) o 1 cuadrito = 2 estudiantes.",
+    "Alturas: 0 libros = 3; 1 libro = 8; 2 libros = 6; 3 libros = 2; 4 libros = 1."
+  ],
+  "etiquetas": [
+    "Práctica N3-03",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

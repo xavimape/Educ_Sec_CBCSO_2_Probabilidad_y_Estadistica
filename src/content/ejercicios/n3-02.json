@@ -1,0 +1,43 @@
+{
+  "id": "N3-02",
+  "titulo": "Identificar el ancho y separación recomendados en hoja cuadriculada",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "construir-barras"
+  ],
+  "enunciado": "Vas a dibujar un gráfico de barras con 5 categorías en tu hoja cuadriculada siguiendo la regla práctica de la guía: 1 cuadrito libre antes de la primera barra, 2 cuadritos de ancho para cada barra y 1 cuadrito libre de separación entre barras. ¿Cuántos cuadritos horizontales ocupará ese tramo en el eje X?",
+  "partes": [
+    {
+      "id": "ancho_5_barras",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "1. ¿Cuántos cuadritos suman los anchos de las 5 barras juntas (5 × 2)?",
+      "entero": true
+    },
+    {
+      "id": "espacios_totales",
+      "tipo": "numero",
+      "esperado": 15,
+      "label": "2. Contando el cuadrito previo a cada una de las 5 barras (5 espacios de 1 cuadrito), ¿cuántos cuadritos suman barras más espacios?",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Cada barra ocupa 2 cuadritos de ancho: para 5 barras son 5 × 2 = 10 cuadritos.",
+    "Cada barra lleva 1 cuadrito de espacio previo (1 + 2 = 3 cuadritos por categoría).",
+    "Para 5 categorías: 5 × 3 = 15 cuadritos (y conviene dejar 1 cuadrito más al final para la flecha del eje).",
+    "Planificar los cuadritos del eje X antes de trazar evita que la última barra quede apretada en el borde de la hoja."
+  ],
+  "solucion": [
+    "Ancho de las 5 barras: 5 × 2 = 10 cuadritos.",
+    "Con 1 cuadrito de separación previo por cada barra (5 espacios): 10 + 5 = 15 cuadritos horizontales."
+  ],
+  "etiquetas": [
+    "Práctica N3-02",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

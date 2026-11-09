@@ -1,0 +1,61 @@
+{
+  "id": "N4-01",
+  "titulo": "Media aritmética como reparto equitativo (5 datos)",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "media"
+  ],
+  "enunciado": "En el ejemplo de la Ficha 6, cinco estudiantes leyeron esta cantidad de libros: 0, 1, 1, 2, 6. Calculá la suma total de libros y el promedio (media) por estudiante.",
+  "partes": [
+    {
+      "id": "suma",
+      "tipo": "numero",
+      "esperado": 10,
+      "label": "1. Suma total de libros (0 + 1 + 1 + 2 + 6)",
+      "entero": true
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 2,
+      "label": "2. Media aritmética (x̄) en libros por estudiante",
+      "unidad": "libros",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 2.5,
+            "message": "Dividiste entre 4 (quizás olvidando contar el 0). El 0 también es un estudiante: hay n = 5 datos (10 ÷ 5 = 2)."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Sumá los 5 números: 0 + 1 + 1 + 2 + 6 = 10.",
+    "El estudiante que leyó 0 libros también forma parte del grupo: hay n = 5 estudiantes.",
+    "Dividí 10 entre 5.",
+    "Nunca excluyas los ceros al contar la cantidad de datos n para el promedio."
+  ],
+  "solucion": [
+    "Suma de todos los datos: 0 + 1 + 1 + 2 + 6 = 10 libros.",
+    "Cantidad de observaciones: n = 5 estudiantes.",
+    "Media aritmética: x̄ = 10 ÷ 5 = 2 libros por estudiante."
+  ],
+  "etiquetas": [
+    "Práctica N4-01",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      0,
+      1,
+      1,
+      2,
+      6
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "G3-03",
+  "titulo": "Detección y prevención de dos errores habituales en gráficos de barras",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "detectar-errores-graficos",
+    "justificar-barras"
+  ],
+  "enunciado": "Un compañero dibujó un gráfico de barras en su carpeta cometiendo dos errores muy comunes: (1) pegó todas las barras sin dejar espacio entre ellas y (2) en el eje vertical escribió las marcas «0, 1, 3, 6, 12» a un cuadrito de distancia cada una. Identificá por qué son incorrectos y explicá cómo prevenirlos.",
+  "partes": [
+    {
+      "id": "error_escala",
+      "tipo": "select",
+      "esperado": "deforma-proporcion",
+      "label": "1. ¿Por qué es un error matemático poner «0, 1, 3, 6, 12» a un cuadrito de distancia cada uno en el Eje Y?",
+      "opciones": [
+        {
+          "valor": "deforma-proporcion",
+          "etiqueta": "Porque rompe la escala uniforme: un mismo cuadrito vale primero 1 unidad, luego 2, luego 3 y luego 6, deformando la proporcionalidad de las barras"
+        },
+        {
+          "valor": "sobran-numeros",
+          "etiqueta": "Porque no se puede escribir el número 0 en el eje vertical"
+        },
+        {
+          "valor": "solo-impares",
+          "etiqueta": "Porque en el eje Y nunca pueden ir números impares"
+        }
+      ]
+    },
+    {
+      "id": "error_pegadas",
+      "tipo": "select",
+      "esperado": "ancho-y-separacion",
+      "label": "2. ¿Cómo se previene el error de pegar las barras o hacerlas de distinto grosor?",
+      "opciones": [
+        {
+          "valor": "ancho-y-separacion",
+          "etiqueta": "Usando un ancho constante (por ejemplo, 2 cuadritos por barra) y una separación uniforme (por ejemplo, 1 cuadrito libre) entre categorías o valores discretos"
+        },
+        {
+          "valor": "unir-con-linea",
+          "etiqueta": "Uniendo todas las barras con una línea diagonal"
+        }
+      ]
+    },
+    {
+      "id": "explicacion",
+      "tipo": "rubrica",
+      "label": "3. Escribí con tus palabras dos recomendaciones para revisar tu gráfico antes de entregar el examen",
+      "detalle": {
+        "placeholder": "Anotá cómo controlás la separación/ancho de las barras y la graduación del eje vertical...",
+        "criteria": [
+          "Indiqué dejar una separación constante (como 1 cuadrito) y mantener el mismo ancho en todas las barras.",
+          "Indiqué graduar el eje Y desde 0 con intervalos numéricos iguales (por ejemplo, de 1 en 1 o de 2 en 2), sin copiar solo las frecuencias de la tabla."
+        ],
+        "modelAnswer": "1) Dejar 1 cuadrito constante de separación entre barras y mantener el mismo ancho (2 cuadritos). 2) Graduar el eje vertical desde 0 con intervalos iguales (como 0, 2, 4, 6, 8...), sin alterar las distancias numéricas."
+      }
+    }
+  ],
+  "pistas": [
+    "En un eje graduado, la misma distancia en cuadritos debe representar siempre la misma cantidad de unidades.",
+    "Si ponés solo los valores que aparecen en la tabla a igual distancia, una barra de 12 parece apenas más alta que una de 6.",
+    "Para datos categóricos o discretos independientes, las barras llevan separación constante.",
+    "Nunca copies la columna f directamente como marcas del eje Y: graduá primero la recta numérica con pasos iguales."
+  ],
+  "solucion": [
+    "Error 1: Dibujar las barras pegadas o de distinto ancho. Prevención: asignar 2 cuadritos de ancho a cada barra y 1 cuadrito libre de separación.",
+    "Error 2: Alterar la escala numérica del eje Y ubicando números a saltos desiguales. Prevención: graduar el eje desde 0 con pasos constantes (por ejemplo, 0, 2, 4, 6, 8, 10, 12)."
+  ],
+  "etiquetas": [
+    "Guía 3.3",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

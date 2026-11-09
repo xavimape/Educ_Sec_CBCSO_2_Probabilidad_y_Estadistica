@@ -1,0 +1,52 @@
+{
+  "id": "N2-03",
+  "titulo": "Hallar el total n y la última acumulada",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "inicial",
+  "habilidades": [
+    "frecuencia-absoluta",
+    "frecuencia-acumulada"
+  ],
+  "enunciado": "En un registro de mascotas por hogar, las frecuencias absolutas fueron: 0 mascotas (f = 4), 1 mascota (f = 9), 2 mascotas (f = 5) y 3 mascotas (f = 2). Calculá el tamaño total de la muestra (n) y las frecuencias acumuladas F₂ y F₄.",
+  "partes": [
+    {
+      "id": "total_n",
+      "tipo": "numero",
+      "esperado": 20,
+      "label": "1. ¿Cuál es el total de hogares encuestados (n)?",
+      "entero": true
+    },
+    {
+      "id": "F2",
+      "tipo": "numero",
+      "esperado": 13,
+      "label": "2. ¿Cuánto vale la frecuencia acumulada hasta 1 mascota (F₂ = f₁ + f₂)?",
+      "entero": true
+    },
+    {
+      "id": "F4",
+      "tipo": "numero",
+      "esperado": 20,
+      "label": "3. ¿Cuánto vale la última frecuencia acumulada (F₄, hasta 3 mascotas)?",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "Sumá todas las frecuencias absolutas: 4 + 9 + 5 + 2.",
+    "Para F₂ sumá las dos primeras filas: 4 + 9.",
+    "La última frecuencia acumulada (F₄) siempre coincide con el total n.",
+    "Si el último valor de F no coincide con n, revisá las sumas parciales."
+  ],
+  "solucion": [
+    "Total de observaciones: n = 4 + 9 + 5 + 2 = 20 hogares.",
+    "Frecuencia acumulada hasta 1 mascota: F₂ = 4 + 9 = 13 hogares.",
+    "Última frecuencia acumulada: F₄ = 4 + 9 + 5 + 2 = 20 (coincide con n = 20)."
+  ],
+  "etiquetas": [
+    "Práctica N2-03",
+    "frecuencias"
+  ],
+  "leccion": "L03",
+  "variante": false
+}

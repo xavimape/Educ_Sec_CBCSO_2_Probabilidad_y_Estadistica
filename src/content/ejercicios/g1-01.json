@@ -1,0 +1,160 @@
+{
+  "id": "G1-01",
+  "titulo": "Clasificación de cuatro variables cotidianas",
+  "origen": "guia",
+  "modulo": "M1",
+  "nivel": "inicial",
+  "habilidades": [
+    "clasificar-variable",
+    "justificar-variable"
+  ],
+  "enunciado": "Clasificá cada una de las siguientes cuatro variables en cualitativa (nominal u ordinal) o cuantitativa (discreta o continua) y elegí la justificación correcta.",
+  "partes": [
+    {
+      "id": "p1",
+      "tipo": "select",
+      "esperado": "cuantitativa-continua",
+      "label": "1. Distancia desde el hogar hasta el colegio expresada en kilómetros",
+      "opciones": [
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (mide una longitud que admite valores intermedios, como 2,75 km)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (solo puede tomar kilómetros enteros)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (expresa el nombre de la calle)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (ordena barrios sin medir distancia)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cuantitativa-continua": "¡Correcto! La distancia es una magnitud física continua que admite valores intermedios en kilómetros o metros.",
+          "cuantitativa-discreta": "Aunque a veces alguien diga «vivo a 2 km», la distancia real admite fracciones de kilómetro (como 2,35 km): es continua.",
+          "cualitativa-nominal": "Se está registrando la distancia en kilómetros (una cantidad medible), no el nombre de la calle.",
+          "cualitativa-ordinal": "Los kilómetros son una magnitud numérica continua, no una categoría verbal."
+        }
+      }
+    },
+    {
+      "id": "p2",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "2. Talle de remera del uniforme escolar (S, M, L, XL)",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (categorías con un orden de tamaño: S < M < L < XL)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (letras sin ningún orden entre sí)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (conteo de remeras con números enteros)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (medición exacta en centímetros)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cualitativa-ordinal": "¡Exacto! Las categorías S, M, L y XL expresan una cualidad ordenada de menor a mayor tamaño.",
+          "cualitativa-nominal": "Fijate que S, M, L y XL sí tienen una jerarquía natural de tamaño (chico, mediano, grande, extragrande).",
+          "cuantitativa-discreta": "No estamos contando cuántas remeras hay, sino clasificando el talle mediante letras ordenadas.",
+          "cuantitativa-continua": "En este caso el registro se hace por categorías ordenadas (S, M, L, XL), por lo que es cualitativa ordinal."
+        }
+      }
+    },
+    {
+      "id": "p3",
+      "tipo": "select",
+      "esperado": "cuantitativa-discreta",
+      "label": "3. Cantidad de mascotas que conviven en el hogar",
+      "opciones": [
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (proviene de un conteo con valores enteros: 0, 1, 2, 3...)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (admite valores intermedios con coma)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (indica si es perro, gato o loro)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (indica cuál mascota llegó primero)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cuantitativa-discreta": "¡Muy bien! Contar cuántas mascotas hay da valores enteros separados (0, 1, 2...), sin valores intermedios.",
+          "cuantitativa-continua": "No puede haber 1,5 mascotas: al tratarse de un conteo de individuos, es cuantitativa discreta.",
+          "cualitativa-nominal": "«Especie de mascota» sería nominal, pero acá la variable es «cantidad de mascotas» (un conteo numérico).",
+          "cualitativa-ordinal": "La cantidad de mascotas es un número obtenido por conteo, es decir, cuantitativa discreta."
+        }
+      }
+    },
+    {
+      "id": "p4",
+      "tipo": "select",
+      "esperado": "cualitativa-nominal",
+      "label": "4. Tipo de transporte utilizado para ir al instituto (Colectivo, Bicicleta, Moto, Caminando)",
+      "opciones": [
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal (categorías no numéricas sin orden jerárquico natural)"
+        },
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (categorías ordenadas por calificación)"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta (conteo de vehículos)"
+        },
+        {
+          "valor": "cuantitativa-continua",
+          "etiqueta": "Cuantitativa continua (velocidad del viaje)"
+        }
+      ],
+      "detalle": {
+        "optionFeedback": {
+          "cualitativa-nominal": "¡Correcto! Son categorías descriptivas que nombran el medio de traslado sin jerarquía natural.",
+          "cualitativa-ordinal": "Entre Colectivo, Bicicleta, Moto y Caminando no existe una escala de jerarquía única.",
+          "cuantitativa-discreta": "Cada estudiante responde con el nombre del medio de transporte, no con una cantidad.",
+          "cuantitativa-continua": "El medio de transporte es un atributo categórico nominal."
+        }
+      }
+    }
+  ],
+  "pistas": [
+    "Preguntate primero en cada caso: ¿la respuesta es una palabra/categoría (cualitativa) o una cantidad matemática (cuantitativa)?",
+    "Si es cualitativa, fijate si las opciones tienen un orden de menor a mayor (ordinal) o no (nominal).",
+    "Si es cuantitativa, distinguí si surge de contar unidades separadas (discreta) o de medir una magnitud con valores intermedios (continua).",
+    "No confundir «tipo de mascota» (cualitativa) con «cantidad de mascotas» (cuantitativa discreta)."
+  ],
+  "solucion": [
+    "1) Distancia en km: Cuantitativa continua, porque la longitud admite valores intermedios (como 2,75 km).",
+    "2) Talle de remera (S, M, L, XL): Cualitativa ordinal, porque son categorías no numéricas ordenadas por tamaño.",
+    "3) Cantidad de mascotas: Cuantitativa discreta, porque surge de contar individuos enteros (0, 1, 2...).",
+    "4) Tipo de transporte: Cualitativa nominal, porque son categorías sin orden jerárquico natural."
+  ],
+  "etiquetas": [
+    "Guía 1.1",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

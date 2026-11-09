@@ -1,0 +1,22 @@
+{
+  "id": "PIC-02",
+  "titulo": "Leer un pictograma con figuras y media",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": ["pictograma", "leyenda"],
+  "enunciado": "En un pictograma, cada figura completa vale 20 alumnos. La categoría «Fútbol» tiene 3 figuras completas y media figura. ¿Cuántos alumnos eligieron Fútbol?",
+  "partes": [
+    { "id": "alumnos", "tipo": "numero", "esperado": 70, "unidad": "alumnos", "entero": true }
+  ],
+  "pistas": [
+    "3 figuras completas valen 3 × 20.",
+    "Sumale la media figura (10)."
+  ],
+  "solucion": [
+    "3 figuras completas: 3 × 20 = 60.",
+    "Media figura: 10.",
+    "Total: 60 + 10 = 70 alumnos."
+  ],
+  "etiquetas": ["pictograma", "nuevo"]
+}

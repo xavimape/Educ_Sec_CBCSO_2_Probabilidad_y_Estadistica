@@ -1,0 +1,118 @@
+{
+  "id": "I-06",
+  "titulo": "Integrador 6 (categórico ordinal): Nivel de comprensión autoevaluado (n = 20)",
+  "origen": "integrador",
+  "modulo": "M8",
+  "nivel": "intermedio",
+  "habilidades": [
+    "cualitativa-ordinal",
+    "frecuencia-acumulada",
+    "porcentaje",
+    "moda-categorica",
+    "mediana-par"
+  ],
+  "enunciado": "Al terminar un tema, n = 20 estudiantes indicaron su nivel de seguridad ordenado de menor a mayor:\n• Inicial (necesito ayuda): 3 estudiantes\n• En proceso (resuelvo con guía): 5 estudiantes\n• Logrado (resuelvo solo): 8 estudiantes\n• Destacado (puedo explicarlo): 4 estudiantes\nCompletá la tabla (incluyendo F porque hay orden jerárquico) y respondé.",
+  "partes": [
+    {
+      "id": "clasif",
+      "tipo": "select",
+      "esperado": "cualitativa-ordinal",
+      "label": "1. ¿Qué tipo de variable es este nivel de seguridad?",
+      "opciones": [
+        {
+          "valor": "cualitativa-ordinal",
+          "etiqueta": "Cualitativa ordinal (categorías con orden creciente de logro)"
+        },
+        {
+          "valor": "cualitativa-nominal",
+          "etiqueta": "Cualitativa nominal"
+        },
+        {
+          "valor": "cuantitativa-discreta",
+          "etiqueta": "Cuantitativa discreta"
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "tipo": "tabla",
+      "label": "2. Completá f, fr, % y F respetando el orden de menor a mayor nivel (n = 20)",
+      "detalle": {
+        "totalN": 20,
+        "columns": [
+          "f",
+          "fr",
+          "pct",
+          "F"
+        ],
+        "rows": [
+          {
+            "x": "Inicial",
+            "label": "1. Inicial",
+            "f": 3,
+            "F": 3
+          },
+          {
+            "x": "En proceso",
+            "label": "2. En proceso",
+            "f": 5,
+            "F": 8
+          },
+          {
+            "x": "Logrado",
+            "label": "3. Logrado",
+            "f": 8,
+            "F": 16
+          },
+          {
+            "x": "Destacado",
+            "label": "4. Destacado",
+            "f": 4,
+            "F": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "pct_logrado_o_mas",
+      "tipo": "numero",
+      "esperado": 60,
+      "label": "3. ¿Qué porcentaje del curso alcanzó «Logrado» o «Destacado» (%)?",
+      "unidad": "%"
+    },
+    {
+      "id": "moda_mediana",
+      "tipo": "select",
+      "esperado": "logrado",
+      "label": "4. ¿Cuáles son la moda y la categoría mediana (posiciones 10 y 11)?",
+      "opciones": [
+        {
+          "valor": "logrado",
+          "etiqueta": "Tanto la moda (f = 8) como las posiciones centrales 10 y 11 (entre F₂=8 y F₃=16) corresponden a la categoría «Logrado»"
+        },
+        {
+          "valor": "en_proceso",
+          "etiqueta": "Ambas corresponden a «En proceso»"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Al ser cualitativa ordinal, sí tiene sentido acumular desde Inicial hasta Destacado: F = 3, 8, 16, 20.",
+    "«Logrado o Destacado» suma 8 + 4 = 12 estudiantes de 20 → (12 ÷ 20) × 100 = 60 %.",
+    "Las posiciones 10 y 11 caen dentro de «Logrado» (que abarca los lugares 9 a 16).",
+    "Cuando la variable es cualitativa ordinal, sí podemos responder preguntas de acumulación y hallar la mediana ordinal, pero nunca calcular una media numérica."
+  ],
+  "solucion": [
+    "1) Variable cualitativa ordinal.",
+    "2) Tabla (n = 20): Inicial (3, 0,15, 15 %, F=3); En proceso (5, 0,25, 25 %, F=8); Logrado (8, 0,40, 40 %, F=16); Destacado (4, 0,20, 20 %, F=20).",
+    "3) Logrado o Destacado: (8 + 4) ÷ 20 × 100 = 60 %.",
+    "4) Moda = Logrado y Mediana ordinal = Logrado."
+  ],
+  "etiquetas": [
+    "Integrador I-06",
+    "integrador"
+  ],
+  "leccion": "L05",
+  "variante": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": "N3-08",
+  "titulo": "Gráfico con eje vertical en porcentajes (%)",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "construir-barras",
+    "porcentaje"
+  ],
+  "enunciado": "Con los datos de transporte de n = 40 estudiantes (Colectivo: 40 %, Moto: 25 %, Bicicleta: 20 %, Caminando: 15 %), se quiere construir un gráfico de barras cuyo eje vertical muestre porcentajes (%) usando la escala 1 cuadrito = 5 %. Calculá cuántos cuadritos sube cada barra.",
+  "partes": [
+    {
+      "id": "constructor_pct",
+      "tipo": "barras",
+      "label": "Con escala 1 cuadrito = 5 %, ingresá la altura en cuadritos de cada medio de transporte",
+      "unidad": "cuadritos",
+      "detalle": {
+        "inputMode": "cells",
+        "maxGridCells": 12,
+        "validScaleSteps": [
+          5
+        ],
+        "bars": [
+          {
+            "key": "col",
+            "label": "Colectivo (40 %)",
+            "value": 40
+          },
+          {
+            "key": "moto",
+            "label": "Moto (25 %)",
+            "value": 25
+          },
+          {
+            "key": "bici",
+            "label": "Bicicleta (20 %)",
+            "value": 20
+          },
+          {
+            "key": "cam",
+            "label": "Caminando (15 %)",
+            "value": 15
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Dividí cada porcentaje entre 5 % por cuadrito.",
+    "Colectivo: 40 ÷ 5 = 8 cuadritos; Moto: 25 ÷ 5 = 5 cuadritos; Bicicleta: 20 ÷ 5 = 4 cuadritos; Caminando: 15 ÷ 5 = 3 cuadritos.",
+    "Observá que las barras de frecuencias absolutas (16, 10, 8, 6 con escala 2) y las de porcentajes (40 %, 25 %, 20 %, 15 % con escala 5 %) tienen exactamente las mismas alturas en cuadritos (8, 5, 4 y 3) porque son proporcionales."
+  ],
+  "solucion": [
+    "Con 1 cuadrito = 5 %, el eje Y se gradúa 0 %, 5 %, 10 %, ..., 40 %.",
+    "Alturas en cuadritos: Colectivo = 8; Moto = 5; Bicicleta = 4; Caminando = 3."
+  ],
+  "etiquetas": [
+    "Práctica N3-08",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

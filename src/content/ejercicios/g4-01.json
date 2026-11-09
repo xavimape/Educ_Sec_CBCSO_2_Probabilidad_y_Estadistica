@@ -1,0 +1,100 @@
+{
+  "id": "G4-01",
+  "titulo": "Media, mediana y moda de las edades de 10 estudiantes",
+  "origen": "guia",
+  "modulo": "M4",
+  "nivel": "inicial",
+  "habilidades": [
+    "media",
+    "mediana-par",
+    "moda"
+  ],
+  "enunciado": "Dado el siguiente conjunto de edades (en años) de n = 10 estudiantes que participan de un taller deportivo (ejemplo de la guía):\n12, 13, 13, 14, 14, 14, 15, 15, 16, 18.\nCalculá la suma total, la media aritmética, la mediana (promediando los dos datos centrales al ser n = 10 par) y la moda.",
+  "partes": [
+    {
+      "id": "suma",
+      "tipo": "numero",
+      "esperado": 144,
+      "label": "1. Suma total de las 10 edades",
+      "entero": true
+    },
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 14.4,
+      "label": "2. Media aritmética (x̄) en años",
+      "unidad": "años",
+      "redondeo": 2,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 14,
+            "message": "14 es la mediana y la moda, pero la media es 144 ÷ 10 = 14,4 años. No redondees a entero."
+          },
+          {
+            "value": 24,
+            "message": "Dividiste por la cantidad de valores distintos (6) en lugar de dividir entre los n = 10 estudiantes."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 14,
+      "label": "3. Mediana (Me) en años (promedio de las posiciones 5 y 6)",
+      "unidad": "años",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 5.5,
+            "message": "5,5 es la posición central ((10 + 1) ÷ 2 = 5,5), no el valor de la edad. Buscá qué edades están en las posiciones 5 y 6 (ambas son 14)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [
+        14
+      ],
+      "label": "4. Moda (Mo) en años",
+      "detalle": {
+        "maxFrequency": 3
+      }
+    }
+  ],
+  "pistas": [
+    "Sumá los 10 números (incluyendo los repetidos): 12 + 13 + 13 + 14 + 14 + 14 + 15 + 15 + 16 + 18 = 144.",
+    "Para la media dividí 144 entre 10. Para la mediana, como la lista ya está ordenada y n = 10 es par, fijate qué valores ocupan los lugares 5.º y 6.º.",
+    "Para la moda, buscá cuál es la edad que más veces se repite en la lista.",
+    "No confundir la posición 5,5 con el valor de la mediana (14 años), ni la frecuencia máxima (3) con la moda (14 años)."
+  ],
+  "solucion": [
+    "Datos ordenados (n = 10): 12, 13, 13, 14, 14, 14, 15, 15, 16, 18.",
+    "Suma total: 144 años → Media: x̄ = 144 ÷ 10 = 14,4 años.",
+    "Mediana: como n = 10 es par, posición = (10 + 1) ÷ 2 = 5,5. Promediamos los datos en posición 5 (14) y posición 6 (14): Me = (14 + 14) ÷ 2 = 14 años.",
+    "Moda: el valor 14 años aparece 3 veces (mayor frecuencia) → Mo = 14 años."
+  ],
+  "etiquetas": [
+    "Guía 4.1",
+    "medidas"
+  ],
+  "leccion": "L07",
+  "variante": true,
+  "datos": {
+    "conjunto": [
+      12,
+      13,
+      13,
+      14,
+      14,
+      14,
+      15,
+      15,
+      16,
+      18
+    ]
+  }
+}

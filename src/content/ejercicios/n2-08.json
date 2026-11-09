@@ -1,0 +1,68 @@
+{
+  "id": "N2-08",
+  "titulo": "Reconstruir las frecuencias simples (f) desde la columna acumulada (F)",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-acumulada",
+    "frecuencia-absoluta"
+  ],
+  "enunciado": "En una tabla de frecuencias sobre cantidad de lápices de colores, se borraron las frecuencias simples (f) pero quedó visible la columna de frecuencias acumuladas (F):\n• 0 lápices: F₁ = 3\n• 1 lápiz: F₂ = 11\n• 2 lápices: F₃ = 18\n• 3 lápices: F₄ = 20\nHallá cuántas veces se repitió cada valor (f₁, f₂, f₃ y f₄).",
+  "partes": [
+    {
+      "id": "f1",
+      "tipo": "numero",
+      "esperado": 3,
+      "label": "1. Frecuencia simple f₁ (para 0 lápices)",
+      "entero": true
+    },
+    {
+      "id": "f2",
+      "tipo": "numero",
+      "esperado": 8,
+      "label": "2. Frecuencia simple f₂ (para 1 lápiz: F₂ − F₁)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 11,
+            "message": "11 es la acumulada F₂ (que suma f₁ + f₂). Como f₁ = 3, restá 11 − 3 = 8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "f3",
+      "tipo": "numero",
+      "esperado": 7,
+      "label": "3. Frecuencia simple f₃ (para 2 lápices: F₃ − F₂)",
+      "entero": true
+    },
+    {
+      "id": "f4",
+      "tipo": "numero",
+      "esperado": 2,
+      "label": "4. Frecuencia simple f₄ (para 3 lápices: F₄ − F₃)",
+      "entero": true
+    }
+  ],
+  "pistas": [
+    "En la primera fila, F₁ siempre es igual a f₁.",
+    "Como cada acumulada se obtiene sumando la nueva f a la acumulada anterior (F₂ = F₁ + f₂), para despejar f₂ hacés la resta: F₂ − F₁.",
+    "Verificá que f₁ + f₂ + f₃ + f₄ dé igual a F₄ = 20.",
+    "Para pasar de f a F sumamos; para recuperar f desde F restamos la acumulada anterior."
+  ],
+  "solucion": [
+    "f₁ = F₁ = 3.",
+    "f₂ = F₂ − F₁ = 11 − 3 = 8.",
+    "f₃ = F₃ − F₂ = 18 − 11 = 7.",
+    "f₄ = F₄ − F₃ = 20 − 18 = 2. Comprobación: 3 + 8 + 7 + 2 = 20."
+  ],
+  "etiquetas": [
+    "Práctica N2-08",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "variante": false
+}

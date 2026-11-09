@@ -1,0 +1,95 @@
+{
+  "id": "N3-04",
+  "titulo": "Pasar de un gráfico de barras a una tabla de frecuencias",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "grafico-a-tabla",
+    "porcentaje"
+  ],
+  "enunciado": "Un gráfico de barras sobre el club o deporte elegido en el patio muestra cuatro barras con estas alturas: Vóley = 10, Básquet = 6, Fútbol = 5, Ajedrez = 4. Construí la tabla de frecuencias (f, fr y %) a partir del gráfico.",
+  "partes": [
+    {
+      "id": "tabla_desde_grafico",
+      "tipo": "tabla",
+      "label": "Completá f, fr y % leyendo las alturas del gráfico (total n = 25)",
+      "detalle": {
+        "totalN": 25,
+        "columns": [
+          "f",
+          "fr",
+          "pct"
+        ],
+        "rows": [
+          {
+            "x": "Vóley",
+            "label": "Vóley",
+            "f": 10
+          },
+          {
+            "x": "Básquet",
+            "label": "Básquet",
+            "f": 6
+          },
+          {
+            "x": "Fútbol",
+            "label": "Fútbol",
+            "f": 5
+          },
+          {
+            "x": "Ajedrez",
+            "label": "Ajedrez",
+            "f": 4
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "La altura de cada barra es su frecuencia absoluta f: 10, 6, 5 y 4 (suman n = 25).",
+    "Dividí cada altura entre 25 para hallar fr: 10/25 = 0,40; 6/25 = 0,24; 5/25 = 0,20; 4/25 = 0,16.",
+    "Multiplicá por 100 para obtener los porcentajes: 40 %, 24 %, 20 % y 16 %.",
+    "Como es una variable cualitativa nominal, la tabla incluye f, fr y %, pero no columna acumulada F."
+  ],
+  "solucion": [
+    "Total de observaciones leídas del gráfico: n = 10 + 6 + 5 + 4 = 25.",
+    "Vóley: f = 10 → fr = 0,40 → 40 %.",
+    "Básquet: f = 6 → fr = 0,24 → 24 %.",
+    "Fútbol: f = 5 → fr = 0,20 → 20 %.",
+    "Ajedrez: f = 4 → fr = 0,16 → 16 %."
+  ],
+  "etiquetas": [
+    "Práctica N3-04",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false,
+  "datos": {
+    "grafico": {
+      "title": "Actividad elegida en el patio (n = 25)",
+      "xAxisLabel": "Actividad",
+      "yAxisLabel": "Estudiantes",
+      "yStep": 2,
+      "yMax": 12,
+      "bars": [
+        {
+          "label": "Vóley",
+          "value": 10
+        },
+        {
+          "label": "Básquet",
+          "value": 6
+        },
+        {
+          "label": "Fútbol",
+          "value": 5
+        },
+        {
+          "label": "Ajedrez",
+          "value": 4
+        }
+      ]
+    }
+  }
+}

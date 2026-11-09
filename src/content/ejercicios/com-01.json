@@ -1,0 +1,22 @@
+{
+  "id": "COM-01",
+  "titulo": "Porcentaje de residuos de CABA",
+  "origen": "nuevo",
+  "modulo": "M8",
+  "nivel": "intermedio",
+  "habilidades": ["lectura-de-datos", "porcentaje", "comunicar"],
+  "enunciado": "Un informe (datos ficticios) indica que por día se generan 6.200 toneladas de residuos en CABA y 10.800 en el Gran Buenos Aires. ¿Qué porcentaje del total corresponde a CABA? Redondeá a dos decimales.",
+  "partes": [
+    { "id": "porcentaje", "tipo": "numero", "esperado": 36.47, "redondeo": 2, "aceptaPorcentaje": true }
+  ],
+  "pistas": [
+    "Primero sumá el total: 6.200 + 10.800.",
+    "Después dividí la parte de CABA entre el total y multiplicá por 100."
+  ],
+  "solucion": [
+    "Total: 6.200 + 10.800 = 17.000 t.",
+    "Parte de CABA: 6.200 ÷ 17.000 ≈ 0,3647.",
+    "0,3647 × 100 ≈ 36,47 %."
+  ],
+  "etiquetas": ["comunicacion", "nuevo"]
+}

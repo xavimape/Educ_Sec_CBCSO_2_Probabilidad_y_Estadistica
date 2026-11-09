@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArbolProbabilidad from '../../components/ArbolProbabilidad.tsx';
+import '../../styles/actividades.css';
+---
+
+<Layout
+  titulo="Actividad · Árbol de probabilidad"
+  descripcion="Construí el espacio muestral y calculá una probabilidad."
+>
+  <main>
+    <h1>Construí el árbol de probabilidad</h1>
+    <ArbolProbabilidad client:load />
+    <p><a href="../">Volver al inicio</a>.</p>
+  </main>
+</Layout>

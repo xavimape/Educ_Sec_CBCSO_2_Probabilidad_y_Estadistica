@@ -1,0 +1,81 @@
+{
+  "id": "G2-06",
+  "titulo": "Tabla incompleta sobre número de hermanos (n = 30)",
+  "origen": "guia",
+  "modulo": "M2",
+  "nivel": "intermedio",
+  "habilidades": [
+    "frecuencia-faltante",
+    "frecuencia-acumulada",
+    "porcentaje"
+  ],
+  "enunciado": "Se presenta la siguiente tabla incompleta sobre el número de hermanos en un curso de n = 30 alumnos:\n• x = 0 hermanos: f₁ = 6\n• x = 1 hermano: f₂ = 12\n• x = 2 hermanos: f₃ = ?\n• x = 3 hermanos: f₄ = 3\nCalculá el valor que falta en f₃, hallá la frecuencia acumulada F₃ (hasta 2 hermanos) y determiná el porcentaje de alumnos que tienen 2 o menos hermanos.",
+  "partes": [
+    {
+      "id": "f3",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "1. Frecuencia absoluta faltante f₃ (alumnos con 2 hermanos)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 21,
+            "message": "21 es la suma de las tres frecuencias conocidas (6 + 12 + 3). Restale 21 al total n = 30 para hallar f₃."
+          }
+        ]
+      }
+    },
+    {
+      "id": "F3",
+      "tipo": "numero",
+      "esperado": 27,
+      "label": "2. Frecuencia acumulada F₃ (alumnos con 2 o menos hermanos)",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 9,
+            "message": "9 es la frecuencia simple f₃ (exactamente 2 hermanos). Para la acumulada F₃ sumá f₁ + f₂ + f₃ = 6 + 12 + 9."
+          },
+          {
+            "value": 18,
+            "message": "18 es F₂ (6 + 12). Sumale también f₃ = 9 para llegar hasta 2 hermanos."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pct_F3",
+      "tipo": "numero",
+      "esperado": 90,
+      "label": "3. Porcentaje de alumnos con 2 o menos hermanos (%)",
+      "unidad": "%",
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 30,
+            "message": "30 % es el porcentaje de quienes tienen exactamente 2 hermanos (9 de 30). Calculá el porcentaje para los 27 alumnos de 30."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Todas las frecuencias absolutas deben sumar n = 30: 6 + 12 + f₃ + 3 = 30.",
+    "Una vez que tenés f₃ = 9, calculá F₃ sumando las frecuencias de 0, 1 y 2 hermanos: 6 + 12 + 9.",
+    "Dividí F₃ entre 30 y multiplicá por 100 para obtener el porcentaje acumulado.",
+    "Comprobá que si 27 de 30 tienen 2 o menos hermanos y los otros 3 tienen 3 hermanos, 27 + 3 = 30 (90 % + 10 % = 100 %)."
+  ],
+  "solucion": [
+    "1) Suma total: 6 + 12 + f₃ + 3 = 30 → 21 + f₃ = 30 → f₃ = 30 − 21 = 9 alumnos.",
+    "2) Frecuencia acumulada hasta 2 hermanos: F₃ = 6 + 12 + 9 = 27 alumnos.",
+    "3) Porcentaje acumulado: (27 ÷ 30) × 100 = 0,90 × 100 = 90 % (el 90 % del curso tiene 2 o menos hermanos)."
+  ],
+  "etiquetas": [
+    "Guía 2.6",
+    "frecuencias"
+  ],
+  "leccion": "L03",
+  "variante": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "N2-12",
+  "titulo": "Consultas combinadas sobre una distribución de tardanzas",
+  "origen": "nuevo",
+  "modulo": "M2",
+  "nivel": "desafio",
+  "habilidades": [
+    "frecuencia-acumulada",
+    "porcentaje",
+    "interpretacion"
+  ],
+  "enunciado": "En un registro de n = 25 estudiantes sobre la cantidad de veces que olvidaron traer la regla en el mes, la tabla de frecuencias absolutas es: 0 veces (f=10), 1 vez (f=8), 2 veces (f=4), 3 veces (f=2), 4 veces (f=1). Respondé las tres consultas.",
+  "partes": [
+    {
+      "id": "pct_ninguna",
+      "tipo": "numero",
+      "esperado": 40,
+      "label": "1. ¿Qué porcentaje de estudiantes no olvidó la regla ninguna vez (0 veces) (%)?",
+      "unidad": "%"
+    },
+    {
+      "id": "pct_hasta_1",
+      "tipo": "numero",
+      "esperado": 72,
+      "label": "2. ¿Qué porcentaje la olvidó como máximo 1 vez (0 o 1 vez) (%)?",
+      "unidad": "%"
+    },
+    {
+      "id": "cant_entre_1_y_2",
+      "tipo": "numero",
+      "esperado": 12,
+      "label": "3. ¿Cuántos estudiantes la olvidaron entre 1 y 2 veces inclusive (1 o 2 veces)?",
+      "entero": true,
+      "detalle": {
+        "commonErrors": [
+          {
+            "value": 22,
+            "message": "22 incluye también a los 10 estudiantes de «0 veces». «Entre 1 y 2 veces inclusive» suma solo las filas de 1 vez (8) y 2 veces (4)."
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Con n = 25, cada estudiante representa 100 ÷ 25 = 4 %.",
+    "«Como máximo 1 vez» es la acumulada hasta 1: 10 + 8 = 18 estudiantes → (18 ÷ 25) × 100 = 72 %.",
+    "«Entre 1 y 2 veces inclusive» suma las frecuencias de 1 vez (8) y 2 veces (4).",
+    "Leé con precisión qué valores extremos incluye cada frase («ninguna vez», «como máximo 1», «entre 1 y 2»)."
+  ],
+  "solucion": [
+    "1) 0 veces: f = 10 → (10 ÷ 25) × 100 = 40 %.",
+    "2) Como máximo 1 vez (0 o 1): F(1) = 10 + 8 = 18 → (18 ÷ 25) × 100 = 72 %.",
+    "3) Entre 1 y 2 veces inclusive: f(1) + f(2) = 8 + 4 = 12 estudiantes."
+  ],
+  "etiquetas": [
+    "Práctica N2-12",
+    "frecuencias"
+  ],
+  "leccion": "L05",
+  "variante": true
+}

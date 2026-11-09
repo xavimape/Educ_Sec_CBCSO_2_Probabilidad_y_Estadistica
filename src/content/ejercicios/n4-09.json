@@ -1,0 +1,71 @@
+{
+  "id": "N4-09",
+  "titulo": "Mediana en una variable cualitativa ordinal",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "desafio",
+  "habilidades": [
+    "cualitativa-ordinal",
+    "mediana-impar",
+    "pertinencia-medidas"
+  ],
+  "enunciado": "En una consulta de satisfacción con n = 9 respuestas ordenadas de menor a mayor nivel (Baja < Media < Alta), se obtuvieron: 2 respuestas «Baja», 4 respuestas «Media» y 3 respuestas «Alta». Determiná qué medidas pueden calcularse y cuáles son sus valores.",
+  "partes": [
+    {
+      "id": "medidas_posibles",
+      "tipo": "select",
+      "esperado": "moda_y_mediana",
+      "label": "1. Tratándose de una variable cualitativa ordinal, ¿qué medidas de tendencia central tienen sentido?",
+      "opciones": [
+        {
+          "valor": "moda_y_mediana",
+          "etiqueta": "La moda y la mediana (porque hay frecuencias y un orden jerárquico, pero no suma numérica para la media)"
+        },
+        {
+          "valor": "solo_media",
+          "etiqueta": "Únicamente la media aritmética"
+        },
+        {
+          "valor": "las_tres",
+          "etiqueta": "Media, mediana y moda"
+        }
+      ]
+    },
+    {
+      "id": "mediana_ordinal",
+      "tipo": "select",
+      "esperado": "Media",
+      "label": "2. Al ordenar las 9 respuestas (Baja, Baja, Media, Media, [Media], Media, Alta, Alta, Alta), ¿qué categoría ocupa la 5.ª posición central (mediana)?",
+      "opciones": [
+        {
+          "valor": "Media",
+          "etiqueta": "Media (ocupa las posiciones 3.ª a 6.ª, incluida la 5.ª central)"
+        },
+        {
+          "valor": "Baja",
+          "etiqueta": "Baja (posiciones 1.ª y 2.ª)"
+        },
+        {
+          "valor": "Alta",
+          "etiqueta": "Alta (posiciones 7.ª a 9.ª)"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Como las categorías son palabras ordenadas (Baja < Media < Alta), no se pueden sumar para una media, pero sí se pueden ordenar para ubicar el centro (mediana).",
+    "Con n = 9 respuestas, la posición central es (9 + 1) ÷ 2 = 5.",
+    "Las 2 primeras son «Baja» y las 4 siguientes (lugares 3, 4, 5 y 6) son «Media».",
+    "Recordá la tabla de la guía: la mediana aplica tanto a variables cuantitativas como a cualitativas ordinales."
+  ],
+  "solucion": [
+    "En una variable cualitativa ordinal son aplicables la Moda y la Mediana (no la Media).",
+    "Posición central para n = 9: (9 + 1) ÷ 2 = 5. La 5.ª respuesta ordenada corresponde a la categoría «Media» (que además coincide con la moda, f = 4)."
+  ],
+  "etiquetas": [
+    "Práctica N4-09",
+    "medidas"
+  ],
+  "leccion": "L08",
+  "variante": false
+}

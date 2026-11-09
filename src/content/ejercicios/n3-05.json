@@ -1,0 +1,46 @@
+{
+  "id": "N3-05",
+  "titulo": "Elegir una escala para valores grandes (máximo 60 en 12 cuadritos)",
+  "origen": "nuevo",
+  "modulo": "M3",
+  "nivel": "intermedio",
+  "habilidades": [
+    "elegir-escala"
+  ],
+  "enunciado": "Se recolectaron botellas plásticas para reciclar en tres cursos: 2.º A juntó 45 botellas, 2.º B juntó 60 botellas y 2.º C juntó 30 botellas. Si disponés de 12 cuadritos verticales para el eje Y, ¿cuántas botellas debe representar como mínimo cada cuadrito y qué altura tendrá cada barra con escala de 5 botellas por cuadrito?",
+  "partes": [
+    {
+      "id": "escala_minima",
+      "tipo": "numero",
+      "esperado": 5,
+      "label": "1. Si el máximo es 60 botellas y hay 12 cuadritos disponibles, ¿cuántas botellas representa 1 cuadrito al hacer 60 ÷ 12?"
+    },
+    {
+      "id": "alt_45",
+      "tipo": "numero",
+      "esperado": 9,
+      "label": "2. Con escala 1 cuadrito = 5 botellas, ¿cuántos cuadritos de alto mide la barra de 2.º A (45 botellas)?"
+    },
+    {
+      "id": "alt_30",
+      "tipo": "numero",
+      "esperado": 6,
+      "label": "3. ¿Y cuántos cuadritos mide la barra de 2.º C (30 botellas)?"
+    }
+  ],
+  "pistas": [
+    "Dividí el valor máximo (60) por los cuadritos disponibles (12): 60 ÷ 12 = 5 botellas por cuadrito.",
+    "Con esa escala, dividí cada cantidad por 5: 45 ÷ 5 = 9 cuadritos y 30 ÷ 5 = 6 cuadritos.",
+    "Para elegir rápido una escala, dividí el valor máximo por la cantidad de cuadritos disponibles y redondeá hacia arriba a un paso cómodo (como 2, 5 o 10)."
+  ],
+  "solucion": [
+    "Escala elegida: 1 cuadrito = 5 botellas (el eje Y avanza 0, 5, 10, 15, ..., 60 en 12 cuadritos).",
+    "Alturas: 2.º A (45) → 9 cuadritos; 2.º B (60) → 12 cuadritos; 2.º C (30) → 6 cuadritos."
+  ],
+  "etiquetas": [
+    "Práctica N3-05",
+    "barras"
+  ],
+  "leccion": "L06",
+  "variante": false
+}

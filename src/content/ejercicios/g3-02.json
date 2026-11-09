@@ -1,0 +1,88 @@
+{
+  "id": "G3-02",
+  "titulo": "Gráfico de barras de faltas mensuales",
+  "origen": "guia",
+  "modulo": "M3",
+  "nivel": "inicial",
+  "habilidades": [
+    "construir-barras",
+    "rotular-ejes"
+  ],
+  "enunciado": "Con los datos de faltas mensuales de 15 alumnos (0 faltas: 5 alumnos; 1 falta: 6 alumnos; 2 faltas: 3 alumnos; 3 faltas: 1 alumno), construí el gráfico de barras e identificá qué representa cada eje.",
+  "partes": [
+    {
+      "id": "ejes",
+      "tipo": "select",
+      "esperado": "x_faltas_y_alumnos",
+      "label": "1. ¿Qué debe ubicarse en el eje horizontal (X) y qué en el eje vertical (Y)?",
+      "opciones": [
+        {
+          "valor": "x_faltas_y_alumnos",
+          "etiqueta": "Eje X: Cantidad de faltas (0, 1, 2, 3) | Eje Y: Cantidad de alumnos (frecuencia absoluta)"
+        },
+        {
+          "valor": "x_alumnos_y_faltas",
+          "etiqueta": "Eje X: Cantidad de alumnos (5, 6, 3, 1) | Eje Y: Cantidad de faltas"
+        },
+        {
+          "valor": "x_acumulada",
+          "etiqueta": "Eje X: Frecuencia acumulada (5, 11, 14, 15) | Eje Y: Porcentaje"
+        }
+      ]
+    },
+    {
+      "id": "constructor",
+      "tipo": "barras",
+      "label": "2. Configurá la escala (por ejemplo, 1 cuadrito = 1 alumno) y la altura de cada barra",
+      "unidad": "alumnos",
+      "detalle": {
+        "inputMode": "value",
+        "maxGridCells": 12,
+        "validScaleSteps": [
+          1,
+          2
+        ],
+        "bars": [
+          {
+            "key": "f0",
+            "label": "0 faltas",
+            "value": 5
+          },
+          {
+            "key": "f1",
+            "label": "1 falta",
+            "value": 6
+          },
+          {
+            "key": "f2",
+            "label": "2 faltas",
+            "value": 3
+          },
+          {
+            "key": "f3",
+            "label": "3 faltas",
+            "value": 1
+          }
+        ]
+      }
+    }
+  ],
+  "pistas": [
+    "Los valores observados de la variable (0, 1, 2 y 3 faltas) van en la base horizontal (Eje X).",
+    "La cantidad de veces que se repite cada valor (5, 6, 3 y 1 alumnos) da la altura vertical en el Eje Y.",
+    "Como la frecuencia máxima es 6, elegir 1 cuadrito = 1 alumno permite dibujar alturas exactas de 5, 6, 3 y 1 cuadritos.",
+    "Incluso cuando el valor de la variable es 0 («0 faltas»), tiene su propia barra cuya altura es su frecuencia (5 alumnos)."
+  ],
+  "solucion": [
+    "Eje horizontal (X): valores de la variable «Cantidad de faltas» (0, 1, 2, 3), con barras de 2 cuadritos de ancho separadas por 1 cuadrito.",
+    "Eje vertical (Y): «Cantidad de alumnos» graduado de 1 en 1 desde 0 hasta 6.",
+    "Alturas de las barras: 0 faltas → 5 cuadritos; 1 falta → 6 cuadritos; 2 faltas → 3 cuadritos; 3 faltas → 1 cuadrito."
+  ],
+  "etiquetas": [
+    "Guía 3.2",
+    "barras"
+  ],
+  "leccion": "L06",
+  "adaptacion": "Provee la tabla completa en el enunciado para que sea autónomo respecto del Ejercicio 2.1.",
+  "variante": false
+}

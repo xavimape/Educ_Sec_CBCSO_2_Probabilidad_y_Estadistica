@@ -1,0 +1,103 @@
+{
+  "id": "N1-12",
+  "titulo": "Diseño de variables para un estudio del kiosco escolar",
+  "origen": "nuevo",
+  "modulo": "M1",
+  "nivel": "desafio",
+  "habilidades": [
+    "clasificar-variable",
+    "transferencia"
+  ],
+  "enunciado": "Querés armar una consulta ficticia sobre la cantina escolar que incluya exactamente un ejemplo de cada uno de los cuatro tipos de variables. Asociá cada pregunta con su clasificación.",
+  "partes": [
+    {
+      "id": "p_nominal",
+      "tipo": "select",
+      "esperado": "alimento",
+      "label": "1. ¿Cuál de estas preguntas define una variable cualitativa nominal?",
+      "opciones": [
+        {
+          "valor": "alimento",
+          "etiqueta": "¿Qué alimento elegís con más frecuencia en el recreo? (Fruta, Sándwich, Alfajor, Empanada)"
+        },
+        {
+          "valor": "satisfaccion",
+          "etiqueta": "¿Qué nivel de conformidad tenés con la atención? (Bajo, Medio, Alto)"
+        },
+        {
+          "valor": "espera",
+          "etiqueta": "¿Cuántos minutos exactos esperaste en la fila?"
+        }
+      ]
+    },
+    {
+      "id": "p_ordinal",
+      "tipo": "select",
+      "esperado": "satisfaccion",
+      "label": "2. ¿Cuál define una variable cualitativa ordinal?",
+      "opciones": [
+        {
+          "valor": "satisfaccion",
+          "etiqueta": "¿Qué nivel de conformidad tenés con la atención? (Bajo, Medio, Alto)"
+        },
+        {
+          "valor": "alimento",
+          "etiqueta": "¿Qué alimento elegís en el recreo?"
+        },
+        {
+          "valor": "veces",
+          "etiqueta": "¿Cuántos días de esta semana compraste en la cantina? (0 a 5)"
+        }
+      ]
+    },
+    {
+      "id": "p_discreta",
+      "tipo": "select",
+      "esperado": "veces",
+      "label": "3. ¿Cuál define una variable cuantitativa discreta?",
+      "opciones": [
+        {
+          "valor": "veces",
+          "etiqueta": "¿Cuántos días de esta semana compraste en la cantina? (0, 1, 2, 3, 4, 5)"
+        },
+        {
+          "valor": "espera",
+          "etiqueta": "¿Cuánto tiempo exacto esperaste en la fila medido en segundos?"
+        }
+      ]
+    },
+    {
+      "id": "p_continua",
+      "tipo": "select",
+      "esperado": "espera",
+      "label": "4. ¿Y cuál define una variable cuantitativa continua?",
+      "opciones": [
+        {
+          "valor": "espera",
+          "etiqueta": "¿Cuánto tiempo exacto esperaste en la fila medido con cronómetro?"
+        },
+        {
+          "valor": "veces",
+          "etiqueta": "¿Cuántos productos compraste hoy?"
+        }
+      ]
+    }
+  ],
+  "pistas": [
+    "Nominal: palabras sin orden (tipo de alimento). Ordinal: palabras con jerarquía (Bajo, Medio, Alto).",
+    "Discreta: conteo de días enteros (0 a 5). Continua: medición de tiempo.",
+    "Comprobá que cada tipo de variable responde a una pregunta distinta."
+  ],
+  "solucion": [
+    "Cualitativa nominal: tipo de alimento elegido.",
+    "Cualitativa ordinal: nivel de conformidad (Bajo, Medio, Alto).",
+    "Cuantitativa discreta: cantidad de días de la semana que compró (0 a 5).",
+    "Cuantitativa continua: tiempo de espera en la fila."
+  ],
+  "etiquetas": [
+    "Práctica N1-12",
+    "variables"
+  ],
+  "leccion": "L02",
+  "variante": false
+}

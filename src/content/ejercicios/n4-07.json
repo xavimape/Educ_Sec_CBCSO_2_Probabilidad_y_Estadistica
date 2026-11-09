@@ -1,0 +1,61 @@
+{
+  "id": "N4-07",
+  "titulo": "Serie amodal: cuando ningún valor se destaca en frecuencia",
+  "origen": "nuevo",
+  "modulo": "M4",
+  "nivel": "intermedio",
+  "habilidades": [
+    "moda",
+    "amodal"
+  ],
+  "enunciado": "Las temperaturas mínimas (en °C) registradas en 5 mañanas consecutivas fueron: 11, 13, 14, 16, 18. Determiná la media, la mediana y analizá qué ocurre con la moda.",
+  "partes": [
+    {
+      "id": "media",
+      "tipo": "numero",
+      "esperado": 14.4,
+      "label": "1. Media aritmética (x̄) en °C",
+      "unidad": "°C",
+      "redondeo": 2
+    },
+    {
+      "id": "mediana",
+      "tipo": "numero",
+      "esperado": 14,
+      "label": "2. Mediana (Me) en °C",
+      "unidad": "°C"
+    },
+    {
+      "id": "moda",
+      "tipo": "numeroConjunto",
+      "esperado": [],
+      "label": "3. ¿Cuál es la moda (escribí «amodal» si ningún valor se repite más que otro)?"
+    }
+  ],
+  "pistas": [
+    "Suma: 11 + 13 + 14 + 16 + 18 = 72 °C → dividí entre 5 para la media.",
+    "El 3.º dato ordenado es 14 °C (mediana).",
+    "Como los 5 valores aparecen 1 sola vez cada uno, ninguno se repite más que los demás: en el criterio escolar la serie es amodal.",
+    "Cuando ningún valor supera en frecuencia a los demás, indicá que la serie es amodal."
+  ],
+  "solucion": [
+    "Media: (11 + 13 + 14 + 16 + 18) ÷ 5 = 72 ÷ 5 = 14,4 °C.",
+    "Mediana: el 3.º dato ordenado es Me = 14 °C.",
+    "Moda: todos los valores tienen frecuencia 1 → la serie es amodal (sin moda destacada)."
+  ],
+  "etiquetas": [
+    "Práctica N4-07",
+    "medidas"
+  ],
+  "leccion": "L09",
+  "variante": false,
+  "datos": {
+    "conjunto": [
+      11,
+      13,
+      14,
+      16,
+      18
+    ]
+  }
+}
