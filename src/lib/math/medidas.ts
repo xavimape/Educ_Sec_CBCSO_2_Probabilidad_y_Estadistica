@@ -31,8 +31,10 @@ export function moda<T extends string | number>(datos: T[]): T[] | null {
   const frecuencias = [...conteo.values()];
   const maxima = Math.max(...frecuencias);
   const minima = Math.min(...frecuencias);
-  // Todas iguales (incluye el caso de todos los valores distintos): no hay una moda destacada.
-  if (maxima === minima) return [];
+  // Si hay más de un valor distinto y todos tienen la misma frecuencia (incluye el caso de
+  // todos los valores distintos con f=1): no hay una moda destacada (amodal).
+  // Si hay un solo valor único en la serie (conteo.size === 1), ese valor es la moda.
+  if (conteo.size > 1 && maxima === minima) return [];
   return [...conteo.entries()].filter(([, f]) => f === maxima).map(([valor]) => valor);
 }
 

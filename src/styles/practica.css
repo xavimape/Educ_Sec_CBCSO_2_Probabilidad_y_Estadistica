@@ -3,6 +3,7 @@
 .ejercicio {
   display: grid;
   gap: 1rem;
+  min-width: 0;
 }
 
 .ejercicio-cabecera {
@@ -10,6 +11,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: baseline;
+  min-width: 0;
 }
 
 .badge {
@@ -27,11 +29,13 @@
   display: grid;
   gap: 1rem;
   padding-left: 1.2rem;
+  min-width: 0;
 }
 
 .parte {
   display: grid;
   gap: 0.5rem;
+  min-width: 0;
 }
 
 .parte input,
@@ -40,7 +44,9 @@
   padding: 0.4rem 0.5rem;
   border: 1px solid var(--color-tinta);
   border-radius: 4px;
+  width: 100%;
   max-width: 22rem;
+  min-width: 0;
 }
 
 .label {

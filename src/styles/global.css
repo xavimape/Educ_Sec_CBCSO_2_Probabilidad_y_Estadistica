@@ -11,6 +11,14 @@
   box-sizing: border-box;
 }
 
+/* Evitar que controles de formulario desborden su contenedor por textos largos de options o valores */
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
 html {
   font-family: var(--fuente);
   font-size: 112.5%; /* base cercana a 18px, en unidades relativas */

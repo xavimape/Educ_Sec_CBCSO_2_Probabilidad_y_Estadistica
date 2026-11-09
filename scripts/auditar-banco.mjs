@@ -92,17 +92,21 @@ for (const archivo of archivos) {
     const comparar = (calculado) =>
       redondeo !== undefined ? cerca(redondear(v, redondeo), redondear(calculado, redondeo), 1e-9) : cerca(v, calculado);
 
-    if (/\bmedia\b|\bpromedio\b|x̄/.test(label)) {
-      if (comparar(m)) verificadas += 1;
-      else {
-        discrepancias += 1;
-        console.log(`⚠ ${ej.id}/${parte.id} media: esperado ${v} vs calculado ${m}`);
-      }
-    } else if (/\bmediana\b/.test(label)) {
+    if (/\bmediana\b/.test(label)) {
+      // Si la etiqueta especifica sin el extremo o n=10, el cálculo sobre el conjunto completo no aplica directamente
+      if (/sin el extremo|n\s*=\s*10|10\s*alumnos/i.test(label)) continue;
       if (comparar(md)) verificadas += 1;
       else {
         discrepancias += 1;
         console.log(`⚠ ${ej.id}/${parte.id} mediana: esperado ${v} vs calculado ${md}`);
+      }
+    } else if (/\bmedia\b|\bpromedio\b|x̄/.test(label)) {
+      // Si la etiqueta pide un total necesario (ej: "para promedio 7") o sin el extremo, no compara con la media simple
+      if (/para que|sin el extremo|n\s*=\s*10|10\s*alumnos/i.test(label)) continue;
+      if (comparar(m)) verificadas += 1;
+      else {
+        discrepancias += 1;
+        console.log(`⚠ ${ej.id}/${parte.id} media: esperado ${v} vs calculado ${m}`);
       }
     } else if (/\bsuma\b/.test(label)) {
       if (comparar(s)) verificadas += 1;

@@ -2,7 +2,7 @@
 
 Único documento vivo de estado. Reemplaza la costumbre del proyecto anterior de mantener varios documentos superpuestos.
 
-**Fecha:** 9 de noviembre de 2026. **Fase:** 3 (interactividad) cerrada. F4 (calidad y publicación) próxima.
+**Fecha:** 9 de noviembre de 2026. **Estado:** F1–F4 completas. **Publicado** en https://xavimape.github.io/Educ_Sec_CBCSO_2_Probabilidad_y_Estadistica/
 
 ## 1. Decisiones cerradas (fase 0)
 

@@ -48,6 +48,11 @@ describe('moda', () => {
     expect(moda([1, 2, 2, 3])).toEqual([2]);
   });
 
+  it('valor único repetido devuelve ese valor como moda', () => {
+    expect(moda([2, 2])).toEqual([2]);
+    expect(moda([5])).toEqual([5]);
+  });
+
   it('bimodal devuelve las dos modas', () => {
     expect(moda([1, 1, 2, 2, 3])).toEqual([1, 2]);
   });

@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import BarrasBuilder from '../../components/BarrasBuilder.tsx';
 import '../../styles/actividades.css';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -11,6 +13,6 @@ import '../../styles/actividades.css';
   <main>
     <h1>Construí el gráfico de barras</h1>
     <BarrasBuilder client:load />
-    <p><a href="../">Volver al inicio</a>.</p>
+    <p><a href={base}>Volver al inicio</a>.</p>
   </main>
 </Layout>

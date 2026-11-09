@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Laboratorio from '../components/Laboratorio.tsx';
 import '../styles/laboratorio.css';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout titulo="Laboratorio" descripcion="Explorá datos, tabla, gráfico y medidas de tendencia central.">
@@ -9,6 +11,6 @@ import '../styles/laboratorio.css';
     <h1>Laboratorio</h1>
     <p>Cargá tus datos (uno por línea) y mirá cómo cambian la tabla, el gráfico y las medidas.</p>
     <Laboratorio client:load />
-    <p><a href="../">Volver al inicio</a>.</p>
+    <p><a href={base}>Volver al inicio</a>.</p>
   </main>
 </Layout>

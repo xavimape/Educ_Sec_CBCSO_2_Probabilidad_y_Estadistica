@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { corregir, type Parte, type Resultado } from '../lib/corrector';
 import { mulberry32 } from '../lib/math';
 
@@ -19,6 +19,7 @@ type EjercicioDatos = {
 type Fase = 'config' | 'intento' | 'resultado';
 
 export default function Simulacro({ ejercicios }: { ejercicios: string }) {
+  const [listo, setListo] = useState(false);
   const banco = useMemo(() => JSON.parse(ejercicios) as EjercicioDatos[], [ejercicios]);
   const [fase, setFase] = useState<Fase>('config');
   const [cantidad, setCantidad] = useState<8 | 12>(8);
@@ -27,6 +28,10 @@ export default function Simulacro({ ejercicios }: { ejercicios: string }) {
   const [indice, setIndice] = useState(0);
   const [respuestas, setRespuestas] = useState<Record<string, Record<string, string>>>({});
   const [resultados, setResultados] = useState<Record<string, Record<string, Resultado>>>({});
+
+  useEffect(() => {
+    setListo(true);
+  }, []);
 
   function iniciar() {
     setSeleccion(seleccionar(banco, cantidad, semilla));
@@ -63,16 +68,16 @@ export default function Simulacro({ ejercicios }: { ejercicios: string }) {
         <p>El simulacro es práctica, no una nota oficial. Elegí cuántos ejercicios y una semilla.</p>
         <label className="campo">
           Cantidad:
-          <select value={cantidad} onChange={(e) => setCantidad(Number(e.target.value) as 8 | 12)}>
+          <select value={cantidad} disabled={!listo} onChange={(e) => setCantidad(Number(e.target.value) as 8 | 12)}>
             <option value={8}>8 ejercicios (repaso breve, 2 por tema)</option>
             <option value={12}>12 ejercicios (repaso completo, 3 por tema)</option>
           </select>
         </label>
         <label className="campo">
           Semilla (mismo número → mismo simulacro):
-          <input type="number" value={semilla} onChange={(e) => setSemilla(Number(e.target.value) || 1)} />
+          <input type="number" value={semilla} disabled={!listo} onChange={(e) => setSemilla(Number(e.target.value) || 1)} />
         </label>
-        <button type="button" onClick={iniciar}>Comenzar</button>
+        <button type="button" onClick={iniciar} disabled={!listo}>Comenzar</button>
       </section>
     );
   }

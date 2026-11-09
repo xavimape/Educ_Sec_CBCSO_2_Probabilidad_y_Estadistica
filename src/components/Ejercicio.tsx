@@ -17,6 +17,7 @@ type EjercicioDatos = {
 };
 
 export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
+  const [listo, setListo] = useState(false);
   const datos = useMemo(() => JSON.parse(ejercicio) as EjercicioDatos, [ejercicio]);
   const [respuestas, setRespuestas] = useState<Record<string, string>>({});
   const [resultados, setResultados] = useState<Record<string, Resultado>>({});
@@ -24,6 +25,10 @@ export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
   const [mostrarSolucion, setMostrarSolucion] = useState(false);
   const [revisado, setRevisado] = useState(false);
   const [repasar, setRepasar] = useState(false);
+
+  useEffect(() => {
+    setListo(true);
+  }, []);
 
   function responder(id: string, valor: string) {
     setRespuestas((prev) => ({ ...prev, [id]: valor }));
@@ -81,7 +86,7 @@ export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
         {datos.partes.map((parte) => (
           <li key={parte.id} className="parte">
             {parte.label && <p className="label">{parte.label}</p>}
-            <ParteCampo parte={parte} valor={respuestas[parte.id] ?? ''} onChange={(v) => responder(parte.id, v)} />
+            <ParteCampo parte={parte} valor={respuestas[parte.id] ?? ''} disabled={!listo} onChange={(v) => responder(parte.id, v)} />
             {revisado && resultados[parte.id] && (
               <p className={resultados[parte.id].correcto === true ? 'feedback ok' : 'feedback error'} role="status">
                 {resultados[parte.id].mensaje}
@@ -92,9 +97,9 @@ export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
       </ol>
 
       <div className="controles">
-        <button type="button" onClick={comprobar}>Comprobar</button>
-        <button type="button" onClick={reintentar}>Volver a intentar</button>
-        <button type="button" onClick={alternarRepaso} aria-pressed={repasar}>
+        <button type="button" onClick={comprobar} disabled={!listo}>Comprobar</button>
+        <button type="button" onClick={reintentar} disabled={!listo}>Volver a intentar</button>
+        <button type="button" onClick={alternarRepaso} aria-pressed={repasar} disabled={!listo}>
           {repasar ? 'Quitar de repasar' : 'Marcar para repasar'}
         </button>
       </div>
@@ -124,10 +129,20 @@ export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
   );
 }
 
-function ParteCampo({ parte, valor, onChange }: { parte: Parte; valor: string; onChange: (v: string) => void }) {
+function ParteCampo({
+  parte,
+  valor,
+  disabled,
+  onChange,
+}: {
+  parte: Parte;
+  valor: string;
+  disabled?: boolean;
+  onChange: (v: string) => void;
+}) {
   if (parte.tipo === 'select') {
     return (
-      <select value={valor} onChange={(e) => onChange(e.target.value)}>
+      <select value={valor} disabled={disabled} onChange={(e) => onChange(e.target.value)}>
         <option value="">Elegí una opción…</option>
         {(parte.opciones ?? []).map((o) => (
           <option key={o.valor} value={o.valor}>{o.etiqueta}</option>
@@ -142,6 +157,7 @@ function ParteCampo({ parte, valor, onChange }: { parte: Parte; valor: string; o
     <input
       type="text"
       value={valor}
+      disabled={disabled}
       onChange={(e) => onChange(e.target.value)}
       aria-label={parte.label ?? parte.id}
     />

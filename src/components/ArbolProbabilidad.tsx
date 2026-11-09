@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const HOJAS = ['CC', 'CS', 'SC', 'SS'];
 const FAVORABLES = new Set(['CC', 'CS', 'SC']);
 
 export default function ArbolProbabilidad() {
+  const [listo, setListo] = useState(false);
   const [seleccion, setSeleccion] = useState<string[]>([]);
   const [total, setTotal] = useState('');
   const [favorables, setFavorables] = useState('');
@@ -11,6 +12,10 @@ export default function ArbolProbabilidad() {
   const [revisado, setRevisado] = useState(false);
   const [correcto, setCorrecto] = useState(false);
   const [mensaje, setMensaje] = useState('');
+
+  useEffect(() => {
+    setListo(true);
+  }, []);
 
   const seleccionCorrecta = HOJAS.every((h) => seleccion.includes(h) === FAVORABLES.has(h));
 
@@ -57,6 +62,7 @@ export default function ArbolProbabilidad() {
               key={hoja}
               type="button"
               className="hoja"
+              disabled={!listo}
               aria-pressed={seleccion.includes(hoja)}
               onClick={() => alternar(hoja)}
             >
@@ -74,6 +80,7 @@ export default function ArbolProbabilidad() {
             type="number"
             min={0}
             value={total}
+            disabled={!listo}
             onChange={(e) => setTotal(e.target.value)}
             aria-label="Total de resultados posibles"
           />
@@ -84,6 +91,7 @@ export default function ArbolProbabilidad() {
             type="number"
             min={0}
             value={favorables}
+            disabled={!listo}
             onChange={(e) => setFavorables(e.target.value)}
             aria-label="Resultados favorables"
           />
@@ -93,13 +101,14 @@ export default function ArbolProbabilidad() {
           <input
             type="text"
             value={probabilidad}
+            disabled={!listo}
             onChange={(e) => setProbabilidad(e.target.value)}
             aria-label="Probabilidad de al menos una cara"
           />
         </label>
       </div>
 
-      <button type="button" onClick={comprobar}>
+      <button type="button" onClick={comprobar} disabled={!listo}>
         Comprobar
       </button>
       <p className="resultado" role="status">{mensaje}</p>

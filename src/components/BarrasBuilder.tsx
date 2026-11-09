@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Barra = { etiqueta: string; frecuencia: number };
 
@@ -14,11 +14,17 @@ const MAX = 8;
 const PX = 16; // píxeles por unidad (1 cuadrito = 1 unidad)
 
 export default function BarrasBuilder() {
+  const [listo, setListo] = useState(false);
   const [alturas, setAlturas] = useState<number[]>([0, 0, 0, 0]);
   const [total, setTotal] = useState('');
   const [justificacion, setJustificacion] = useState('');
   const [revisado, setRevisado] = useState(false);
   const [mensaje, setMensaje] = useState('');
+
+  // Marcar como hidratado para habilitar controles una vez que React esté listo
+  useEffect(() => {
+    setListo(true);
+  }, []);
 
   const aciertos = DATOS.filter((d, i) => alturas[i] === d.frecuencia);
   const correcto = aciertos.length === DATOS.length && total.trim() === '15' && justificacion === 'mayor';
@@ -75,6 +81,7 @@ export default function BarrasBuilder() {
               min={0}
               max={MAX}
               value={alturas[i]}
+              disabled={!listo}
               onChange={(e) => {
                 const v = Number(e.target.value);
                 const alturasNuevas = [...alturas];
@@ -94,6 +101,7 @@ export default function BarrasBuilder() {
           type="number"
           min={0}
           value={total}
+          disabled={!listo}
           onChange={(e) => setTotal(e.target.value)}
           aria-label="Total de alumnos"
         />
@@ -103,6 +111,7 @@ export default function BarrasBuilder() {
         ¿Por qué la barra de «1 falta» es la más alta?
         <select
           value={justificacion}
+          disabled={!listo}
           onChange={(e) => setJustificacion(e.target.value)}
           aria-label="Justificación de la barra más alta"
         >
@@ -113,7 +122,7 @@ export default function BarrasBuilder() {
         </select>
       </label>
 
-      <button type="button" onClick={comprobar}>
+      <button type="button" onClick={comprobar} disabled={!listo}>
         Comprobar
       </button>
       <p className="resultado" role="status">{mensaje}</p>

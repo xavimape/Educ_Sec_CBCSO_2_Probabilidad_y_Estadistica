@@ -51,7 +51,7 @@ Las tardanzas de 11 alumnos: `0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 11`.
 
 **Acompañada.** Un jugador anotó `2, 4, 6, 8, 30` puntos en cinco partidos. ¿La media o la mediana describe mejor su rendimiento habitual? Calculá ambas.
 
-**Sin ayuda.** La pregunta es «¿cuántos libros leyeron la mayoría?». ¿Qué medida conviene y por qué? Usá la tabla `f = 3, 8, 6, 2, 1` para 0–4 libros.
+**Sin ayuda.** La pregunta es «¿qué cantidad de libros fue la más frecuente?». ¿Qué medida conviene y por qué? Usá la tabla `f = 3, 8, 6, 2, 1` para 0–4 libros.
 
 ---
 
@@ -60,7 +60,7 @@ Las tardanzas de 11 alumnos: `0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 11`.
 
 **Acompañada.** Media `50 ÷ 5 = 10`; mediana `6`. La mediana describe mejor lo habitual: el `30` infla la media.
 
-**Sin ayuda.** Conviene la **moda** (1 libro, con frecuencia 8): responde «la mayoría», no un reparto ni un valor central.
+**Sin ayuda.** Conviene la **moda** (1 libro, con frecuencia 8): responde «lo más frecuente» (8 de 20 representa el 40 %, la mayor frecuencia, aunque no sea una mayoría absoluta mayor al 50 %), no un reparto ni un valor central.
 </details>
 
 ## Para cerrar

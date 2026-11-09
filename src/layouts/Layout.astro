@@ -33,6 +33,6 @@ const base = import.meta.env.BASE_URL;
   </head>
   <body>
     <slot />
-    <script src={`${base}sw-registro.js`}></script>
+    <script is:inline src={`${base}sw-registro.js`}></script>
   </body>
 </html>

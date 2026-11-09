@@ -7,12 +7,13 @@ import '../styles/simulacro.css';
 
 const ejercicios = await getCollection('ejercicios');
 const datos = JSON.stringify(ejercicios.map((e) => e.data));
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout titulo="Simulacro" descripcion="Práctica integradora con devolución al final.">
   <main>
     <h1>Simulacro</h1>
     <Simulacro client:load ejercicios={datos} />
-    <p><a href="../">Volver al inicio</a>.</p>
+    <p><a href={base}>Volver al inicio</a>.</p>
   </main>
 </Layout>
