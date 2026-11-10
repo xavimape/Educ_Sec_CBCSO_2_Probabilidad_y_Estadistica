@@ -1,4 +1,4 @@
-/* Estilos de las actividades interactivas (fase 1). */
+/* Estilos de las actividades interactivas. */
 
 .actividad {
   display: grid;
@@ -29,9 +29,9 @@
 .campo input,
 .campo select {
   font-size: 1rem;
-  padding: 0.3rem 0.5rem;
-  border: 1px solid var(--color-tinta);
-  border-radius: 4px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -64,20 +64,33 @@
 }
 
 .resultado.ok {
-  color: #15803d;
+  color: var(--color-ok);
   font-weight: 600;
+  border-left: 3px solid var(--color-ok);
+  padding-left: var(--space-2);
 }
 
 button {
   font-size: 1rem;
-  padding: 0.5rem 0.9rem;
+  padding: var(--space-2) var(--space-3);
   border: 2px solid var(--color-acento);
   background: var(--color-acento);
   color: #ffffff;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.12s ease, transform 0.12s ease;
 }
 
 button:hover {
   background: #1e40af;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
