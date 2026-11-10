@@ -69,3 +69,10 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 | M6 | Azar y espacio muestral | moneda y dado |
 | M7 | Conteo y probabilidad | dos monedas → P = 3/4 |
 | M8 | Comunicación y lectura crítica | CEAMSE (6.200 + 10.800) |
+
+## 7. Fase visual (10/11/2026, en curso)
+
+- **Cambio A · Íconos PWA**: `scripts/generar-iconos.mjs` (+ `npm run iconos`) genera `icon-192.png`, `icon-512.png` y `icon-maskable-512.png` desde `icon.svg`; manifest y `apple-touch-icon` actualizados.
+- **Cambio B · Estilos globales**: `global.css` con tokens (colores AA verificados, tipografía y espaciado), `:focus-visible` y medida de lectura `68ch`; se conserva la protección de 320 px.
+- **Inventario paralelo**: `npm run inventario` genera `docs/REVISION_MANUAL.md` con los ejercicios que `auditar:banco` no cubre.
+- **Pendiente**: ejecutar `npm run iconos` y re-verificar contraste, 320 px, build y E2E antes de publicar; luego Antigravity/Codex/Qwen validan.
