@@ -18,6 +18,8 @@
     "migrate:bank": "node scripts/migrate-bank.mjs",
     "resumen": "node scripts/resumen-banco.mjs",
     "auditar:banco": "node scripts/auditar-banco.mjs",
+    "iconos": "node scripts/generar-iconos.mjs",
+    "inventario": "node scripts/inventario-revision.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {
