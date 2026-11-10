@@ -15,12 +15,14 @@ const base = import.meta.env.BASE_URL;
     {lecciones.length === 0 ? (
       <p>Todavía no hay lecciones publicadas.</p>
     ) : (
-      <ul>
+      <ul class="tarjetas">
         {lecciones.map((leccion) => (
-          <li>
-            <a href={`./${leccion.id}/`}>{leccion.data.titulo}</a>
-            <span> · {leccion.data.modulo}</span>
-            <p>{leccion.data.objetivo}</p>
+          <li class="tarjeta">
+            <a href={`./${leccion.id}/`}>
+              <span class="tarjeta-modulo">{leccion.data.modulo}</span>
+              <strong>{leccion.data.titulo}</strong>
+              <p>{leccion.data.objetivo}</p>
+            </a>
           </li>
         ))}
       </ul>

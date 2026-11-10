@@ -75,4 +75,8 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Cambio A · Íconos PWA**: `scripts/generar-iconos.mjs` (+ `npm run iconos`) genera `icon-192.png`, `icon-512.png` y `icon-maskable-512.png` desde `icon.svg`; manifest y `apple-touch-icon` actualizados.
 - **Cambio B · Estilos globales**: `global.css` con tokens (colores AA verificados, tipografía y espaciado), `:focus-visible` y medida de lectura `68ch`; se conserva la protección de 320 px.
 - **Inventario paralelo**: `npm run inventario` genera `docs/REVISION_MANUAL.md` con los ejercicios que `auditar:banco` no cubre.
-- **Pendiente**: ejecutar `npm run iconos` y re-verificar contraste, 320 px, build y E2E antes de publicar; luego Antigravity/Codex/Qwen validan.
+- **Paso 2 · Componentes de interacción**: inputs/selects/textarea con borde `--color-borde` y radio 6 px; botones con hover/elevación y deshabilitado; feedback con borde y colores AA (`--color-ok`, `--color-error`).
+- **Paso 3 · Tarjetas**: portada (módulos enlazados a cada lección) y lecciones en grilla de tarjetas (`.tarjetas`/`.tarjeta` en `global.css`).
+- **Verificado (local, usuario)**: íconos generados y `check`/`build`/`test`/`test:e2e` en verde.
+- **Inventario**: 104 total, 15 auto-verificados, **89** para revisión manual (diferencia con los 85 de Codex: incluye numéricos sin parte medible).
+- **Pendiente**: verificar `check`/`build`/`test`/`test:e2e` de los pasos 2-3 y re-validar 320 px/AA; desplegar `618ddf6` (validado por Antigravity y Codex) y luego los pasos 2-3.
