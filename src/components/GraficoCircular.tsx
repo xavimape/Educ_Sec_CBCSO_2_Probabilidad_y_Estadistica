@@ -54,6 +54,29 @@ export default function GraficoCircular() {
             })}
       </svg>
 
+      <div className="solo-impresion">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Frecuencia</th>
+              <th>Relativa</th>
+              <th>%</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CATEGORIAS.map((c, i) => (
+              <tr key={c}>
+                <td>{c}</td>
+                <td>{frecuencias[i]}</td>
+                <td>{total > 0 ? (frecuencias[i] / total).toFixed(2).replace('.', ',') : '0'}</td>
+                <td>{total > 0 ? Math.round((frecuencias[i] / total) * 100) + ' %' : '0 %'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <div className="campos-frecuencias">
         {CATEGORIAS.map((c, i) => (
           <label key={c} className="campo">

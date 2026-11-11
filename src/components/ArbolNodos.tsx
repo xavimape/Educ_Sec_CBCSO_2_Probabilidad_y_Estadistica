@@ -77,6 +77,11 @@ export default function ArbolNodos() {
         ))}
       </svg>
 
+      <div className="solo-impresion">
+        <p>Resultados posibles: CC, CS, SC y SS; cada uno con P = 1/4 (25 %).</p>
+        {seleccion && <p>Resultado elegido: {seleccion}.</p>}
+      </div>
+
       <p aria-live="polite">
         {seleccion ? `Elegiste ${seleccion}: P = 1/4.` : 'Ningún resultado elegido.'}
       </p>

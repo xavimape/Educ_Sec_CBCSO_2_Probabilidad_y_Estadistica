@@ -30,6 +30,25 @@ export default function Histograma() {
         <line x1="0" y1={ALTO} x2={ANCHO} y2={ALTO} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1" />
       </svg>
 
+      <div className="solo-impresion">
+        <table>
+          <thead>
+            <tr>
+              <th>Intervalo</th>
+              <th>Frecuencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ETIQUETAS.map((et, i) => (
+              <tr key={et}>
+                <td>{et}</td>
+                <td>{frecuencias[i]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <div className="campos-frecuencias">
         {ETIQUETAS.map((et, i) => (
           <label key={et} className="campo">

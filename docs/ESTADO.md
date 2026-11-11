@@ -155,4 +155,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Oculta solo elementos de pantalla (skip link, header, migas, botones, inputs, aviso de hidratación, feedback, pestañas).
 - Evita cortes: `break-inside: avoid` en tarjetas/ejercicios/SVG/tablas y `break-after: avoid` en encabezados.
 - Sin JavaScript, dependencias ni rutas nuevas.
-- **Pendiente**: verificar build/E2E y validar el PDF de portada, M1, M3 y `/actividades/graficos/` (Antigravity).
+- **Fase 13.1 (11/11)**: resúmenes `.solo-impresion` en circular (categoría/frecuencia/relativa/%), histograma (intervalo/frecuencia) y árbol (rutas y P); `.bloque-impresion` con `break-inside: avoid`; paleta de papel forzada en `@media print` (fondo/superficie blancos, tinta negra, SVG y enlaces negros), incluso si la pantalla está en oscuro.
+- **Pendiente**: verificar build/E2E y validar los PDF en claro y oscuro (Antigravity).

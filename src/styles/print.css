@@ -1,5 +1,25 @@
 /* Fase 13 · estilos de impresión (/print) */
+.solo-impresion {
+  display: none;
+}
+
 @media print {
+  /* Paleta forzada de papel (independiente del tema oscuro) */
+  :root {
+    --color-fondo: #ffffff;
+    --color-superficie: #ffffff;
+    --color-tinta: #000000;
+    --color-tinta-suave: #333333;
+    --color-borde: #888888;
+    --color-acento: #000000;
+    --color-ok: #000000;
+    --color-error: #000000;
+    --color-secundario: #000000;
+    --color-encabezado: #ffffff;
+    --hero-grad-inicio: #ffffff;
+    --hero-grad-fin: #ffffff;
+  }
+
   @page {
     margin: 2cm;
   }
@@ -37,6 +57,10 @@
     display: none !important;
   }
 
+  .solo-impresion {
+    display: block;
+  }
+
   a {
     color: #000000;
     text-decoration: none;
@@ -57,7 +81,9 @@
   .lab-tabla,
   .resumen-ejercicio,
   .acordeon-panel,
-  .tabs-panel {
+  .tabs-panel,
+  .bloque-grafico,
+  .bloque-impresion {
     break-inside: avoid;
   }
 }

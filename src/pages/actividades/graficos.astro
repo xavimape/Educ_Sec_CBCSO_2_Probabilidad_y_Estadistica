@@ -20,12 +20,18 @@ const base = import.meta.env.BASE_URL;
     <p>Vista previa de los gráficos SVG de la Fase 6B: circular (M2), histograma (M3) y árbol de probabilidad (M7).</p>
 
     <h2>Circular (M2)</h2>
-    <GraficoCircular client:load />
+    <div class="bloque-impresion">
+      <GraficoCircular client:load />
+    </div>
 
     <h2>Histograma (M3)</h2>
-    <Histograma client:load />
+    <div class="bloque-impresion">
+      <Histograma client:load />
+    </div>
 
     <h2>Árbol de probabilidad (M7)</h2>
-    <ArbolNodos client:load />
+    <div class="bloque-impresion">
+      <ArbolNodos client:load />
+    </div>
   </main>
 </Layout>
