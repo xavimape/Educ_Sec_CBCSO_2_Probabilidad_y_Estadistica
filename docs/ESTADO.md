@@ -98,4 +98,12 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Árbol con nodos `<g tabindex="0" role="button">` (Enter/Espacio) y probabilidad al enfocar.
 - Vista previa en `/actividades/graficos/`.
 - **Correcciones (11/11)**: circular al 100 % dibuja disco completo; histograma con escala dinámica (`Math.max`); integración de los tres SVG en M2/M3/M7 con enlace a la actividad.
-- **Pendiente**: verificar build/E2E y validar 320 px/teclado/contraste (Antigravity).
+- **Cerrada**: corregida en `4154032`; validada por Antigravity y Codex en producción.
+
+## 10. Fase 7 · Micro-interacciones (11/11)
+
+- Hover de tarjetas con elevación (`transform: translateY(-2px)`, `transition: 0.2s`).
+- Fade-in del contenido (`@keyframes fadeIn` aplicado a `main`).
+- Shake sutil en `.feedback.error`.
+- `@media (prefers-reduced-motion: reduce)` desactiva todas las animaciones y transiciones.
+- **Pendiente**: verificar build/E2E y validar `prefers-reduced-motion` (Antigravity).

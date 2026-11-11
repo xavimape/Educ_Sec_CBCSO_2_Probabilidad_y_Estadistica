@@ -114,13 +114,14 @@ h3 {
   text-decoration: none;
   color: var(--color-tinta);
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
-  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tarjeta > a:hover,
 .tarjeta > a:focus-visible {
   border-color: var(--color-acento);
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
+  transform: translateY(-2px);
 }
 
 .tarjeta-modulo {
@@ -175,4 +176,49 @@ h3 {
   margin-top: var(--space-6);
   padding-top: var(--space-4);
   border-top: 1px solid var(--color-borde);
+}
+
+/* Fase 7 · micro-interacciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+main {
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback.error {
+  animation: shake 0.4s ease;
+}
+
+/* Accesibilidad: sin movimiento si el usuario lo prefiere. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
