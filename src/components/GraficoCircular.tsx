@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const CATEGORIAS = ['A', 'B', 'C', 'D'];
 // Mismos valores que los tokens AA (--color-acento, --color-ok, --color-error + neutro).
-const COLORES = ['#1d4ed8', '#15803d', '#b91c1c', '#64748b'];
+const COLORES = ['var(--color-acento)', 'var(--color-ok)', 'var(--color-error)', 'var(--color-tinta-suave)'];
 const R = 80;
 const CX = 100;
 const CY = 100;
@@ -44,13 +44,13 @@ export default function GraficoCircular() {
             .map((p) => {
               // Una categoría con el 100 % degenera el arco (360° = 0°): se dibuja el disco completo.
               if (p.fin - p.inicio >= DOS_PI - 0.0001) {
-                return <circle key={p.etiqueta} cx={CX} cy={CY} r={R} fill={p.color} />;
+                return <circle key={p.etiqueta} cx={CX} cy={CY} r={R} style={{ fill: p.color }} />;
               }
               const a = punto(p.inicio);
               const b = punto(p.fin);
               const grande = p.fin - p.inicio > Math.PI ? 1 : 0;
               const d = `M ${CX} ${CY} L ${a.x} ${a.y} A ${R} ${R} 0 ${grande} 1 ${b.x} ${b.y} Z`;
-              return <path key={p.etiqueta} d={d} fill={p.color} stroke="#ffffff" strokeWidth="2" />;
+              return <path key={p.etiqueta} d={d} style={{ fill: p.color, stroke: 'var(--color-superficie)' }} strokeWidth="2" />;
             })}
       </svg>
 

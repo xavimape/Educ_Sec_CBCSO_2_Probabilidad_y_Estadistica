@@ -2,15 +2,20 @@
    Colores con contraste AA verificado sobre --color-fondo.
    Se conserva la medida de lectura (68ch) y la protección de 320 px. */
 :root {
-  /* Colores */
+  /* Colores (modo claro) */
   --color-fondo: #fafbfc;
+  --color-superficie: #ffffff;
   --color-tinta: #0f172a;
+  --color-tinta-suave: #64748b;
   --color-borde: #cbd5e1;
   --color-acento: #1d4ed8; /* azul-700: > 4,5:1 sobre el fondo */
   --color-acento-secundario: #f59e0b;
   --color-secundario: #0f766e; /* teal-700: blanco sobre él = 5,47:1 (AA) */
   --color-ok: #15803d; /* verde-700: > 4,5:1 */
   --color-error: #b91c1c; /* rojo-700: > 4,5:1 */
+  --color-encabezado: rgba(250, 251, 252, 0.96);
+  --hero-grad-inicio: #eef2ff;
+  --hero-grad-fin: #fafbfc;
 
   /* Tipografía */
   --fuente: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -31,6 +36,24 @@
 
   /* Medida de lectura */
   --max-lectura: 68ch;
+}
+
+/* Modo oscuro automático (Fase 12A) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #0f172a;
+    --color-superficie: #1e293b;
+    --color-tinta: #e5e7eb;
+    --color-tinta-suave: #94a3b8;
+    --color-borde: #334155;
+    --color-acento: #93c5fd;
+    --color-secundario: #2dd4bf;
+    --color-ok: #4ade80;
+    --color-error: #fca5a5;
+    --color-encabezado: rgba(15, 23, 42, 0.96);
+    --hero-grad-inicio: #1e293b;
+    --hero-grad-fin: #0f172a;
+  }
 }
 
 * {
@@ -108,7 +131,7 @@ h3 {
 .tarjeta > a {
   display: block;
   height: 100%;
-  background: #ffffff;
+  background: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: 12px;
   padding: var(--space-5);
@@ -136,7 +159,7 @@ h3 {
 .tarjeta-modulo {
   display: inline-block;
   font-size: var(--text-sm);
-  color: #ffffff;
+  color: var(--color-fondo);
   background: var(--color-secundario);
   padding: 0.1rem 0.5rem;
   border-radius: 999px;
@@ -152,7 +175,7 @@ h3 {
 
 .tarjeta-desc {
   display: block;
-  color: #64748b;
+  color: var(--color-tinta-suave);
   font-size: var(--text-sm);
   margin-top: var(--space-2);
 }
@@ -194,7 +217,7 @@ h3 {
 .aviso-hidratacion {
   border: 1px solid var(--color-borde);
   border-left: 3px solid var(--color-acento);
-  background: #fafbfc;
+  background: var(--color-fondo);
   padding: var(--space-2) var(--space-3);
   margin: var(--space-3) 0;
   font-size: var(--text-sm);
@@ -268,7 +291,7 @@ main {
   justify-content: space-between;
   gap: var(--space-2) var(--space-4);
   padding: var(--space-2) var(--space-4);
-  background: rgba(250, 251, 252, 0.96);
+  background: var(--color-encabezado);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-borde);
 }
@@ -305,7 +328,7 @@ main {
   align-items: center;
   gap: var(--space-5);
   padding: var(--space-6) var(--space-5);
-  background: linear-gradient(135deg, #eef2ff 0%, #fafbfc 100%);
+  background: linear-gradient(135deg, var(--hero-grad-inicio) 0%, var(--hero-grad-fin) 100%);
   border: 1px solid var(--color-borde);
   border-radius: 12px;
   margin-bottom: var(--space-5);
@@ -348,7 +371,7 @@ main {
 
 .boton-primario {
   background: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-fondo);
 }
 
 .boton-secundario {
@@ -358,7 +381,7 @@ main {
 
 .boton-secundario:hover {
   background: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-fondo);
 }
 
 @media (max-width: 600px) {
@@ -378,7 +401,7 @@ main {
   top: 0;
   z-index: 100;
   background: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-fondo);
   padding: var(--space-2) var(--space-4);
   border-radius: 0 0 6px 0;
   text-decoration: none;
@@ -421,5 +444,5 @@ main {
 }
 
 .migas-sep {
-  color: #64748b;
+  color: var(--color-tinta-suave);
 }

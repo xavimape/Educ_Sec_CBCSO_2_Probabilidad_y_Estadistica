@@ -30,15 +30,15 @@ export default function ArbolNodos() {
         <title>Árbol de probabilidad de dos lanzamientos de moneda</title>
         <desc>Cuatro resultados posibles (CC, CS, SC y SS), cada uno con probabilidad un cuarto.</desc>
 
-        <line x1="110" y1={Y_RAIZ} x2={X_C} y2={Y_RAMA} stroke="#64748b" strokeWidth="1.5" />
-        <line x1="110" y1={Y_RAIZ} x2={X_S} y2={Y_RAMA} stroke="#64748b" strokeWidth="1.5" />
+        <line x1="110" y1={Y_RAIZ} x2={X_C} y2={Y_RAMA} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1.5" />
+        <line x1="110" y1={Y_RAIZ} x2={X_S} y2={Y_RAMA} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1.5" />
         <text x="105" y={Y_RAIZ - 5} fontSize="9" textAnchor="end">inicio</text>
         <text x={X_C} y={Y_RAMA - 5} fontSize="10" textAnchor="middle">C</text>
         <text x={X_S} y={Y_RAMA - 5} fontSize="10" textAnchor="middle">S</text>
 
         {HOJAS.map((h) => (
           <g key={h.id}>
-            <line x1={h.padre === 'C' ? X_C : X_S} y1={Y_RAMA} x2={h.x} y2={Y_HOJA} stroke="#64748b" strokeWidth="1.5" />
+            <line x1={h.padre === 'C' ? X_C : X_S} y1={Y_RAMA} x2={h.x} y2={Y_HOJA} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1.5" />
             <g
               tabIndex={0}
               role="button"
@@ -57,8 +57,10 @@ export default function ArbolNodos() {
                 cx={h.x}
                 cy={Y_HOJA}
                 r="9"
-                fill={seleccion === h.id ? '#1d4ed8' : '#f8f9fa'}
-                stroke="#1d4ed8"
+                style={{
+                  fill: seleccion === h.id ? 'var(--color-acento)' : 'var(--color-fondo)',
+                  stroke: 'var(--color-acento)',
+                }}
                 strokeWidth="1.5"
               />
               <text
@@ -66,7 +68,7 @@ export default function ArbolNodos() {
                 y={Y_HOJA + 3}
                 fontSize="7"
                 textAnchor="middle"
-                fill={seleccion === h.id ? '#ffffff' : '#1d4ed8'}
+                style={{ fill: seleccion === h.id ? 'var(--color-superficie)' : 'var(--color-acento)' }}
               >
                 {h.id}
               </text>

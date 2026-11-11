@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const ETIQUETAS = ['0–10', '10–20', '20–30', '30–40'];
-const COLOR = '#1d4ed8'; // --color-acento
+const COLOR = 'var(--color-acento)';
 const ALTO = 120;
 const ANCHO = 200;
 
@@ -25,9 +25,9 @@ export default function Histograma() {
         <desc>Barras contiguas con la frecuencia de cada intervalo, escaladas al valor máximo.</desc>
         {frecuencias.map((f, i) => {
           const h = (f / maxEscala) * ALTO;
-          return <rect key={i} x={i * anchoBarra} y={ALTO - h} width={anchoBarra} height={h} fill={COLOR} />;
+          return <rect key={i} x={i * anchoBarra} y={ALTO - h} width={anchoBarra} height={h} style={{ fill: COLOR }} />;
         })}
-        <line x1="0" y1={ALTO} x2={ANCHO} y2={ALTO} stroke="#64748b" strokeWidth="1" />
+        <line x1="0" y1={ALTO} x2={ANCHO} y2={ALTO} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1" />
       </svg>
 
       <div className="campos-frecuencias">

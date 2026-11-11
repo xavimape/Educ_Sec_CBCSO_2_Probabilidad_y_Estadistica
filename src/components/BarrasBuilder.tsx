@@ -68,7 +68,7 @@ export default function BarrasBuilder() {
             y={MAX * PX - alturas[i] * PX}
             width={40}
             height={alturas[i] * PX}
-            fill={revisado && alturas[i] === d.frecuencia ? '#16a34a' : '#1d4ed8'}
+            style={{ fill: revisado && alturas[i] === d.frecuencia ? 'var(--color-ok)' : 'var(--color-acento)' }}
           />
         ))}
       </svg>

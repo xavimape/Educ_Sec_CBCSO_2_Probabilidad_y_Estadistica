@@ -55,7 +55,7 @@
 
 .hoja[aria-pressed='true'] {
   background: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-fondo);
   border-color: var(--color-acento);
 }
 
@@ -75,14 +75,14 @@ button {
   padding: var(--space-2) var(--space-3);
   border: 2px solid var(--color-acento);
   background: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-fondo);
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.12s ease, transform 0.12s ease;
 }
 
 button:hover {
-  background: #1e40af;
+  filter: brightness(0.9);
   transform: translateY(-1px);
 }
 

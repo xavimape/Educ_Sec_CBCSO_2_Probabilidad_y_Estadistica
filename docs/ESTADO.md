@@ -138,4 +138,12 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Migas en: lecciones (índice y lección), práctica (índice y ejercicio), laboratorio, simulacro, actividades/gráficos y componentes.
 - `skip-link` «Saltar al contenido» en `Layout.astro` → `#contenido`.
 - Estilos `.migas` y `.skip-link` en `global.css` (con wrap a 320 px).
-- **Pendiente**: verificar build/E2E y validar 320 px/AA/teclado (Antigravity).
+- **Cerrada**: validada por Antigravity y Codex en producción (`21dc93a`).
+
+## 15. Fase 12A · Modo oscuro automático (11/11)
+
+- Tokens nuevos (`--color-superficie`, `--color-tinta-suave`, `--color-encabezado`, `--hero-grad-*`) y bloque `@media (prefers-color-scheme: dark)` que redefine fondo/superficie/tinta/borde/acento/ok/error/secundario.
+- Componentes y SVG ya no usan hex de modo claro: superficies, grises, botones, pill y gráficos pasan a tokens.
+- `theme-color` con variante clara y oscura.
+- Sin toggle manual (eso sería Fase 12B).
+- **Pendiente**: verificar build/E2E y validar contraste AA/≥3:1 en oscuro (Antigravity).

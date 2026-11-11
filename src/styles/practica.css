@@ -88,7 +88,7 @@
 
 .no-auto {
   margin: 0;
-  color: #555;
+  color: var(--color-tinta-suave);
 }
 
 .grupo ul {
@@ -96,6 +96,6 @@
 }
 
 .nivel {
-  color: #555;
+  color: var(--color-tinta-suave);
   font-size: 0.9rem;
 }

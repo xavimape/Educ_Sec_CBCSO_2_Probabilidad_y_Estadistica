@@ -176,7 +176,7 @@ function GraficoBarras({ filas }: { filas: { valor: string; f: number }[] }) {
         const x = i * (anchoBarra + separacion);
         return (
           <g key={f.valor}>
-            <rect x={x} y={alto - h} width={anchoBarra} height={h} fill="#1d4ed8" />
+            <rect x={x} y={alto - h} width={anchoBarra} height={h} style={{ fill: 'var(--color-acento)' }} />
             <text x={x + anchoBarra / 2} y={alto + 16} textAnchor="middle" fontSize="11">{f.valor}</text>
           </g>
         );
