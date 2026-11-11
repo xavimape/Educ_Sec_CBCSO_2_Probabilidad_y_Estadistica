@@ -123,3 +123,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Jerarquía interna: `.tarjeta-titulo` (600, 1.1 rem), `.tarjeta-desc` (#64748b) y `.tarjeta-ir` («Ver lección →» / «Ir →»).
 - `prefers-reduced-motion` ya anula el `transform` de las tarjetas.
 - **Pendiente**: verificar build/E2E y validar 320 px/AA/teclado (Antigravity).
+
+## 13. Fase 10 · Paleta y tipografía (11/11)
+
+- `--color-fondo` pasa a `#fafbfc`; se agrega `--color-secundario: #0f766e` (teal-700, blanco encima = 5,47:1).
+- `.tarjeta-modulo` pasa a pill teal con texto blanco.
+- `.leccion-contenido h1` con `letter-spacing: -0.01em`; `--max-lectura: 68ch` confirmado en `main`.
+- Font-stack del sistema (sin fuentes externas, para no romper offline).
+- **Pendiente**: verificar build/E2E y validar contraste/320 px (Antigravity).
