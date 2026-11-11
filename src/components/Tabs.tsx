@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export type Item = { titulo: string; contenido: string };
 
 export default function Tabs({ items }: { items: Item[] }) {
   const [activo, setActivo] = useState(0);
+  const refs = useRef<(HTMLButtonElement | null)[]>([]);
+
   if (items.length === 0) return null;
 
   const mover = (delta: number) => {
-    setActivo((i) => (i + delta + items.length) % items.length);
+    const nuevo = (activo + delta + items.length) % items.length;
+    setActivo(nuevo);
+    refs.current[nuevo]?.focus();
   };
 
   return (
@@ -20,11 +24,20 @@ export default function Tabs({ items }: { items: Item[] }) {
             role="tab"
             aria-selected={activo === i}
             tabIndex={activo === i ? 0 : -1}
+            ref={(el) => {
+              refs.current[i] = el;
+            }}
             className="tabs-boton"
             onClick={() => setActivo(i)}
             onKeyDown={(e) => {
-              if (e.key === 'ArrowRight') mover(1);
-              if (e.key === 'ArrowLeft') mover(-1);
+              if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                mover(1);
+              }
+              if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                mover(-1);
+              }
             }}
           >
             {item.titulo}

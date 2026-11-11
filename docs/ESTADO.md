@@ -80,6 +80,7 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Ajustes 3.1/3.2 (11/11)**: tarjetas con `padding` 1.5 rem y margen superior 2 rem; jerarquía tipográfica en `.leccion-contenido` (h1 2 rem, h2 1.5 rem, h3 1.25 rem, p con margen y `line-height` 1.6).
 - **Ajuste H1 (11/11)**: el título de la lección se movió dentro de `.leccion-contenido` (Opción A), con márgenes consistentes con la jerarquía.
 - **Fase 5 (preparación)**: componentes `Acordeon`, `Tabs` y `Colapsable` (React + `useState`, sin librerías externas) y página de vista previa `/componentes/`.
+- **Corrección de Tabs (11/11)**: el foco ahora acompaña a la selección al usar las flechas (`useRef` + `.focus()`), cerrando el bug detectado por Codex en `2ffa1b7`.
 - **Verificado (local, usuario)**: íconos generados y `check`/`build`/`test`/`test:e2e` en verde.
 - **Inventario**: 104 total, 15 auto-verificados, **89** para revisión manual (diferencia con los 85 de Codex: incluye numéricos sin parte medible).
 - **Pendiente**: verificar build/E2E del ajuste H1 y de la vista previa; Antigravity valida accesibilidad (teclado, `aria-expanded`) y 320 px.
