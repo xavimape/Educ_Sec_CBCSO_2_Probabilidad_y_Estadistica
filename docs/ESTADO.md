@@ -106,4 +106,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Fade-in del contenido (`@keyframes fadeIn` aplicado a `main`).
 - Shake sutil en `.feedback.error`.
 - `@media (prefers-reduced-motion: reduce)` desactiva todas las animaciones y transiciones.
+- **Corrección (11/11)**: en `prefers-reduced-motion` se anula también el `transform` de las tarjetas (`transform: none`), cerrando la observación de Codex.
 - **Pendiente**: verificar build/E2E y validar `prefers-reduced-motion` (Antigravity).
