@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 
 const modulos = [
   { modulo: 'M1', titulo: 'Dato y variable', slug: 'm1-dato-y-variable' },
@@ -32,8 +33,7 @@ const fichas = [
   descripcion="Consultá, aprendé, repasá y practicá Estadística y Probabilidad para el segundo año de secundaria."
 >
   <main>
-    <h1>Estadística y Probabilidad</h1>
-    <p>Consultá, aprendé, repasá y practicá Estadística y Probabilidad para el segundo año de secundaria. Podés leer las lecciones, resolver los ejercicios con corrección, explorar datos en el laboratorio y hacer un simulacro.</p>
+    <Hero />
     <h2>Contenido</h2>
     <ul class="tarjetas">
       {modulos.map((m) => (

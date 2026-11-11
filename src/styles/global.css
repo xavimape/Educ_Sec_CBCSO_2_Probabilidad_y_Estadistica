@@ -227,3 +227,117 @@ main {
     transform: none;
   }
 }
+
+/* Fase 8 · encabezado sticky */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(248, 249, 250, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.encabezado a {
+  text-decoration: none;
+}
+
+.encabezado .marca {
+  font-weight: 700;
+  color: var(--color-tinta);
+}
+
+.encabezado-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.encabezado-nav a {
+  color: var(--color-acento);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.encabezado-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Fase 8 · hero section */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-5);
+  background: linear-gradient(135deg, #eef2ff 0%, #f8f9fa 100%);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  margin-bottom: var(--space-5);
+}
+
+.hero-etiqueta {
+  color: var(--color-acento);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin: 0 0 var(--space-1);
+}
+
+.hero h1 {
+  margin: 0 0 var(--space-3);
+}
+
+.hero-descripcion {
+  margin: 0 0 var(--space-4);
+}
+
+.hero-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero-icono {
+  width: 110px;
+  height: 110px;
+}
+
+.boton-primario,
+.boton-secundario {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.boton-primario {
+  background: var(--color-acento);
+  color: #ffffff;
+}
+
+.boton-secundario {
+  border: 2px solid var(--color-acento);
+  color: var(--color-acento);
+}
+
+.boton-secundario:hover {
+  background: var(--color-acento);
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-icono {
+    display: none;
+  }
+}

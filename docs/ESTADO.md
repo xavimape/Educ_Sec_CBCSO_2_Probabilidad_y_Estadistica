@@ -108,3 +108,10 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `@media (prefers-reduced-motion: reduce)` desactiva todas las animaciones y transiciones.
 - **Corrección (11/11)**: en `prefers-reduced-motion` se anula también el `transform` de las tarjetas (`transform: none`), cerrando la observación de Codex.
 - **Pendiente**: verificar build/E2E y validar `prefers-reduced-motion` (Antigravity).
+
+## 11. Fase 8 · Hero + header sticky (11/11)
+
+- `Encabezado.astro`: header sticky con marca y navegación (Inicio/Lecciones/Practicar), incluido en `Layout.astro`.
+- `Hero.astro`: título, subtítulo, descripción, botones «Empezar a practicar» y «Ver lecciones», e icono SVG decorativo.
+- Estilos en `global.css` (degradado sutil, radio 12 px, AA en botones).
+- **Pendiente**: verificar build/E2E y validar 320 px/AA/teclado (Antigravity).

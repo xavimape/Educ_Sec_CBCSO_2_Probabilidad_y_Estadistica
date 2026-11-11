@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Encabezado from '../components/Encabezado.astro';
 
 interface Props {
   titulo?: string;
@@ -33,6 +34,7 @@ const base = import.meta.env.BASE_URL;
     <title>{titulo}</title>
   </head>
   <body>
+    <Encabezado />
     <slot />
     <script is:inline src={`${base}sw-registro.js`}></script>
   </body>
