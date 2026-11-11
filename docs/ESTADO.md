@@ -172,4 +172,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 
 - `<g class="anotacion">` en `GraficoCircular` (Porción / Total / Categoría), `Histograma` (Eje X / Eje Y / Barra, con `viewBox` ampliado para las etiquetas) y `ArbolNodos` (Rama / Nodo / P. condicional).
 - Estilos `.anotacion text` y `.anotacion line` con `--color-tinta-suave` (legibles en claro y oscuro); `<title>`/`<desc>` por grupo.
+- **Fase 15.1 (11/11)**: rótulo del árbol corregido a «Probabilidad del resultado = 1/4»; «Total» del circular movido debajo del círculo; etiquetas «inicio/C/S» del árbol con `--color-tinta` (contraste en oscuro).
 - **Pendiente**: verificar build/E2E y validar 320 px/AA (Antigravity).

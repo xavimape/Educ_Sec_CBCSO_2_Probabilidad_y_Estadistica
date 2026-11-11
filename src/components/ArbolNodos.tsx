@@ -32,9 +32,9 @@ export default function ArbolNodos() {
 
         <line x1="110" y1={Y_RAIZ} x2={X_C} y2={Y_RAMA} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1.5" />
         <line x1="110" y1={Y_RAIZ} x2={X_S} y2={Y_RAMA} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1.5" />
-        <text x="105" y={Y_RAIZ - 5} fontSize="9" textAnchor="end">inicio</text>
-        <text x={X_C} y={Y_RAMA - 5} fontSize="10" textAnchor="middle">C</text>
-        <text x={X_S} y={Y_RAMA - 5} fontSize="10" textAnchor="middle">S</text>
+        <text x="105" y={Y_RAIZ - 5} fontSize="9" textAnchor="end" style={{ fill: 'var(--color-tinta)' }}>inicio</text>
+        <text x={X_C} y={Y_RAMA - 5} fontSize="10" textAnchor="middle" style={{ fill: 'var(--color-tinta)' }}>C</text>
+        <text x={X_S} y={Y_RAMA - 5} fontSize="10" textAnchor="middle" style={{ fill: 'var(--color-tinta)' }}>S</text>
 
         {HOJAS.map((h) => (
           <g key={h.id}>
@@ -80,7 +80,7 @@ export default function ArbolNodos() {
           <desc>Las ramas salen del inicio y cada nodo terminal es un resultado con probabilidad 1/4.</desc>
           <text x="85" y="56" textAnchor="middle">Rama</text>
           <text x="12" y="152" textAnchor="middle">Nodo</text>
-          <text x="130" y="152" textAnchor="middle">P. condicional = 1/4</text>
+          <text x="130" y="152" textAnchor="middle">Probabilidad del resultado = 1/4</text>
         </g>
       </svg>
 

@@ -55,10 +55,12 @@ export default function GraficoCircular() {
         <g className="anotacion" role="img">
           <title>Anotaciones del gráfico circular</title>
           <desc>Cada porción representa una categoría y el círculo completo es el total.</desc>
-          <line x1={CX} y1={CY - R - 8} x2={CX} y2={CY - R} />
-          <text x={CX} y={CY - R - 12} textAnchor="middle">Porción</text>
-          <text x={CX} y={CY + 4} textAnchor="middle">Total {total}</text>
-          <text x={CX} y={CY + R + 14} textAnchor="middle">Categoría</text>
+          <line x1="40" y1="14" x2="55" y2="30" />
+          <text x="20" y="10" textAnchor="start">Porción</text>
+          <line x1="160" y1="14" x2="145" y2="30" />
+          <text x="180" y="10" textAnchor="end">Categoría</text>
+          <line x1={CX} y1={CY + R + 6} x2={CX} y2={CY + R} />
+          <text x={CX} y={CY + R + 16} textAnchor="middle">Total {total}</text>
         </g>
       </svg>
 
