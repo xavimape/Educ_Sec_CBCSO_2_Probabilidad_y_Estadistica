@@ -187,4 +187,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `AlertaConcepto` en M1 (post-it «¡OJO!» sobre el número de camiseta), `PasosConstruccion` en M3 (4 pasos) y `Comparativa` en M5 (❌/✅ media vs. mediana), embebidos desde `[slug].astro` con `kit.css`.
 - Hero con copys gamificados: «2.º año · Secundaria» y «Organizá datos, construí gráficos y tomá decisiones basadas en evidencia».
 - Estilos `.bloque-kit` en `kit.css`.
+- **Fase 17.1 (11/11)**: `PasosConstruccion` con 4 mini-SVG (ejes, graduación, cuadrícula, barras) y comparativa de M5 acotada a «representar un valor típico», con la nota de que la media sirve para el reparto equitativo.
 - **Pendiente**: verificar build/E2E y validar 320 px/AA (Antigravity).

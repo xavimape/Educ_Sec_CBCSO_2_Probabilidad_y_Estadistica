@@ -71,6 +71,7 @@ const conGrafico = ['m2-tablas-de-frecuencias', 'm3-graficos', 'm7-probabilidad'
               'Marcá la cuadrícula (2 cuadritos de ancho y 1 de separación).',
               'Levantá cada barra hasta su frecuencia y rotulá los dos ejes.',
             ]}
+            diagramas={['ejes', 'graduacion', 'cuadricula', 'barras']}
           />
         </section>
       )}
@@ -80,9 +81,9 @@ const conGrafico = ['m2-tablas-de-frecuencias', 'm3-graficos', 'm7-probabilidad'
           <h2>¿Media o mediana?</h2>
           <Comparativa
             client:load
-            error="Usar la media cuando hay valores extremos."
-            acierto="Usar la mediana cuando hay valores extremos."
-            explicacion="La mediana no se deja arrastrar por un dato extremo; la media sí."
+            error="Usar la media para representar un valor típico cuando hay valores extremos."
+            acierto="Usar la mediana para representar un valor típico cuando hay valores extremos."
+            explicacion="La mediana no se deja arrastrar por un dato extremo; la media sí. Pero la media es útil si querés calcular el total repartido equitativamente."
           />
         </section>
       )}
