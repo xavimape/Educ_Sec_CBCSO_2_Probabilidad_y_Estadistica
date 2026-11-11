@@ -1,0 +1,63 @@
+/* Fase 13 · estilos de impresión (/print) */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+    line-height: 1.5;
+    color-scheme: light;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Elementos solo de pantalla */
+  .skip-link,
+  .encabezado,
+  .migas,
+  .hero-botones,
+  .hero-icono,
+  .controles,
+  .tarjeta-ir,
+  .aviso-hidratacion,
+  .feedback,
+  .tabs-lista,
+  .tabs-boton,
+  button,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  /* Evitar cortes malos */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  .tarjeta,
+  .ejercicio,
+  .parte,
+  .svg-grafico,
+  table,
+  .lab-tabla,
+  .resumen-ejercicio,
+  .acordeon-panel,
+  .tabs-panel {
+    break-inside: avoid;
+  }
+}

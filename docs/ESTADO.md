@@ -148,3 +148,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Sin toggle manual (eso sería Fase 12B).
 - **Fase 12A.1 (11/11)**: `color-scheme: light dark` en `html` y `background`/`color` con tokens en `input`/`select`/`textarea`, para que los controles nativos acompañen el tema oscuro.
 - **Pendiente**: verificar build/E2E y validar contraste AA/≥3:1 en oscuro (Antigravity).
+
+## 16. Fase 13 · Impresión accesible (11/11)
+
+- `print.css` importado en `Layout.astro`: `@page` con márgenes de 2 cm, tipografía 12 pt e interlineado 1,5.
+- Oculta solo elementos de pantalla (skip link, header, migas, botones, inputs, aviso de hidratación, feedback, pestañas).
+- Evita cortes: `break-inside: avoid` en tarjetas/ejercicios/SVG/tablas y `break-after: avoid` en encabezados.
+- Sin JavaScript, dependencias ni rutas nuevas.
+- **Pendiente**: verificar build/E2E y validar el PDF de portada, M1, M3 y `/actividades/graficos/` (Antigravity).
