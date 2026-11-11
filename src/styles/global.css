@@ -370,3 +370,56 @@ main {
     display: none;
   }
 }
+
+/* Fase 11 · skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-acento);
+  color: #ffffff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Fase 11 · migas de pan */
+.migas {
+  font-size: 0.875rem;
+  margin: 0 0 var(--space-4);
+}
+
+.migas ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.migas li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.migas a {
+  color: var(--color-acento);
+}
+
+.migas [aria-current='page'] {
+  color: var(--color-tinta);
+  font-weight: 600;
+}
+
+.migas-sep {
+  color: #64748b;
+}

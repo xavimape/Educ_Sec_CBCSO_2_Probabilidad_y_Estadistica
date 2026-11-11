@@ -1,0 +1,30 @@
+---
+interface Item {
+  texto: string;
+  href?: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Migas de pan" class="migas">
+  <ol>
+    {items.map((item, i) => {
+      const esUltimo = i === items.length - 1;
+      return (
+        <li>
+          {i > 0 && <span class="migas-sep" aria-hidden="true">›</span>}
+          {item.href ? (
+            <a href={item.href}>{item.texto}</a>
+          ) : (
+            <span aria-current={esUltimo ? 'page' : undefined}>{item.texto}</span>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

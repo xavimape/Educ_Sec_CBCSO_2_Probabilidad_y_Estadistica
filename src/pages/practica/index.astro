@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Migas from '../../components/Migas.astro';
 import { getCollection } from 'astro:content';
 import '../../styles/practica.css';
 
@@ -12,6 +13,7 @@ const base = import.meta.env.BASE_URL;
 
 <Layout titulo="Práctica" descripcion="Banco de ejercicios de Estadística y Probabilidad.">
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Práctica' }]} />
     <h1>Práctica</h1>
     <p>Elegí un ejercicio. Corregí, usá pistas y consultá la solución cuando lo necesites.</p>
     {modulos.map((m) => {

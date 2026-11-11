@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Migas from '../components/Migas.astro';
 import Simulacro from '../components/Simulacro.tsx';
 import { getCollection } from 'astro:content';
 import '../styles/practica.css';
@@ -12,6 +13,7 @@ const base = import.meta.env.BASE_URL;
 
 <Layout titulo="Simulacro" descripcion="Práctica integradora con devolución al final.">
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Simulacro' }]} />
     <h1>Simulacro</h1>
     <Simulacro client:load ejercicios={datos} />
     <p><a href={base}>Volver al inicio</a>.</p>

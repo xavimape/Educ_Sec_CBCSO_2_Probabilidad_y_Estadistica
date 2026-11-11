@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Migas from '../../components/Migas.astro';
 import GraficoCircular from '../../components/GraficoCircular.tsx';
 import Histograma from '../../components/Histograma.tsx';
 import ArbolNodos from '../../components/ArbolNodos.tsx';
@@ -13,6 +14,7 @@ const base = import.meta.env.BASE_URL;
   descripcion="Circular, histograma y árbol de probabilidad."
 >
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Actividades' }, { texto: 'Gráficos' }]} />
     <p><a href={base}>← Volver al inicio</a></p>
     <h1>Gráficos interactivos</h1>
     <p>Vista previa de los gráficos SVG de la Fase 6B: circular (M2), histograma (M3) y árbol de probabilidad (M7).</p>

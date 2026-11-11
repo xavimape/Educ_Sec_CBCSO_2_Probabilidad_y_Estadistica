@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Migas from '../components/Migas.astro';
 import Acordeon from '../components/Acordeon.tsx';
 import Tabs from '../components/Tabs.tsx';
 import Colapsable from '../components/Colapsable.tsx';
@@ -9,6 +10,7 @@ const ejemplos = [
   { titulo: 'Ejemplo 1', contenido: 'Contenido de ejemplo 1.' },
   { titulo: 'Ejemplo 2', contenido: 'Contenido de ejemplo 2.' },
 ];
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -16,6 +18,7 @@ const ejemplos = [
   descripcion="Vista previa interna de acordeones, tabs y colapsables."
 >
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Componentes' }]} />
     <h1>Componentes didácticos</h1>
     <p>Vista previa interna de los componentes de la Fase 5. No es una página de contenido para estudiantes.</p>
 

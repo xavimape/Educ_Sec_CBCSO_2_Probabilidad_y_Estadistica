@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Migas from '../../components/Migas.astro';
 import Ejercicio from '../../components/Ejercicio.tsx';
 import { getCollection } from 'astro:content';
 import '../../styles/practica.css';
@@ -11,10 +12,12 @@ export async function getStaticPaths() {
 
 const { ejercicio } = Astro.props;
 const serializado = JSON.stringify(ejercicio.data);
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout titulo={ejercicio.data.titulo} descripcion="Ejercicio de práctica de Estadística y Probabilidad.">
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Práctica', href: `${base}practica/` }, { texto: ejercicio.data.id }]} />
     <p><a href="../">← Volver a la lista de práctica</a></p>
     <Ejercicio client:load ejercicio={serializado} />
   </main>

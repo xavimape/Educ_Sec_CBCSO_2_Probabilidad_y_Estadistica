@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Migas from '../../components/Migas.astro';
 import { getCollection, render } from 'astro:content';
 import GraficoCircular from '../../components/GraficoCircular.tsx';
 import Histograma from '../../components/Histograma.tsx';
@@ -19,6 +20,7 @@ const conGrafico = ['m2-tablas-de-frecuencias', 'm3-graficos', 'm7-probabilidad'
 
 <Layout titulo={leccion.data.titulo} descripcion={leccion.data.objetivo}>
   <main>
+    <Migas items={[{ texto: 'Inicio', href: base }, { texto: 'Lecciones', href: `${base}lecciones/` }, { texto: leccion.data.titulo }]} />
     <p><a href="../">← Volver a las lecciones</a></p>
     <div class="leccion-contenido">
       <h1>{leccion.data.titulo}</h1>

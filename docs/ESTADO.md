@@ -130,4 +130,12 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `.tarjeta-modulo` pasa a pill teal con texto blanco.
 - `.leccion-contenido h1` con `letter-spacing: -0.01em`; `--max-lectura: 68ch` confirmado en `main`.
 - Font-stack del sistema (sin fuentes externas, para no romper offline).
-- **Pendiente**: verificar build/E2E y validar contraste/320 px (Antigravity).
+- **Cerrada**: validada por Antigravity y Codex en producción (`f6c6559`).
+
+## 14. Fase 11 · Migas de pan y skip link (11/11)
+
+- `Migas.astro`: `<nav aria-label="Migas de pan">` con `<ol>`, separadores `aria-hidden` y página actual en `<span aria-current="page">`.
+- Migas en: lecciones (índice y lección), práctica (índice y ejercicio), laboratorio, simulacro, actividades/gráficos y componentes.
+- `skip-link` «Saltar al contenido» en `Layout.astro` → `#contenido`.
+- Estilos `.migas` y `.skip-link` en `global.css` (con wrap a 320 px).
+- **Pendiente**: verificar build/E2E y validar 320 px/AA/teclado (Antigravity).
