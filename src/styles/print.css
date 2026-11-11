@@ -39,6 +39,21 @@
     border-color: #888888 !important;
   }
 
+  /* Bloques preformateados (Shiki) en papel: sin tema oscuro ni corte horizontal */
+  pre {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #888888;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  pre code,
+  pre span {
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
   main {
     max-width: none;
     padding: 0;
