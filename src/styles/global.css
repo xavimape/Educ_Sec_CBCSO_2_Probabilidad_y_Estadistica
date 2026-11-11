@@ -16,6 +16,9 @@
   --color-encabezado: rgba(250, 251, 252, 0.96);
   --hero-grad-inicio: #eef2ff;
   --hero-grad-fin: #fafbfc;
+  --concepto-cualitativo: #b45309; /* ámbar-700: > 4,5:1 sobre el fondo */
+  --concepto-cuantitativo: #1d4ed8; /* azul-700 */
+  --concepto-medida: #15803d; /* verde-700 */
 
   /* Tipografía */
   --fuente: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -53,6 +56,9 @@
     --color-encabezado: rgba(15, 23, 42, 0.96);
     --hero-grad-inicio: #1e293b;
     --hero-grad-fin: #0f172a;
+    --concepto-cualitativo: #fcd34d;
+    --concepto-cuantitativo: #93c5fd;
+    --concepto-medida: #4ade80;
   }
 }
 

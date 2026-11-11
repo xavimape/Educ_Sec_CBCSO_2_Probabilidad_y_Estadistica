@@ -1,0 +1,93 @@
+/* Fase 14 · kit didáctico accesible */
+
+/* Pasos numerados */
+.pasos {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.paso {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.paso-numero {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-acento);
+  color: var(--color-fondo);
+  font-weight: 700;
+}
+
+/* Comparativa error / acierto */
+.comparativa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+@media (max-width: 600px) {
+  .comparativa {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparativa-col {
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: var(--space-3);
+}
+
+.comparativa-error {
+  border-left: 4px solid var(--color-error);
+}
+
+.comparativa-acierto {
+  border-left: 4px solid var(--color-ok);
+}
+
+.comparativa-marca {
+  font-size: var(--text-lg);
+  margin: 0 0 var(--space-1);
+}
+
+.comparativa-exp {
+  grid-column: 1 / -1;
+  font-size: var(--text-sm);
+  color: var(--color-tinta-suave);
+  margin: 0;
+}
+
+/* Alerta de concepto (post-it de misconception) */
+.alerta-concepto {
+  border: 1px solid var(--color-borde);
+  border-left: 3px solid var(--concepto-cualitativo);
+  background: var(--color-superficie);
+  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.alerta-titulo {
+  color: var(--concepto-cualitativo);
+  font-weight: 700;
+  margin: 0 0 var(--space-1);
+}
+
+/* Textura de hoja cuadriculada (decorativa, opcional) */
+.fondo-cuadricula {
+  background-image:
+    linear-gradient(var(--color-borde) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-borde) 1px, transparent 1px);
+  background-size: 16px 16px;
+}

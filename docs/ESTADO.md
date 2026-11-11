@@ -159,3 +159,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Fase 13.2 (11/11)**: `color-scheme: light` en `:root` de impresión; `html`/`body` con blanco/negro `!important`; hero neutralizado; enlaces negros subrayados. Robustece la impresión con fondos activados desde tema oscuro.
 - **Fase 13.3 (11/11)**: en impresión, `pre` y sus `code`/`span` (Shiki) pasan a fondo blanco, texto negro, borde gris, `white-space: pre-wrap` y `overflow-wrap: anywhere`; vence los estilos inline del tema oscuro.
 - **Pendiente**: verificar build/E2E y validar los PDF en claro y oscuro (Antigravity).
+
+## 17. Fase 14 · Kit didáctico (11/11)
+
+- Tokens semánticos AA `--concepto-cualitativo` (ámbar), `--concepto-cuantitativo` (azul) y `--concepto-medida` (verde), con variantes oscuras.
+- Componentes `PasosConstruccion` (pasos numerados), `Comparativa` (❌/✅) y `AlertaConcepto` (`role="note"`).
+- `kit.css` con `.paso-numero`, `.comparativa`, `.alerta-concepto` y `.fondo-cuadricula`.
+- Vista previa en `/componentes/`.
+- **Pendiente**: verificar build/E2E y validar AA/320 px/teclado (Antigravity).

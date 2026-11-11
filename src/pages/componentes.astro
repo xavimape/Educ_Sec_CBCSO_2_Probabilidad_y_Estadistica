@@ -4,7 +4,11 @@ import Migas from '../components/Migas.astro';
 import Acordeon from '../components/Acordeon.tsx';
 import Tabs from '../components/Tabs.tsx';
 import Colapsable from '../components/Colapsable.tsx';
+import PasosConstruccion from '../components/PasosConstruccion.tsx';
+import Comparativa from '../components/Comparativa.tsx';
+import AlertaConcepto from '../components/AlertaConcepto.tsx';
 import '../styles/componentes.css';
+import '../styles/kit.css';
 
 const ejemplos = [
   { titulo: 'Ejemplo 1', contenido: 'Contenido de ejemplo 1.' },
@@ -30,5 +34,23 @@ const base = import.meta.env.BASE_URL;
 
     <h2>Colapsable</h2>
     <Colapsable client:load contenido="Respuesta de ejemplo del colapsable." />
+
+    <h2>Pasos de construcción</h2>
+    <PasosConstruccion client:load pasos={['Trazá los ejes', 'Graduá la escala', 'Marcá la cuadrícula', 'Levantá las barras']} />
+
+    <h2>Comparativa</h2>
+    <Comparativa
+      client:load
+      error="Sumar los datos en lugar de multiplicar."
+      acierto="Multiplicar 3 remeras × 2 pantalones = 6 conjuntos."
+      explicacion="El principio de conteo multiplica las opciones de cada etapa."
+    />
+
+    <h2>Alerta de concepto</h2>
+    <AlertaConcepto
+      client:load
+      titulo="¡Ojo!"
+      texto="Un código numérico puede identificar una categoría: no siempre es una cantidad."
+    />
   </main>
 </Layout>
