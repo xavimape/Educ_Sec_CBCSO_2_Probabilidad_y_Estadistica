@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  titulo="Sin conexión"
+  descripcion="Esta página no está disponible sin conexión."
+>
+  <main>
+    <h1>Sin conexión</h1>
+    <p>Esta página no está disponible sin conexión.</p>
+    <p>Conectate a internet y volvé a intentar. Las páginas que ya visitaste antes pueden abrirse sin conexión.</p>
+    <p><a href={base}>Volver a la portada</a></p>
+  </main>
+</Layout>

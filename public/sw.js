@@ -1,24 +1,15 @@
 // Service worker: soporte para uso sin conexión (PWA).
-// Cache-first con actualización en segundo plano (stale-while-revalidate / cache-first fallback).
-const VERSION = 'ep-estadistica-v2';
+// La lista de precache se genera en el build (scripts/generar-precache.mjs → sw-precache.js).
+const VERSION = 'ep-estadistica-v3';
 const CACHE = `${VERSION}-runtime`;
 
-// Lista base de recursos esenciales que se pre-cachean durante la instalación.
-// Las rutas relativas se resuelven contra la ubicación del propio service worker
-// (funcionando correctamente tanto en raíz como en subrutas de GitHub Pages).
-const PRECACHE_URLS = [
-  './',
-  './index.html',
-  './lecciones/',
-  './practica/',
-  './laboratorio/',
-  './simulacro/',
-  './actividades/barras/',
-  './actividades/arbol/',
-  './manifest.webmanifest',
-  './icon.svg',
-  './sw-registro.js',
-];
+try {
+  importScripts('sw-precache.js');
+} catch (e) {
+  // En desarrollo no existe sw-precache.js: se usa una base mínima.
+}
+
+const PRECACHE_URLS = self.__PRECACHE__ || ['./', './offline/', './manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -73,9 +64,9 @@ self.addEventListener('fetch', (event) => {
         }
         return fetched;
       } catch (err) {
-        // Si falló la red (offline) y es navegación HTML, intentar servir index
+        // Sin conexión: si es navegación, servir la página explícita de offline.
         if (req.mode === 'navigate' || req.headers.get('accept')?.includes('text/html')) {
-          const fallback = await cache.match('./') || await cache.match('./index.html');
+          const fallback = (await cache.match('./offline/')) || (await cache.match('./'));
           if (fallback) return fallback;
         }
         throw err;

@@ -50,6 +50,7 @@ export default function ArbolProbabilidad() {
 
   return (
     <section className="actividad">
+      {!listo && <p className="aviso-hidratacion">Cargando la actividad… Si no responde en unos segundos, esta actividad necesita conexión la primera vez.</p>}
       <p>
         Se lanza una moneda dos veces. Marcá los resultados con <strong>al menos una cara</strong> y calculá la probabilidad.
       </p>

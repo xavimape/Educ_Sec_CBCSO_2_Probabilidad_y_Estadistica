@@ -84,3 +84,10 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Verificado (local, usuario)**: íconos generados y `check`/`build`/`test`/`test:e2e` en verde.
 - **Inventario**: 104 total, 15 auto-verificados, **89** para revisión manual (diferencia con los 85 de Codex: incluye numéricos sin parte medible).
 - **Pendiente**: verificar build/E2E del ajuste H1 y de la vista previa; Antigravity valida accesibilidad (teclado, `aria-expanded`) y 320 px.
+
+## 8. Fase 6A · Offline íntegro (11/11)
+
+- **Precache generado en build**: `scripts/generar-precache.mjs` (se ejecuta tras `astro build`) escribe `dist/sw-precache.js` con los HTML y assets (excluye `fichas/`, `documentos/` y los archivos del SW).
+- **Fallback explícito**: `sw.js` importa la lista generada y sirve `./offline/` en navegación sin red, en lugar de la portada bajo otra URL.
+- **Aviso de hidratación**: `Ejercicio`, `Barras`, `Árbol` y `Simulacro` muestran un aviso visible mientras no hidrataron; se mantiene `disabled={!listo}`.
+- **Pendiente**: verificar build/E2E y la desconexión inicial (Antigravity/Codex).

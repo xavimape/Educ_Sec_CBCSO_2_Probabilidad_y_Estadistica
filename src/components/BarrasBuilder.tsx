@@ -48,6 +48,7 @@ export default function BarrasBuilder() {
 
   return (
     <section className="actividad">
+      {!listo && <p className="aviso-hidratacion">Cargando la actividad… Si no responde en unos segundos, esta actividad necesita conexión la primera vez.</p>}
       <p>
         Tabla: faltas de 15 alumnos — frecuencias <strong>5, 6, 3 y 1</strong> para 0, 1, 2 y 3 faltas.
       </p>

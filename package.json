@@ -9,7 +9,7 @@
   "description": "Estadística y Probabilidad para 2.º año de secundaria. Sitio estático, sin servidor, desplegable en GitHub Pages, Netlify, Cloudflare Pages o Vercel.",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/generar-precache.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",

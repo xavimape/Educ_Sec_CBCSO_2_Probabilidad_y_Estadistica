@@ -74,6 +74,7 @@ export default function Ejercicio({ ejercicio }: { ejercicio: string }) {
 
   return (
     <section className="ejercicio">
+      {!listo && <p className="aviso-hidratacion">Cargando la actividad… Si no responde en unos segundos, esta actividad necesita conexión la primera vez.</p>}
       <header className="ejercicio-cabecera">
         <span className="badge">{datos.nivel}</span>
         <span className="badge">{datos.origen}</span>

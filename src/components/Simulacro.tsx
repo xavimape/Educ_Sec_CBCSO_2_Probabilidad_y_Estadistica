@@ -65,6 +65,7 @@ export default function Simulacro({ ejercicios }: { ejercicios: string }) {
   if (fase === 'config') {
     return (
       <section className="sim-config">
+        {!listo && <p className="aviso-hidratacion">Cargando la actividad… Si no responde en unos segundos, esta actividad necesita conexión la primera vez.</p>}
         <p>El simulacro es práctica, no una nota oficial. Elegí cuántos ejercicios y una semilla.</p>
         <label className="campo">
           Cantidad:
