@@ -6,6 +6,7 @@
 @media print {
   /* Paleta forzada de papel (independiente del tema oscuro) */
   :root {
+    color-scheme: light;
     --color-fondo: #ffffff;
     --color-superficie: #ffffff;
     --color-tinta: #000000;
@@ -26,11 +27,16 @@
 
   html,
   body {
-    background: #ffffff;
-    color: #000000;
+    background: #ffffff !important;
+    color: #000000 !important;
     font-size: 12pt;
     line-height: 1.5;
     color-scheme: light;
+  }
+
+  .hero {
+    background: #ffffff !important;
+    border-color: #888888 !important;
   }
 
   main {
@@ -62,8 +68,8 @@
   }
 
   a {
-    color: #000000;
-    text-decoration: none;
+    color: #000000 !important;
+    text-decoration: underline;
   }
 
   /* Evitar cortes malos */

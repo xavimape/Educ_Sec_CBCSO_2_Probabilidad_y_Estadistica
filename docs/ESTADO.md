@@ -156,4 +156,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Evita cortes: `break-inside: avoid` en tarjetas/ejercicios/SVG/tablas y `break-after: avoid` en encabezados.
 - Sin JavaScript, dependencias ni rutas nuevas.
 - **Fase 13.1 (11/11)**: resúmenes `.solo-impresion` en circular (categoría/frecuencia/relativa/%), histograma (intervalo/frecuencia) y árbol (rutas y P); `.bloque-impresion` con `break-inside: avoid`; paleta de papel forzada en `@media print` (fondo/superficie blancos, tinta negra, SVG y enlaces negros), incluso si la pantalla está en oscuro.
+- **Fase 13.2 (11/11)**: `color-scheme: light` en `:root` de impresión; `html`/`body` con blanco/negro `!important`; hero neutralizado; enlaces negros subrayados. Robustece la impresión con fondos activados desde tema oscuro.
 - **Pendiente**: verificar build/E2E y validar los PDF en claro y oscuro (Antigravity).
