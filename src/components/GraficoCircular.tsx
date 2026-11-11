@@ -52,6 +52,14 @@ export default function GraficoCircular() {
               const d = `M ${CX} ${CY} L ${a.x} ${a.y} A ${R} ${R} 0 ${grande} 1 ${b.x} ${b.y} Z`;
               return <path key={p.etiqueta} d={d} style={{ fill: p.color, stroke: 'var(--color-superficie)' }} strokeWidth="2" />;
             })}
+        <g className="anotacion" role="img">
+          <title>Anotaciones del gráfico circular</title>
+          <desc>Cada porción representa una categoría y el círculo completo es el total.</desc>
+          <line x1={CX} y1={CY - R - 8} x2={CX} y2={CY - R} />
+          <text x={CX} y={CY - R - 12} textAnchor="middle">Porción</text>
+          <text x={CX} y={CY + 4} textAnchor="middle">Total {total}</text>
+          <text x={CX} y={CY + R + 14} textAnchor="middle">Categoría</text>
+        </g>
       </svg>
 
       <div className="solo-impresion">

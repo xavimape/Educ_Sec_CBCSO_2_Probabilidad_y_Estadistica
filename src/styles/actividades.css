@@ -109,3 +109,15 @@ button:disabled {
   grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   gap: var(--space-3);
 }
+
+/* Fase 15 · anotaciones didácticas sobre los SVG */
+.anotacion text {
+  fill: var(--color-tinta-suave);
+  font-size: 7px;
+}
+
+.anotacion line {
+  stroke: var(--color-tinta-suave);
+  stroke-width: 0.8;
+  stroke-dasharray: 2 2;
+}

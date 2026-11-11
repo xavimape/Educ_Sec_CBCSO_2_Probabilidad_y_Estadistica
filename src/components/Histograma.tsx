@@ -20,7 +20,7 @@ export default function Histograma() {
       {!listo && <p className="aviso-hidratacion">Cargando la actividad… Si no responde en unos segundos, esta actividad necesita conexión la primera vez.</p>}
       <p>En un histograma las barras son contiguas (sin separación) porque los intervalos son continuos.</p>
 
-      <svg viewBox={`0 0 ${ANCHO} ${ALTO + 12}`} width="100%" className="svg-grafico" role="img">
+      <svg viewBox="-35 -18 270 175" width="100%" className="svg-grafico" role="img">
         <title>Histograma de frecuencias por intervalo</title>
         <desc>Barras contiguas con la frecuencia de cada intervalo, escaladas al valor máximo.</desc>
         {frecuencias.map((f, i) => {
@@ -28,6 +28,14 @@ export default function Histograma() {
           return <rect key={i} x={i * anchoBarra} y={ALTO - h} width={anchoBarra} height={h} style={{ fill: COLOR }} />;
         })}
         <line x1="0" y1={ALTO} x2={ANCHO} y2={ALTO} style={{ stroke: 'var(--color-tinta-suave)' }} strokeWidth="1" />
+
+        <g className="anotacion" role="img">
+          <title>Anotaciones del histograma</title>
+          <desc>El eje horizontal muestra los intervalos y el vertical la frecuencia; cada rectángulo es una barra.</desc>
+          <text x="100" y="148" textAnchor="middle">Eje X (intervalos)</text>
+          <text x="-24" y="60" textAnchor="middle" transform="rotate(-90 -24 60)">Eje Y (frecuencia)</text>
+          <text x="100" y="-6" textAnchor="middle">Barra</text>
+        </g>
       </svg>
 
       <div className="solo-impresion">

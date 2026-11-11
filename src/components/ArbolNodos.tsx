@@ -75,6 +75,13 @@ export default function ArbolNodos() {
             </g>
           </g>
         ))}
+        <g className="anotacion" role="img">
+          <title>Anotaciones del árbol de probabilidad</title>
+          <desc>Las ramas salen del inicio y cada nodo terminal es un resultado con probabilidad 1/4.</desc>
+          <text x="85" y="56" textAnchor="middle">Rama</text>
+          <text x="12" y="152" textAnchor="middle">Nodo</text>
+          <text x="130" y="152" textAnchor="middle">P. condicional = 1/4</text>
+        </g>
       </svg>
 
       <div className="solo-impresion">

@@ -166,4 +166,10 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Componentes `PasosConstruccion` (pasos numerados), `Comparativa` (❌/✅) y `AlertaConcepto` (`role="note"`).
 - `kit.css` con `.paso-numero`, `.comparativa`, `.alerta-concepto` y `.fondo-cuadricula`.
 - Vista previa en `/componentes/`.
-- **Pendiente**: verificar build/E2E y validar AA/320 px/teclado (Antigravity).
+- **Cerrada**: validada por Antigravity y Codex en producción (`fe5f3cc`).
+
+## 18. Fase 15 · Anatomía anotada (11/11)
+
+- `<g class="anotacion">` en `GraficoCircular` (Porción / Total / Categoría), `Histograma` (Eje X / Eje Y / Barra, con `viewBox` ampliado para las etiquetas) y `ArbolNodos` (Rama / Nodo / P. condicional).
+- Estilos `.anotacion text` y `.anotacion line` con `--color-tinta-suave` (legibles en claro y oscuro); `<title>`/`<desc>` por grupo.
+- **Pendiente**: verificar build/E2E y validar 320 px/AA (Antigravity).
