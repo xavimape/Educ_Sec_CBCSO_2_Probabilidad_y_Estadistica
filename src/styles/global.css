@@ -68,12 +68,20 @@ button {
   max-width: 100%;
 }
 
+input,
+select,
+textarea {
+  background: var(--color-superficie);
+  color: var(--color-tinta);
+}
+
 html {
   font-family: var(--fuente);
   font-size: 112.5%; /* base cercana a 18px, en unidades relativas */
   line-height: 1.6;
   color: var(--color-tinta);
   background: var(--color-fondo);
+  color-scheme: light dark;
 }
 
 body {

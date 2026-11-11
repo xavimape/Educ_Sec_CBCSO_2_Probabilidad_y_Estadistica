@@ -146,4 +146,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - Componentes y SVG ya no usan hex de modo claro: superficies, grises, botones, pill y gráficos pasan a tokens.
 - `theme-color` con variante clara y oscura.
 - Sin toggle manual (eso sería Fase 12B).
+- **Fase 12A.1 (11/11)**: `color-scheme: light dark` en `html` y `background`/`color` con tokens en `input`/`select`/`textarea`, para que los controles nativos acompañen el tema oscuro.
 - **Pendiente**: verificar build/E2E y validar contraste AA/≥3:1 en oscuro (Antigravity).
