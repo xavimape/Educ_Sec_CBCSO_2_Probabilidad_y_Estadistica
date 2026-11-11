@@ -169,3 +169,10 @@ h3 {
   margin: var(--space-3) 0;
   font-size: var(--text-sm);
 }
+
+/* Bloque de gráfico embebido en las lecciones (Fase 6B). */
+.bloque-grafico {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-borde);
+}

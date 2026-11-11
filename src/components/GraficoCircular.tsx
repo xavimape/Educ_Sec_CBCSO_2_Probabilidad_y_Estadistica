@@ -6,12 +6,13 @@ const COLORES = ['#1d4ed8', '#15803d', '#b91c1c', '#64748b'];
 const R = 80;
 const CX = 100;
 const CY = 100;
+const DOS_PI = Math.PI * 2;
 
 function punto(angulo: number) {
   return { x: CX + R * Math.cos(angulo), y: CY + R * Math.sin(angulo) };
 }
 
-type Porcion = { inicio: number; fin: number; color: string; etiqueta: string; valor: number };
+type Porcion = { inicio: number; fin: number; color: string; etiqueta: string };
 
 export default function GraficoCircular() {
   const [listo, setListo] = useState(false);
@@ -24,8 +25,8 @@ export default function GraficoCircular() {
   let acumulado = -Math.PI / 2;
   for (let i = 0; i < frecuencias.length; i++) {
     const inicio = acumulado;
-    const fin = total > 0 ? inicio + (frecuencias[i] / total) * Math.PI * 2 : inicio;
-    porciones.push({ inicio, fin, color: COLORES[i % COLORES.length], etiqueta: CATEGORIAS[i], valor: frecuencias[i] });
+    const fin = total > 0 ? inicio + (frecuencias[i] / total) * DOS_PI : inicio;
+    porciones.push({ inicio, fin, color: COLORES[i % COLORES.length], etiqueta: CATEGORIAS[i] });
     acumulado = fin;
   }
 
@@ -41,6 +42,10 @@ export default function GraficoCircular() {
           porciones
             .filter((p) => p.fin > p.inicio)
             .map((p) => {
+              // Una categoría con el 100 % degenera el arco (360° = 0°): se dibuja el disco completo.
+              if (p.fin - p.inicio >= DOS_PI - 0.0001) {
+                return <circle key={p.etiqueta} cx={CX} cy={CY} r={R} fill={p.color} />;
+              }
               const a = punto(p.inicio);
               const b = punto(p.fin);
               const grande = p.fin - p.inicio > Math.PI ? 1 : 0;

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 const ETIQUETAS = ['0–10', '10–20', '20–30', '30–40'];
 const COLOR = '#1d4ed8'; // --color-acento
-const MAX = 8;
 const ALTO = 120;
 const ANCHO = 200;
 
@@ -13,6 +12,8 @@ export default function Histograma() {
   useEffect(() => setListo(true), []);
 
   const anchoBarra = ANCHO / frecuencias.length;
+  // Escala dinámica: la barra más alta ocupa el alto disponible y el resto es proporcional.
+  const maxEscala = Math.max(1, ...frecuencias);
 
   return (
     <section className="grafico">
@@ -21,9 +22,9 @@ export default function Histograma() {
 
       <svg viewBox={`0 0 ${ANCHO} ${ALTO + 12}`} width="100%" className="svg-grafico" role="img">
         <title>Histograma de frecuencias por intervalo</title>
-        <desc>Barras contiguas con la frecuencia de cada intervalo.</desc>
+        <desc>Barras contiguas con la frecuencia de cada intervalo, escaladas al valor máximo.</desc>
         {frecuencias.map((f, i) => {
-          const h = (Math.min(f, MAX) / MAX) * ALTO;
+          const h = (f / maxEscala) * ALTO;
           return <rect key={i} x={i * anchoBarra} y={ALTO - h} width={anchoBarra} height={h} fill={COLOR} />;
         })}
         <line x1="0" y1={ALTO} x2={ANCHO} y2={ALTO} stroke="#64748b" strokeWidth="1" />

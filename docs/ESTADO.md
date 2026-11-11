@@ -97,4 +97,5 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `GraficoCircular.tsx` (M2), `Histograma.tsx` (M3) y `ArbolNodos.tsx` (M7): SVG puro con `viewBox`, `title`/`desc` y `width: 100%`.
 - Árbol con nodos `<g tabindex="0" role="button">` (Enter/Espacio) y probabilidad al enfocar.
 - Vista previa en `/actividades/graficos/`.
+- **Correcciones (11/11)**: circular al 100 % dibuja disco completo; histograma con escala dinámica (`Math.max`); integración de los tres SVG en M2/M3/M7 con enlace a la actividad.
 - **Pendiente**: verificar build/E2E y validar 320 px/teclado/contraste (Antigravity).
