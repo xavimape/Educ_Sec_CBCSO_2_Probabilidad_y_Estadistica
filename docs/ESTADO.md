@@ -77,6 +77,7 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Inventario paralelo**: `npm run inventario` genera `docs/REVISION_MANUAL.md` con los ejercicios que `auditar:banco` no cubre.
 - **Paso 2 · Componentes de interacción**: inputs/selects/textarea con borde `--color-borde` y radio 6 px; botones con hover/elevación y deshabilitado; feedback con borde y colores AA (`--color-ok`, `--color-error`).
 - **Paso 3 · Tarjetas**: portada (módulos enlazados a cada lección) y lecciones en grilla de tarjetas (`.tarjetas`/`.tarjeta` en `global.css`).
+- **Ajustes 3.1/3.2 (11/11)**: tarjetas con `padding` 1.5 rem y margen superior 2 rem; jerarquía tipográfica en `.leccion-contenido` (h1 2 rem, h2 1.5 rem, h3 1.25 rem, p con margen y `line-height` 1.6).
 - **Verificado (local, usuario)**: íconos generados y `check`/`build`/`test`/`test:e2e` en verde.
 - **Inventario**: 104 total, 15 auto-verificados, **89** para revisión manual (diferencia con los 85 de Codex: incluye numéricos sin parte medible).
-- **Pendiente**: verificar `check`/`build`/`test`/`test:e2e` de los pasos 2-3 y re-validar 320 px/AA; desplegar `618ddf6` (validado por Antigravity y Codex) y luego los pasos 2-3.
+- **Pendiente**: que Antigravity revalide 320 px y contraste de 3.1/3.2 y desplegar la Fase 4.

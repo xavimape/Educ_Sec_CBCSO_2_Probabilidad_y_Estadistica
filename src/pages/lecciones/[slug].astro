@@ -16,6 +16,8 @@ const { Content } = await render(leccion);
     <p><a href="../">← Volver a las lecciones</a></p>
     <h1>{leccion.data.titulo}</h1>
     <p><strong>Módulo {leccion.data.modulo} · Objetivo:</strong> {leccion.data.objetivo}</p>
-    <Content />
+    <div class="leccion-contenido">
+      <Content />
+    </div>
   </main>
 </Layout>

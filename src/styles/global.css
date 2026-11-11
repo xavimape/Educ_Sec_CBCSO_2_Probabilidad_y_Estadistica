@@ -95,7 +95,7 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-4);
   padding: 0;
-  margin: 0 0 var(--space-5);
+  margin: var(--space-6) 0 var(--space-5);
   list-style: none;
 }
 
@@ -110,7 +110,7 @@ h3 {
   background: #ffffff;
   border: 1px solid var(--color-borde);
   border-radius: 8px;
-  padding: var(--space-4);
+  padding: var(--space-5);
   text-decoration: none;
   color: var(--color-tinta);
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
@@ -134,4 +134,28 @@ h3 {
 .tarjeta p {
   margin: var(--space-2) 0 0;
   font-size: var(--text-sm);
+}
+
+/* Jerarquía tipográfica dentro de las lecciones (ajuste 3.2) */
+.leccion-contenido h1 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-5);
+  margin-top: 0;
+}
+
+.leccion-contenido h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.leccion-contenido h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.leccion-contenido p {
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
 }
