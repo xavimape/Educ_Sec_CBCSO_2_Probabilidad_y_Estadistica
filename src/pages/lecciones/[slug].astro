@@ -5,7 +5,11 @@ import { getCollection, render } from 'astro:content';
 import GraficoCircular from '../../components/GraficoCircular.tsx';
 import Histograma from '../../components/Histograma.tsx';
 import ArbolNodos from '../../components/ArbolNodos.tsx';
+import AlertaConcepto from '../../components/AlertaConcepto.tsx';
+import PasosConstruccion from '../../components/PasosConstruccion.tsx';
+import Comparativa from '../../components/Comparativa.tsx';
 import '../../styles/actividades.css';
+import '../../styles/kit.css';
 
 export async function getStaticPaths() {
   const lecciones = await getCollection('lecciones');
@@ -44,6 +48,44 @@ const conGrafico = ['m2-tablas-de-frecuencias', 'm3-graficos', 'm7-probabilidad'
         />
       )}
       <Content />
+
+      {leccion.id === 'm1-dato-y-variable' && (
+        <section class="bloque-kit">
+          <h2>Para tener en cuenta</h2>
+          <AlertaConcepto
+            client:load
+            titulo="¡OJO!"
+            texto="Un número de camiseta es una etiqueta (Nominal), NO una cantidad. Ver un número no alcanza para clasificar."
+          />
+        </section>
+      )}
+
+      {leccion.id === 'm3-graficos' && (
+        <section class="bloque-kit">
+          <h2>Cómo se construye, paso a paso</h2>
+          <PasosConstruccion
+            client:load
+            pasos={[
+              'Trazá los ejes: horizontal para las categorías, vertical para la frecuencia.',
+              'Graduá el eje vertical con una escala uniforme.',
+              'Marcá la cuadrícula (2 cuadritos de ancho y 1 de separación).',
+              'Levantá cada barra hasta su frecuencia y rotulá los dos ejes.',
+            ]}
+          />
+        </section>
+      )}
+
+      {leccion.id === 'm5-eleccion-de-medida' && (
+        <section class="bloque-kit">
+          <h2>¿Media o mediana?</h2>
+          <Comparativa
+            client:load
+            error="Usar la media cuando hay valores extremos."
+            acierto="Usar la mediana cuando hay valores extremos."
+            explicacion="La mediana no se deja arrastrar por un dato extremo; la media sí."
+          />
+        </section>
+      )}
 
       {conGrafico && (
         <section class="bloque-grafico">

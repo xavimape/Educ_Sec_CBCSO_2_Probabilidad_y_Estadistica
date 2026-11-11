@@ -91,3 +91,10 @@
     linear-gradient(90deg, var(--color-borde) 1px, transparent 1px);
   background-size: 16px 16px;
 }
+
+/* Bloque de integración del kit en lecciones */
+.bloque-kit {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-borde);
+}

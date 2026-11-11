@@ -180,4 +180,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - 8 PNG en `public/ilustraciones/` integradas: diana (hero), libro (tarjetas de lecciones), calculadora/matraz/documento (tarjetas de acciones), post-it (`AlertaConcepto`), dado (M7) y lupa (M8).
 - Cada `<img>` con `alt` descriptivo, o `alt=""` + `aria-hidden="true"` cuando el concepto está en texto adyacente; `width`/`height` 120 (o 48 en tarjetas).
 - Modo oscuro: `filter: brightness(0.92)`.
-- **Pendiente**: verificar build/E2E y validar 320 px/AA/offline (Antigravity).
+- **Cerrada**: validada por Antigravity y Codex en producción (`fc28461`).
+
+## 20. Fase 17 · Integración del kit en lecciones (11/11)
+
+- `AlertaConcepto` en M1 (post-it «¡OJO!» sobre el número de camiseta), `PasosConstruccion` en M3 (4 pasos) y `Comparativa` en M5 (❌/✅ media vs. mediana), embebidos desde `[slug].astro` con `kit.css`.
+- Hero con copys gamificados: «2.º año · Secundaria» y «Organizá datos, construí gráficos y tomá decisiones basadas en evidencia».
+- Estilos `.bloque-kit` en `kit.css`.
+- **Pendiente**: verificar build/E2E y validar 320 px/AA (Antigravity).
