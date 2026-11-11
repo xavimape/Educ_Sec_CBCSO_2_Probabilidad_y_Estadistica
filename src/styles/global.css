@@ -109,7 +109,7 @@ h3 {
   height: 100%;
   background: #ffffff;
   border: 1px solid var(--color-borde);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: var(--space-5);
   text-decoration: none;
   color: var(--color-tinta);
@@ -120,8 +120,16 @@ h3 {
 .tarjeta > a:hover,
 .tarjeta > a:focus-visible {
   border-color: var(--color-acento);
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  transform: translateY(-4px);
+}
+
+.tarjeta-icono {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-acento);
+  margin-bottom: var(--space-2);
 }
 
 .tarjeta-modulo {
@@ -132,8 +140,24 @@ h3 {
   margin-bottom: var(--space-1);
 }
 
-.tarjeta p {
-  margin: var(--space-2) 0 0;
+.tarjeta-titulo {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.tarjeta-desc {
+  display: block;
+  color: #64748b;
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+}
+
+.tarjeta-ir {
+  display: inline-block;
+  margin-top: var(--space-3);
+  color: var(--color-acento);
+  font-weight: 600;
   font-size: var(--text-sm);
 }
 

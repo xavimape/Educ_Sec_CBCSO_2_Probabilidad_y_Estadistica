@@ -114,4 +114,12 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `Encabezado.astro`: header sticky con marca y navegación (Inicio/Lecciones/Practicar), incluido en `Layout.astro`.
 - `Hero.astro`: título, subtítulo, descripción, botones «Empezar a practicar» y «Ver lecciones», e icono SVG decorativo.
 - Estilos en `global.css` (degradado sutil, radio 12 px, AA en botones).
+- **Cerrada**: validada por Antigravity y Codex en producción (`f6ecc80`).
+
+## 12. Fase 9 · Tarjetas con iconos (11/11)
+
+- Iconos SVG en las tarjetas de módulos y en las tarjetas de acciones (Practicar, Laboratorio, Simulacro), con `aria-hidden="true"`.
+- `.tarjeta > a`: radio 12 px, hover `translateY(-4px)`, sombra `0 4px 12px`, borde de acento.
+- Jerarquía interna: `.tarjeta-titulo` (600, 1.1 rem), `.tarjeta-desc` (#64748b) y `.tarjeta-ir` («Ver lección →» / «Ir →»).
+- `prefers-reduced-motion` ya anula el `transform` de las tarjetas.
 - **Pendiente**: verificar build/E2E y validar 320 px/AA/teclado (Antigravity).

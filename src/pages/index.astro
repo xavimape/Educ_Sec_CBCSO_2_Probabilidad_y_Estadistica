@@ -12,6 +12,7 @@ const modulos = [
   { modulo: 'M7', titulo: 'Conteo y probabilidad', slug: 'm7-probabilidad' },
   { modulo: 'M8', titulo: 'Comunicación y lectura crítica', slug: 'm8-comunicacion' },
 ];
+
 const base = import.meta.env.BASE_URL;
 
 const fichas = [
@@ -34,27 +35,67 @@ const fichas = [
 >
   <main>
     <Hero />
+
     <h2>Contenido</h2>
     <ul class="tarjetas">
       {modulos.map((m) => (
         <li class="tarjeta">
           <a href={`./lecciones/${m.slug}/`}>
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+            </svg>
             <span class="tarjeta-modulo">{m.modulo}</span>
-            <strong>{m.titulo}</strong>
+            <span class="tarjeta-titulo">{m.titulo}</span>
+            <span class="tarjeta-ir">Ver lección →</span>
           </a>
         </li>
       ))}
     </ul>
     <p><a href="./lecciones/">Ver las lecciones disponibles</a>.</p>
-    <p><a href="./practica/">Ir a practicar (banco de ejercicios)</a>.</p>
-    <p><a href="./laboratorio/">Abrir el laboratorio de datos</a>.</p>
-    <p><a href="./simulacro/">Hacer un simulacro</a>.</p>
+
+    <h2>¿Qué querés hacer hoy?</h2>
+    <ul class="tarjetas">
+      <li class="tarjeta">
+        <a href="./practica/">
+          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="20" rx="2" />
+            <path d="M8 6h8M8 11h2M12 11h2M16 11h.01M8 15h2M12 15h2M16 15h.01" />
+          </svg>
+          <span class="tarjeta-titulo">Practicar</span>
+          <span class="tarjeta-desc">Ejercicios con corrección automática.</span>
+          <span class="tarjeta-ir">Ir →</span>
+        </a>
+      </li>
+      <li class="tarjeta">
+        <a href="./laboratorio/">
+          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3" />
+          </svg>
+          <span class="tarjeta-titulo">Laboratorio</span>
+          <span class="tarjeta-desc">Explorá datos y medidas.</span>
+          <span class="tarjeta-ir">Ir →</span>
+        </a>
+      </li>
+      <li class="tarjeta">
+        <a href="./simulacro/">
+          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+            <path d="M14 2v6h6M8 13h8M8 17h5" />
+          </svg>
+          <span class="tarjeta-titulo">Simulacro</span>
+          <span class="tarjeta-desc">Practicá con un repaso mixto.</span>
+          <span class="tarjeta-ir">Ir →</span>
+        </a>
+      </li>
+    </ul>
+
     <h2>Actividades interactivas</h2>
     <ul>
       <li><a href="./actividades/barras/">Construir un gráfico de barras</a></li>
       <li><a href="./actividades/arbol/">Construir un árbol de probabilidad</a></li>
       <li><a href="./actividades/graficos/">Gráficos interactivos (circular, histograma y árbol)</a></li>
     </ul>
+
     <h2>Recursos y descargas</h2>
     <ul>
       <li>
