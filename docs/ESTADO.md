@@ -90,4 +90,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - **Precache generado en build**: `scripts/generar-precache.mjs` (se ejecuta tras `astro build`) escribe `dist/sw-precache.js` con los HTML y assets (excluye `fichas/`, `documentos/` y los archivos del SW).
 - **Fallback explícito**: `sw.js` importa la lista generada y sirve `./offline/` en navegación sin red, en lugar de la portada bajo otra URL.
 - **Aviso de hidratación**: `Ejercicio`, `Barras`, `Árbol` y `Simulacro` muestran un aviso visible mientras no hidrataron; se mantiene `disabled={!listo}`.
-- **Pendiente**: verificar build/E2E y la desconexión inicial (Antigravity/Codex).
+- **Cerrada**: validada por Antigravity y Codex y desplegada en `55c9dab`.
+
+## 9. Fase 6B · SVG interactivas (11/11)
+
+- `GraficoCircular.tsx` (M2), `Histograma.tsx` (M3) y `ArbolNodos.tsx` (M7): SVG puro con `viewBox`, `title`/`desc` y `width: 100%`.
+- Árbol con nodos `<g tabindex="0" role="button">` (Enter/Espacio) y probabilidad al enfocar.
+- Vista previa en `/actividades/graficos/`.
+- **Pendiente**: verificar build/E2E y validar 320 px/teclado/contraste (Antigravity).
