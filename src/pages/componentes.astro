@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Acordeon from '../components/Acordeon.tsx';
+import Tabs from '../components/Tabs.tsx';
+import Colapsable from '../components/Colapsable.tsx';
+import '../styles/componentes.css';
+
+const ejemplos = [
+  { titulo: 'Ejemplo 1', contenido: 'Contenido de ejemplo 1.' },
+  { titulo: 'Ejemplo 2', contenido: 'Contenido de ejemplo 2.' },
+];
+---
+
+<Layout
+  titulo="Componentes didácticos"
+  descripcion="Vista previa interna de acordeones, tabs y colapsables."
+>
+  <main>
+    <h1>Componentes didácticos</h1>
+    <p>Vista previa interna de los componentes de la Fase 5. No es una página de contenido para estudiantes.</p>
+
+    <h2>Acordeón</h2>
+    <Acordeon client:load titulo="Ver explicación detallada" contenido="Contenido de ejemplo del acordeón." />
+
+    <h2>Tabs</h2>
+    <Tabs client:load items={ejemplos} />
+
+    <h2>Colapsable</h2>
+    <Colapsable client:load contenido="Respuesta de ejemplo del colapsable." />
+  </main>
+</Layout>
