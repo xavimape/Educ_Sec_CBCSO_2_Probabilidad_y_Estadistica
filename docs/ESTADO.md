@@ -173,4 +173,11 @@ Resumen de las 8 correcciones de la [auditoría inicial](AUDITORIA_INICIAL_2026-
 - `<g class="anotacion">` en `GraficoCircular` (Porción / Total / Categoría), `Histograma` (Eje X / Eje Y / Barra, con `viewBox` ampliado para las etiquetas) y `ArbolNodos` (Rama / Nodo / P. condicional).
 - Estilos `.anotacion text` y `.anotacion line` con `--color-tinta-suave` (legibles en claro y oscuro); `<title>`/`<desc>` por grupo.
 - **Fase 15.1 (11/11)**: rótulo del árbol corregido a «Probabilidad del resultado = 1/4»; «Total» del circular movido debajo del círculo; etiquetas «inicio/C/S» del árbol con `--color-tinta` (contraste en oscuro).
-- **Pendiente**: verificar build/E2E y validar 320 px/AA (Antigravity).
+- **Cerrada**: validada por Antigravity y Codex en producción (`e7ce920`).
+
+## 19. Fase 16 · Ilustraciones conceptuales (11/11)
+
+- 8 PNG en `public/ilustraciones/` integradas: diana (hero), libro (tarjetas de lecciones), calculadora/matraz/documento (tarjetas de acciones), post-it (`AlertaConcepto`), dado (M7) y lupa (M8).
+- Cada `<img>` con `alt` descriptivo, o `alt=""` + `aria-hidden="true"` cuando el concepto está en texto adyacente; `width`/`height` 120 (o 48 en tarjetas).
+- Modo oscuro: `filter: brightness(0.92)`.
+- **Pendiente**: verificar build/E2E y validar 320 px/AA/offline (Antigravity).

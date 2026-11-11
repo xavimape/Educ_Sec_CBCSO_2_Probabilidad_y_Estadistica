@@ -41,9 +41,7 @@ const fichas = [
       {modulos.map((m) => (
         <li class="tarjeta">
           <a href={`./lecciones/${m.slug}/`}>
-            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
-            </svg>
+            <img class="tarjeta-icono" src={`${base}ilustraciones/libro-lecciones.png`} alt="" aria-hidden="true" width="48" height="48" />
             <span class="tarjeta-modulo">{m.modulo}</span>
             <span class="tarjeta-titulo">{m.titulo}</span>
             <span class="tarjeta-ir">Ver lección →</span>
@@ -57,10 +55,7 @@ const fichas = [
     <ul class="tarjetas">
       <li class="tarjeta">
         <a href="./practica/">
-          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="5" y="2" width="14" height="20" rx="2" />
-            <path d="M8 6h8M8 11h2M12 11h2M16 11h.01M8 15h2M12 15h2M16 15h.01" />
-          </svg>
+          <img class="tarjeta-icono" src={`${base}ilustraciones/calculadora-practica.png`} alt="" aria-hidden="true" width="48" height="48" />
           <span class="tarjeta-titulo">Practicar</span>
           <span class="tarjeta-desc">Ejercicios con corrección automática.</span>
           <span class="tarjeta-ir">Ir →</span>
@@ -68,9 +63,7 @@ const fichas = [
       </li>
       <li class="tarjeta">
         <a href="./laboratorio/">
-          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3" />
-          </svg>
+          <img class="tarjeta-icono" src={`${base}ilustraciones/matraz-laboratorio.png`} alt="" aria-hidden="true" width="48" height="48" />
           <span class="tarjeta-titulo">Laboratorio</span>
           <span class="tarjeta-desc">Explorá datos y medidas.</span>
           <span class="tarjeta-ir">Ir →</span>
@@ -78,10 +71,7 @@ const fichas = [
       </li>
       <li class="tarjeta">
         <a href="./simulacro/">
-          <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
-            <path d="M14 2v6h6M8 13h8M8 17h5" />
-          </svg>
+          <img class="tarjeta-icono" src={`${base}ilustraciones/documento-simulacro.png`} alt="" aria-hidden="true" width="48" height="48" />
           <span class="tarjeta-titulo">Simulacro</span>
           <span class="tarjeta-desc">Practicá con un repaso mixto.</span>
           <span class="tarjeta-ir">Ir →</span>

@@ -25,6 +25,24 @@ const conGrafico = ['m2-tablas-de-frecuencias', 'm3-graficos', 'm7-probabilidad'
     <div class="leccion-contenido">
       <h1>{leccion.data.titulo}</h1>
       <p><strong>Módulo {leccion.data.modulo} · Objetivo:</strong> {leccion.data.objetivo}</p>
+      {leccion.id === 'm7-probabilidad' && (
+        <img
+          class="leccion-ilustracion"
+          src={`${base}ilustraciones/dado-probabilidad.png`}
+          alt="Ilustración de un dado, que representa los experimentos aleatorios."
+          width="120"
+          height="120"
+        />
+      )}
+      {leccion.id === 'm8-comunicacion' && (
+        <img
+          class="leccion-ilustracion"
+          src={`${base}ilustraciones/lupa-analisis.png`}
+          alt="Ilustración de una lupa, que representa la lectura crítica de datos."
+          width="120"
+          height="120"
+        />
+      )}
       <Content />
 
       {conGrafico && (

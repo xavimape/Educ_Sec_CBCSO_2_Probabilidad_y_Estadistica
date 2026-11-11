@@ -164,9 +164,9 @@ h3 {
 
 .tarjeta-icono {
   display: block;
-  width: 2rem;
-  height: 2rem;
-  color: var(--color-acento);
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
   margin-bottom: var(--space-2);
 }
 
@@ -370,8 +370,9 @@ main {
 }
 
 .hero-icono {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .boton-primario,
@@ -405,6 +406,30 @@ main {
 
   .hero-icono {
     display: none;
+  }
+}
+
+/* Fase 16 · ilustraciones */
+.leccion-ilustracion {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: var(--space-4) auto;
+}
+
+.alerta-ilustracion {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  margin-right: var(--space-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-icono,
+  .tarjeta-icono,
+  .leccion-ilustracion,
+  .alerta-ilustracion {
+    filter: brightness(0.92);
   }
 }
 
